@@ -1,9 +1,13 @@
 import React from "react";
 import { Navbar } from "@components/Navbar";
+import { Footer } from "@components/Footer";
 import { Bike } from "@Home/Bike";
 import { cowork01, cowork02, cowork03 } from "@image";
+import { Link } from "react-router-dom";
+
 
 export function Home() {
+
   return (
     <>
       <div className="main-wrapper mt-[70px]">
@@ -27,7 +31,6 @@ export function Home() {
                   className="d-block w-100 h-[300px] sm:h-[500px]"
                   alt="..."
                 />
-                
               </div>
               <div className="carousel-item">
                 <img
@@ -146,47 +149,17 @@ export function Home() {
 
                 <div className="card-body tab-content">
                   <div className="tab-pane active" id="e-bike">
-                    {/* <div className="owl-carousel featured-slider grid-view row"> */}
-                    {/* {mainTw.map((bike, index) => (
-                        <BikeCard key={index} bike={bike} />
-                      ))} */}
-                    {/* <h6>bike123</h6> */}
-
-                    {/* ----------- */}
-<Bike />
-                    <div className="owl-carousel partnerslist_eight d-flex">
-                      <div className="p-[100px] border-2">
-                        <h2>hello woldl</h2>
-                      </div>
-                      <div className="p-[100px] border-2">
-                        <h2>hello woldl</h2>
-                      </div>
-                      <div className="p-[100px] border-2">
-                        <h2>hello woldl</h2>
-                      </div>
-                      <div className="p-[100px] border-2">
-                        <h2>hello woldl</h2>
-                      </div>
-                      <div className="p-[100px] border-2">
-                        <h2>hello woldl</h2>
-                      </div>
-                      <div className="p-[100px] border-2">
-                        <h2>hello woldl</h2>
-                      </div>
-                    </div>
-
-                    {/* ------------ */}
-                    {/* </div> */}
+                    <Bike />
                     <div
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                      <Link
+                        to={"/twoWheeler"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="tab-pane fade" id="e-bike_up">
@@ -233,6 +206,160 @@ export function Home() {
           </div>
         </section>
         {/* End E-Bike */}
+
+        {/* Category */}
+        <section className="category-section">
+          <div className="container">
+            <div className="section-heading">
+              <div className="row align-items-center">
+                <div
+                  className="col-md-6 aos aos-init aos-animate"
+                  data-aos="fade-up"
+                >
+                  <h2>
+                    EV <span style={{backgroundColor: "red", padding:"4px"}}> Sp </span> ares
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div className="row small">
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo1.png"
+                    alt="icons"
+                    height="100px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Li Battery Packs(6)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo2.png"
+                    alt="icons"
+                    height="100px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Battery Chargers(7)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo3.png"
+                    alt="icons"
+                    height="100px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Motor Controller(13)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo4.png"
+                    alt="icons"
+                    height="100px"
+                    width="80px"
+                  />
+                  <p className="mt-3">BMS(6)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo5.png"
+                    alt="icons"
+                    height="80px"
+                    width="80px"
+                  />
+                  <p className="mt-3">EV Conversion Kits(22)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo6.png"
+                    alt="icons"
+                    height="100px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Lithium Cells(5)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo7.png"
+                    alt="icons"
+                    height="80px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Vehicle & Accessories(16)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo8.png"
+                    alt="icons"
+                    height="100px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Connectors(1)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo9.png"
+                    alt="icons"
+                    height="80px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Mechanical Accessories(5)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo10.png"
+                    alt="icons"
+                    height="80px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Electronics Components(23)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo11.png"
+                    alt="icons"
+                    height="80px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Tools & Equipments(27)</p>
+                </a>
+              </div>
+              <div className="col-lg-2 col-md-3 col-sm-6">
+                <a href="categories.html" className="category-links shadow-sm">
+                  <img
+                    src="/assets/img/evs_logo12.jpeg"
+                    alt="icons"
+                    height="100px"
+                    width="80px"
+                  />
+                  <p className="mt-3">Wires & Cables(0)</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Category */}
+        <Footer />
 
         <h1 className="text-[100px]">hello world</h1>
       </div>
