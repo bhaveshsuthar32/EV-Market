@@ -1,55 +1,7 @@
 import React from "react";
 import { Navbar } from "@components/Navbar";
+import { Bike } from "@Home/Bike";
 import { cowork01, cowork02, cowork03 } from "@image";
-
-// // Mock data for demonstration purposes
-// const mainTw = [
-//   { name: "Bike 1", f_img: cowork01, price: "1000" },
-//   { name: "Bike 2", f_img: cowork02, price: "2000" },
-//   { name: "Bike 3", f_img: cowork03, price: "3000" },
-//   // Add more bike objects
-// ];
-
-// const mainBike = [
-//   { name: "Bike A", f_img: cowork01, price: "1500" },
-//   { name: "Bike B", f_img: cowork02, price: "2500" },
-//   { name: "Bike C", f_img: cowork03, price: "3500" },
-//   // Add more bike objects
-// ];
-
-// const BikeCard = ({ bike }) => (
-//   <div className="card aos" data-aos="fade-up">
-//     <div className="blog-widget">
-//       <div className="blog-img">
-//         <a href="#">
-//           <img
-//             src={bike.f_img}
-//             className="img-fluid"
-//             alt="blog-img"
-//             style={{ height: "200px" }}
-//           />
-//         </a>
-//       </div>
-//       <div className="bloglist-content">
-//         <div className="card-body">
-//           <h6>
-//             <a href="#">{bike.name}</a>
-//           </h6>
-//           <div className="amount-details">
-//             <div className="amount">
-//               <span className="validrate">
-//                 <i className="fa-solid fa-indian-rupee-sign"></i> {bike.price}
-//               </span>
-//             </div>
-//             <div className="ratings">
-//               <span>4.7</span> (50)
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// );
 
 export function Home() {
   return (
@@ -75,6 +27,7 @@ export function Home() {
                   className="d-block w-100 h-[300px] sm:h-[500px]"
                   alt="..."
                 />
+                
               </div>
               <div className="carousel-item">
                 <img
@@ -193,12 +146,37 @@ export function Home() {
 
                 <div className="card-body tab-content">
                   <div className="tab-pane active" id="e-bike">
-                    <div className="owl-carousel featured-slider grid-view">
-                      {/* {mainTw.map((bike, index) => (
+                    {/* <div className="owl-carousel featured-slider grid-view row"> */}
+                    {/* {mainTw.map((bike, index) => (
                         <BikeCard key={index} bike={bike} />
                       ))} */}
-                      <h6>bike123</h6>
+                    {/* <h6>bike123</h6> */}
+
+                    {/* ----------- */}
+<Bike />
+                    <div className="owl-carousel partnerslist_eight d-flex">
+                      <div className="p-[100px] border-2">
+                        <h2>hello woldl</h2>
+                      </div>
+                      <div className="p-[100px] border-2">
+                        <h2>hello woldl</h2>
+                      </div>
+                      <div className="p-[100px] border-2">
+                        <h2>hello woldl</h2>
+                      </div>
+                      <div className="p-[100px] border-2">
+                        <h2>hello woldl</h2>
+                      </div>
+                      <div className="p-[100px] border-2">
+                        <h2>hello woldl</h2>
+                      </div>
+                      <div className="p-[100px] border-2">
+                        <h2>hello woldl</h2>
+                      </div>
                     </div>
+
+                    {/* ------------ */}
+                    {/* </div> */}
                     <div
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
