@@ -77,7 +77,7 @@ export function Home() {
         {/* category section */}
         <section className="category-section">
           <div className="container">
-            <div className="row">
+            <div className="row px-3">
               <div className="col-lg-2 col-md-4 col-sm-6 col-6">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img src={cowork01} alt="icons" height="80px" width="80px" />
@@ -105,7 +105,7 @@ export function Home() {
         {/* E-Bike */}
         <section className="featured-section s_box section-blk py-4 section-blk blog-blk">
           <div className="container">
-            <div className="row">
+            <div className="row container">
               <div className="col-sm-12 my-4">
                 <h4>Electric Bikes Zone</h4>
                 <div className="row mb-2">
@@ -208,7 +208,7 @@ export function Home() {
         {/* End E-Bike */}
 
         {/* Category */}
-        <section className="category-section">
+        <section className="category-section co">
           <div className="container">
             <div className="section-heading">
               <div className="row align-items-center">
@@ -217,7 +217,12 @@ export function Home() {
                   data-aos="fade-up"
                 >
                   <h2>
-                    EV <span style={{backgroundColor: "red", padding:"4px"}}> Sp </span> ares
+                    EV{" "}
+                    <span style={{ backgroundColor: "red", padding: "4px" }}>
+                      {" "}
+                      Sp{" "}
+                    </span>{" "}
+                    ares
                   </h2>
                 </div>
               </div>
@@ -358,6 +363,29 @@ export function Home() {
             </div>
           </div>
         </section>
+
+        <br />
+        <div className="btn">
+          <Link
+            to={"/twodetails"}
+            className="bg-slate-900 text-white mb-3 p-2 mx-2"
+          >
+            Two details
+          </Link>
+          <Link
+            to={"/threedetails"}
+            className="bg-slate-900 text-white mb-3 p-2 mx-2"
+          >
+            Three details
+          </Link>
+          <Link
+            to={"/fourdetails"}
+            className="bg-slate-900 text-white mb-3 p-2 mx-2"
+          >
+            Four details
+          </Link>
+        </div>
+
         {/* Category */}
         <Footer />
 
