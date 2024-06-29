@@ -23,6 +23,7 @@ import { About } from '@components/Pages/About';
 import { TwoWheeler } from '@components/Pages/TwoWheeler';
 import { FourDetails, ThreeDetails,TwoDetails} from '@Vehicle';
 import Dashboard from './Admin/Pages/Dashboard';
+import Profile from './Admin/Pages/Profile';
 
 
 function App() {
@@ -31,8 +32,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="//dashboard/profile" element={<Profile />} />
           <Route path="/" element={<Home />} />
           <Route path="/error" element={<Error404 />} />
           <Route path="/about" element={<About />} />
