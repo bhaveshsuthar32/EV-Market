@@ -10,7 +10,7 @@ export function Navbar() {
         <div className="container">
           <nav
             className="navbar navbar-expand-lg header-nav"
-            style={{ width: 1250 }}
+            style={{width : "100%"}}
           >
             <div className="navbar-header">
               <a id="mobile_btn" href="#;">

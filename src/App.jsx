@@ -21,7 +21,9 @@ import { Error404 } from '@components/Pages/404Error';
 import { Contact } from '@components/Pages/Contact';
 import { About } from '@components/Pages/About';
 import { TwoWheeler } from '@components/Pages/TwoWheeler';
-import { FourDetails, ThreeDetails,TwoDetails} from '@Vehicle'
+import { FourDetails, ThreeDetails,TwoDetails} from '@Vehicle';
+
+import { Dashboard, Auth } from "@/layouts";
 
 function App() {
 
@@ -29,8 +31,11 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/dashboard/*" element={<Dashboard />} />
+          <Route path="/auth/*" element={<Auth />} />
+          <Route path="*" element={<Navigate to="/dashboard/home" replace />} />
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error404 />} />
+          <Route path="/error" element={<Error404 />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/twoWheeler" element={<TwoWheeler />} />

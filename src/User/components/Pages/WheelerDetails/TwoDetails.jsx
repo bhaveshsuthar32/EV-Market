@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { cowork01, cowork02, cowork03 } from "@image";
-import { Navbar } from "@components/Navbar";
+// import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
 import { Link } from "react-router-dom";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,13 +40,14 @@ export default function TwoDetails() {
   const cancelOnRoadPrice = () => {
     setShowOnRoad(false);
   };
+
   return (
     <>
       <div className="main-wrapper">
-        <Navbar />
-        <section className="pb-4 shadow-sm mt-28 bg-white">
+        {/* <Navbar /> */}
+        <section className="pb-4 shadow-sm mt-28  bg-white">
           <div className=" shadow-sm">
-            <div className="row px-12">
+            <div className="row px-2">
               <div className="col-12 ">
                 <nav
                   ref={navRef}
@@ -80,9 +81,10 @@ export default function TwoDetails() {
               </div>
             </div>
           </div>
-          <div className="row mt-4 mx-6 lg:mx-10">
-            <div className="col-lg-6 col-sm-12 p-2 border-2">
-              <div className="card-body px-4 container">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 h-[500px] ">
+            <div className="border-[1px]">
+              <div className="card-body px-4 m-4 container">
                 <div id="carouselExample" className="carousel slide">
                   <div className="carousel-inner">
                     <div className="carousel-item active">
@@ -154,160 +156,165 @@ export default function TwoDetails() {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-6 col-sm-12 px-4 border-2 h-[500px]">
-              <div className="row px-4 mx-2">
-                <div className="col-lg-12 col-sm-12 mb-2 py-1 relative">
-                  <div className="row">
-                    <div className="col-lg-6 border-[1px] p-2 px-4">
-                      <strong>Vehicle Type</strong> <br />
-                      <strong>Honda</strong>
-                    </div>
-                    <div className="col-lg-6 border-[1px] p-2 px-4">
-                      <strong>City</strong> <br />
-                      <strong>Vadodra</strong>
+            <div className="border-2 border-red-600 ">
+              <div className="px-0 border-2">
+                <div className=" px-4 mx-2">
+                  <div className=" mb-2 py-1 relative">
+                    <div className="grid grid-cols-2">
+                      <div className="border-[1px] p-2 px-4">
+                        <strong>Vehicle Type</strong> <br />
+                        <strong>Honda</strong>
+                      </div>
+                      <div className="border-[1px] p-2 px-4">
+                        <strong>City</strong> <br />
+                        <strong>Vadodra</strong>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              {/* First div */}
-              <div
-                className={`row ${showOnRoad ? "hidden" : "block"} px-3 mx-2`}
-                id="price_details"
-              >
-                <div className="col-12">
-                  <div className="mt-2">
-                    <h5>
-                      ₹ <span>120000</span>
-                      <span>
-                        <a
-                          href="#"
-                          className="text-primary text-xs"
-                          onClick={onRoadPrice}
-                        >
-                          Click on-road price
-                        </a>
-                      </span>
-                    </h5>
-                    <p>
-                      <a href={""}>Color</a>
-                    </p>
-                  </div>
-                  <div className="row my-2">
-                    <div className="col-lg-8 col-sm-12" id="emi_1">
-                      <p className="text-base">
-                        EMI Rs. <span id="monthlyShowEMI_2"></span>/month <br />
+                {/* First div */}
+                <div
+                  className={`row ${showOnRoad ? "hidden" : "block"} px-3 mx-2`}
+                  id="price_details"
+                >
+                  <div className="col-12">
+                    <div className="mt-2">
+                      <h5>
+                        ₹ <span>120000</span>
                         <span>
                           <a
                             href="#"
-                            className="text-primary"
-                            id="emiCalculator2"
+                            className="text-primary text-xs"
+                            onClick={onRoadPrice}
                           >
-                            EMI Calculator
+                            Click on-road price
                           </a>
                         </span>
+                      </h5>
+                      <p>
+                        <a href={""}>Color</a>
                       </p>
                     </div>
-                    <div className="col-lg-4 col-sm-12">
-                      <button className="bg-danger rounded-1 text-white py-1 px-3 text-xs border-none">
-                        Get EMI Offers
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Second div */}
-              <div
-                className={`row ${
-                  showOnRoad ? "block" : "hidden"
-                } absolute w-full`}
-                id="onRoadPriceDetails"
-              >
-                <div className="col-12 border-end">
-                  <div className="mt-2 px-3 py-0">
-                    <div className="row">
-                      <div className="col-4">
-                        <h5>On road price</h5>
-                      </div>
-                      <div className="col-1">
-                        <h3
-                          onClick={cancelOnRoadPrice}
-                          className="bg-danger rounded-1 text-white py-1 text-center text-sm border-none cursor-pointer"
-                        >
-                          Cancel
-                        </h3>
-                      </div>
-                    </div>
-
-                    <div className="row pb-2">
-                      <div className="col-7 ">
-                        <span>Ex-price</span>
-                        <br />
-                        <span>RTO</span>
-                        <br />
-                        <span>RTO Expense</span>
-                        <br />
-                        <span>Smart Card</span>
-                        <br />
-                        <span>Insurance (Comprehensive)</span>
-                        <br />
-                        <span>Handling Charges</span>
-                      </div>
-                      <div className="col-5">
-                        <p>
-                          <span>₹ </span>
-                          <span id="shr_value">10</span>
-                          <br />
-                          <span>₹ </span>
-                          <span id="rto_value">10</span>
-                          <br />
-                          <span>₹ </span>
-                          <span id="rtoExp_value">10</span>
-                          <br />
-                          <span>₹ </span>
-                          <span id="smart_value">10</span>
-                          <br />
-                          <span>₹ </span>
-                          <span id="ins_value">10</span>
-                          <br />
-                          <span>₹ </span>
-                          <span id="hand_value">10</span>
-                          <br />
-                        </p>
-                      </div>
-                    </div>
-                    <div className="row border-t-2 w-[550px] my-2">
-                      <div className="col-7">
-                        <p>Total Price</p>
-                      </div>
-                      <div className="col-5">
-                        <p>
-                          <span>₹ </span>
-                          <span id="total"></span>
-                        </p>
-                      </div>
-                    </div>
-                    <div className="row my-2 mt-2" id="emi_1">
-                      <div className="col-4">
-                        <p style={{ font: "12px" }}>
-                          EMI Rs. <span id="monthlyShowEMI_1"></span>/month{" "}
+                    <div className="row my-2">
+                      <div className="col-lg-8 col-sm-12" id="emi_1">
+                        <p className="text-base">
+                          EMI Rs. <span id="monthlyShowEMI_2"></span>/month{" "}
                           <br />
                           <span>
                             <a
                               href="#"
                               className="text-primary"
-                              id="emiCalculator"
+                              id="emiCalculator2"
                             >
-                              {" "}
                               EMI Calculator
                             </a>
                           </span>
                         </p>
                       </div>
-                      <div className="col-2">
+                      <div className="col-lg-4 col-sm-12">
                         <button className="bg-danger rounded-1 text-white py-1 px-3 text-xs border-none">
                           Get EMI Offers
                         </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Second div */}
+                <div
+                  className={` ${
+                    showOnRoad ? "block" : "hidden"
+                  } absolute w-full`}
+                  id="onRoadPriceDetails"
+                >
+                  <div className=" border-end">
+                    <div className="mt-2 px-3 py-0">
+                      <div className="grid grid-rows-4">
+                        <div className="">
+                          <h5>On road price</h5>
+                        </div>
+                        <div className="">
+                          <h3
+                            onClick={cancelOnRoadPrice}
+                            className="bg-danger rounded-1 text-white py-1 text-center text-sm border-none cursor-pointer"
+                          >
+                            Cancel
+                          </h3>
+                        </div>
+                      </div>
+
+                      <div className="row pb-2">
+                        <div className="col-7 ">
+                          <span>Ex-price</span>
+                          <br />
+                          <span>RTO</span>
+                          <br />
+                          <span>RTO Expense</span>
+                          <br />
+                          <span>Smart Card</span>
+                          <br />
+                          <span>Insurance (Comprehensive)</span>
+                          <br />
+                          <span>Handling Charges</span>
+                        </div>
+                        <div className="col-5">
+                          <p>
+                            <span>₹ </span>
+                            <span id="shr_value" className="bg-slate-600">
+                              10
+                            </span>
+                            <br />
+                            <span>₹ </span>
+                            <span id="rto_value">10</span>
+                            <br />
+                            <span>₹ </span>
+                            <span id="rtoExp_value">10</span>
+                            <br />
+                            <span>₹ </span>
+                            <span id="smart_value">10</span>
+                            <br />
+                            <span>₹ </span>
+                            <span id="ins_value">10</span>
+                            <br />
+                            <span>₹ </span>
+                            <span id="hand_value">10</span>
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                      <div className="row border-t-2 w-[550px] my-2">
+                        <div className="col-7">
+                          <p>Total Price</p>
+                        </div>
+                        <div className="col-5">
+                          <p>
+                            <span>₹ </span>
+                            <span id="total"></span>
+                          </p>
+                        </div>
+                      </div>
+                      <div className="row my-2 mt-2" id="emi_1">
+                        <div className="col-4">
+                          <p style={{ font: "12px" }}>
+                            EMI Rs. <span id="monthlyShowEMI_1"></span>/month{" "}
+                            <br />
+                            <span>
+                              <a
+                                href="#"
+                                className="text-primary"
+                                id="emiCalculator"
+                              >
+                                {" "}
+                                EMI Calculator
+                              </a>
+                            </span>
+                          </p>
+                        </div>
+                        <div className="col-2">
+                          <button className="bg-danger rounded-1 text-white py-1 px-3 text-xs border-none">
+                            Get EMI Offers
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
