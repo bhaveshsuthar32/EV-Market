@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <>
       <footer className="footer">
-        <div className="container">
+        {/* <div className="container">
           <div className="stay-tuned">
             <h3>Stay Tuned With Us</h3>
             <p>
@@ -27,7 +27,7 @@ export function Footer() {
               </button>
             </form>
           </div>
-        </div>
+        </div> */}
 
         {/* Footer Top */}
         <div className="footer-top aos" data-aos="fade-up">

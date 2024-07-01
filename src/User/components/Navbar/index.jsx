@@ -1,17 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { logo } from '@image';
+import { cowork01 } from "@image";
 
 export function Navbar() {
   return (
     <>
       {/* <h1>navbar</h1> */}
-      <header className="header">
+      <header className="header shadow-sm">
         <div className="container">
-          <nav
-            className="navbar navbar-expand-lg header-nav"
-            style={{width : "100%"}}
-          >
+          <nav className="navbar header-nav" style={{ width: "100%" }}>
             <div className="navbar-header">
               <a id="mobile_btn" href="#;">
                 <span className="bar-icon">
@@ -21,13 +18,17 @@ export function Navbar() {
                 </span>
               </a>
               <Link to="/" className="navbar-brand logo ">
-                <img src={logo} className="img-fluid mt-[15px] ml-[32px]" alt="Logo" />
+                <img
+                  src={cowork01}
+                  className="img-fluid mt-[15px] ml-[32px] h-[52px]"
+                  alt="Logo"
+                />
               </Link>
             </div>
             <div className="main-menu-wrapper">
               <div className="menu-header">
                 <Link to="/" className="menu-logo">
-                  <img src={logo} className="img-fluid" alt="Logo" />
+                  <img src={cowork01} className="img-fluid h-[52px]" alt="Logo" />
                 </Link>
                 <Link id="menu_close" className="menu-close" to="#">
                   <i className="fas fa-times"></i>
