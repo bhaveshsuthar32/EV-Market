@@ -6,18 +6,12 @@ export default function Profile() {
   return (
     <>
       <div className="">
-        <Sidebar />
         <Header />
-        <div
-          className={`px-4 sm:ml-64 ${
-            DarkMode ? "bg-black text-white" : "bg-white text-black"
-          } `}
-        >
+        <Sidebar />
+        <div className="px-4 sm:ml-64">
           {/* Hide on mobile, show on medium screens and up */}
           <div className="mt-[100px]">
-            <h1 className="text-center mb-4 font-bold text-[22px]">
-              Profile Page
-            </h1>
+                <h1 className='text-center mb-4 font-bold text-[22px]'>Profile Page</h1>
             <form class="max-w-md mx-auto">
               <div class="relative z-0 w-full mb-4 group">
                 <input
@@ -125,7 +119,7 @@ export default function Profile() {
                     name="floating_company"
                     id="floating_company"
                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-b-[1px] border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=""
+                    placeholder=" "
                     required
                   />
                   <label

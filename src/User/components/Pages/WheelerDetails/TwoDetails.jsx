@@ -323,19 +323,19 @@ export default function TwoDetails() {
         <section className=" py-2 mt-[12px] mb-12 container sm:p-4">
           <div className="grid md:grid-cols-9 gap-3 ">
             <div className="md:col-span-7 ">
-              <div className="bg-white">
+              <div className="bg-white shadow-sm">
                 <h1 className="px-10 pt-3 font-bold text-[20px]">Price</h1>
-                <div className="shadow-sm px-4 pt-4 pb-4">
-                  <div className="grid grid-cols-3 border-b-[1px] py-2 font-bold">
-                    <div className="text-center">Variant</div>
-                    <div className="text-center">Price</div>
-                    <div className="text-center">Specifications</div>
+                <div className="px-9 pt-4 pb-4">
+                  <div className="grid grid-cols-3 px-4 border-b-[1px] border-t-[1px] py-2 font-bold">
+                    <div className="">Variant</div>
+                    <div className="">Price</div>
+                    <div className="">Specifications</div>
                   </div>
 
-                  <div className="grid grid-cols-3 border-b-[1px] py-2">
-                    <div className="text-center">abc</div>
-                    <div className="text-center">120000</div>
-                    <div className="text-center">abc</div>
+                  <div className="grid grid-cols-3 px-4 border-b-[1px] py-2">
+                    <div className="">abc</div>
+                    <div className="">120000</div>
+                    <div className="">abc</div>
                   </div>
                 </div>
               </div>
@@ -345,17 +345,40 @@ export default function TwoDetails() {
                 <h1 className="px-10 pt-3 font-bold text-[20px] ">Feature</h1>
                 <div className="shadow-sm px-4 pt-3 pb-4 ">
                   <div className="grid grid-cols-6 py-2 container">
-                    <div className="text-center col-span-2 border-t-[1px]">
-                      <ul>
+                    <div className="col-span-2 border-t-[1px]">
+                      <ul className="">
                         <li className="border-b-[1px] pt-3 pb-1">
                           Riding Range
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Speed                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Battery
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Motor Power
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Tyer
                         </li>
                       </ul>
                     </div>
                     <div className=" col-span-4 border-t-[1px] ">
                       <ul>
                         <li className="border-b-[1px] pt-3 pb-1">
-                          Riding Range
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
                         </li>
                       </ul>
                     </div>
@@ -363,7 +386,7 @@ export default function TwoDetails() {
                 </div>
               </div>
             </div>
-            <div className="md:col-span-2 shadow-sm bg-white">dsfsdfsd</div>
+            <div className="md:col-span-2 shadow-sm bg-white p-2">dsfsdfsd</div>
           </div>
         </section>
       </div>
