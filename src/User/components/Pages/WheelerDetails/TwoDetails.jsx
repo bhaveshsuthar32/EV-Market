@@ -4,6 +4,7 @@ import { cowork01, cowork02, cowork03 } from "@image";
 import { Navbar } from "@components/Navbar";
 import { Link } from "react-router-dom";
 
+
 export default function TwoDetails() {
   const [lastX, setLastX] = useState(0);
   const navRef = useRef(null);
@@ -344,6 +345,52 @@ export default function TwoDetails() {
               <div className="bg-white mt-4">
                 <h1 className="px-10 pt-3 font-bold text-[20px] ">Feature</h1>
                 <div className="shadow-sm px-4 pt-3 pb-4 ">
+                  <div className="grid grid-cols-6 py-2 container">
+                    <div className="col-span-2 border-t-[1px]">
+                      <ul className="">
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Riding Range
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Speed                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Battery
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Motor Power
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Tyer
+                        </li>
+                      </ul>
+                    </div>
+                    <div className=" col-span-4 border-t-[1px] ">
+                      <ul>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* color  */}
+              <div className="bg-white mt-4 shadow-sm">
+                <h1 className="px-10 pt-3 font-bold text-[20px] ">Color</h1>
+                <div className=" px-4 pt-3 pb-4 ">
                   <div className="grid grid-cols-6 py-2 container">
                     <div className="col-span-2 border-t-[1px]">
                       <ul className="">
