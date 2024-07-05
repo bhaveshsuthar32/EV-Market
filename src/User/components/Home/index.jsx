@@ -78,11 +78,25 @@ export function Home() {
         <section className="category-section">
           <div className="container">
             <div className="row px-3">
-              <div className="col-lg-2 col-md-4 col-sm-6 col-6">
-                <a href="categories.html" className="category-links shadow-sm">
+              {/* <div className="col-lg-2 col-md-4 col-sm-6 col-6">
+                <a href="categories.html" className="category-links shadow-sm text-center">
                   <img src={cowork01} alt="icons" height="80px" width="80px" />
                   <h6 className="mt-3">New EV</h6>
                 </a>
+              </div> */}
+
+              <div className="grid grid-cols-6 gap-2">
+                <div className="col-span-1 shadow-sm">
+                    <a href="">
+                      <img
+                        src={cowork01}
+                        alt="icons"
+                        height="80px"
+                        width="80px"
+                      />
+                    </a>
+                    <h4>Thala for reason</h4>
+                </div>
               </div>
 
               <div className="col-lg-2 col-md-4 col-sm-6 col-6">

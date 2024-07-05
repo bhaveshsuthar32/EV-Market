@@ -11,6 +11,7 @@ export const Dealer_Form = () => {
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 border-[1px] rounded-lg shadow-sm ">
           <div className="grid grid-cols-9">
             <div>Dealer FORM</div>
+            <h5>add dealer </h5>
           </div>  
         </div>
       </div>
