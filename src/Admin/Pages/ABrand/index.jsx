@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '@Admin/Layouts/Header'
 import Sidebar from '@Admin/Layouts/Sidebar'
 import { Table } from "flowbite-react";
+import { Link } from 'react-router-dom';
 
 export default function ABrand() {
   return (
@@ -15,9 +16,9 @@ export default function ABrand() {
               Brands
             </h1>
             <div className="col-span-2 md:col-span-1 lg:ml-[20px]">
-              <button className="btn btn-primary text-[9px] lg:text-[15px] font-bold px-[6px] py-[4px] rounded-[5px] ">
+              <Link to={"/dashboard/brand_form"} className="btn btn-primary text-[9px] lg:text-[15px] font-bold px-[6px] py-[4px] rounded-[5px] ">
                 Add Brand
-              </button>
+              </Link>
             </div>
           </div>
           <hr />
@@ -29,11 +30,9 @@ export default function ABrand() {
                 <Table.HeadCell>Action</Table.HeadCell>
               </Table.Head>
               <Table.Body className="divide-y">
-                {/* <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800"> */}
                 <Table.Cell>Sliver</Table.Cell>
                 <Table.Cell>Laptop</Table.Cell>
                 <Table.Cell>$2999</Table.Cell>
-                {/* </Table.Row> */}
               </Table.Body>
             </Table>
           </div>
@@ -42,5 +41,3 @@ export default function ABrand() {
     </div>
   );
 }
-
-

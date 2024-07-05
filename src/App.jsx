@@ -32,13 +32,21 @@ import AFourWheeler from "@Admin/Pages/AFourWheeler";
 import ANews from "@Admin/Pages/ANews";
 import AThreeWheeler from "@Admin/Pages/AThreeWheeler";
 import ATwoWheeler from "@Admin/Pages/ATwoWheeler";
+import { Brand_Form } from "@Admin/Pages/ABrand/Brand_Form";
+import { Dealer_Form } from "@Admin/Pages/ADealer/Dealer_Form";
+import { EVSpares_Form } from "@Admin/Pages/AEVSpares/EVSpares_Form";
+import { EVStartups_Form } from "@Admin/Pages/AEVStartups/EVStartups_Form";
+import { FourWheeler_Form } from "@Admin/Pages/AFourWheeler/FourWheeler_Form";
+import { News_Form } from "@Admin/Pages/ANews/News_Form";
+import { ThreeWheeler_Form } from "@Admin/Pages/AThreeWheeler/ThreeWheeler_Form";
+import { TwoWheeler_Form } from "@Admin/Pages/ATwoWheeler/TwoWheeler_Form";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          {/* {/ Admin  /} */}
+          {/* Admin  */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/dashboard/brand" element={<ABrand />} />
@@ -49,14 +57,37 @@ function App() {
           <Route path="/dashboard/news" element={<ANews />} />
           <Route path="/dashboard/threewheeler" element={<AThreeWheeler />} />
           <Route path="/dashboard/twowheeler" element={<ATwoWheeler />} />
+
+          {/* form----------- */}
+          <Route path="/dashboard/brand_form" element={<Brand_Form />} />
+          <Route path="/dashboard/dealer_form" element={<Dealer_Form />} />
+          <Route path="/dashboard/evspares_form" element={<EVSpares_Form />} />
+          <Route
+            path="/dashboard/evstartups_form"
+            element={<EVStartups_Form />}
+          />
+          <Route
+            path="/dashboard/fourwheeler_form"
+            element={<FourWheeler_Form />}
+          />
+          <Route path="/dashboard/news_form" element={<News_Form />} />
+          <Route
+            path="/dashboard/threewheeler_form"
+            element={<ThreeWheeler_Form />}
+          />
+          <Route
+            path="/dashboard/twowheeler_form"
+            element={<TwoWheeler_Form />}
+          />
+
           <Route path="/" element={<Home />} />
           <Route path="/error" element={<Error404 />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/twodetails" element={<TwoDetails />} />
           <Route path="/threedetails" element={<ThreeDetails />} />
-          <Route path="/fourdetails" element={<FourDetails />} />\
-          <Route path="/twoWheeler" element={<TwoWheeler />} />
+          <Route path="/fourdetails" element={<FourDetails />} />
+          <Route path="/twowheeler" element={<TwoWheeler />} />
         </Routes>
       </BrowserRouter>
     </>
