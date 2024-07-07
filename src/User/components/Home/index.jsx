@@ -403,7 +403,7 @@ export function Home() {
         {/* Category */}
         <Footer />
 
-        <h1 className="text-[100px]">hello world</h1>
+        <h1 className="text-[100px]">new section</h1>
       </div>
     </>
   );
