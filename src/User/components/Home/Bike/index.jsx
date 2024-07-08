@@ -99,7 +99,7 @@ export function Bike  ()  {
               <div className="bloglist-content">
                 <div className="card-body">
                   <h6>
-                    <a href="#">abc3</a>
+                    <a href="#">batman</a>
                   </h6>
                   <div className="amount-details">
                     <div className="amount">
