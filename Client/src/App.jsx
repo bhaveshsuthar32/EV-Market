@@ -44,8 +44,7 @@ import TwoColor from "@components/Pages/Details/TwoColor";
 import ThreeColor from "@components/Pages/Details/ThreeColor";
 import FourColor from "@components/Pages/Details/FourColor";
 
- function App() {
-  return (
+ function App() {        
     <>
       <BrowserRouter>
         <Routes>
