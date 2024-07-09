@@ -136,7 +136,7 @@ export default function TwoDetails() {
               <div className="inline-block p-2">
                 <Link to={"#"}>
                   <span className="ml-4">
-                    <Link to={"#"} className="">
+                    <Link to={"/twocolor"} className="">
                       Colors
                     </Link>
                   </span>

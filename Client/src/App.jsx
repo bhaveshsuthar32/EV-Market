@@ -40,8 +40,11 @@ import { FourWheeler_Form } from "@Admin/Pages/AFourWheeler/FourWheeler_Form";
 import { News_Form } from "@Admin/Pages/ANews/News_Form";
 import { ThreeWheeler_Form } from "@Admin/Pages/AThreeWheeler/ThreeWheeler_Form";
 import { TwoWheeler_Form } from "@Admin/Pages/ATwoWheeler/TwoWheeler_Form";
+import TwoColor from "@components/Pages/Details/TwoColor";
+import ThreeColor from "@components/Pages/Details/ThreeColor";
+import FourColor from "@components/Pages/Details/FourColor";
 
-function App() {
+ function App() {
   return (
     <>
       <BrowserRouter>
@@ -88,6 +91,9 @@ function App() {
           <Route path="/threedetails" element={<ThreeDetails />} />
           <Route path="/fourdetails" element={<FourDetails />} />
           <Route path="/twowheeler" element={<TwoWheeler />} />
+          <Route path="/twocolor" element={<TwoColor />} />
+          <Route path="/threecolor" element={<ThreeColor />} />
+          <Route path="/fourcolor" element={<FourColor />} />
         </Routes>
       </BrowserRouter>
     </>
