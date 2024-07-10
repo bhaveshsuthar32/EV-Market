@@ -18,22 +18,22 @@ export function Bike  ()  {
   return (
     <Slider {...settings} className="featured-slider grid-view">
     
-          <div className="card aos w-[200px]" data-aos="fade-up">
+          <div className="border-[1px] bg-white rounded-[10px] p-0" data-aos="fade-up">
             <div className="blog-widget ">
-              <div className="blog-img w-[200px]">
+              <div className="blog-img w-[200px] mx-auto p-0">
                 <a href="#">
                   <img
                     src={cowork01}
-                    className="img-fluid"
+                    className="img-fluid border-2 w-full"
                     alt="blog-img"
-                    style={{ height: "200px" , width:"100px"}}
+                    // style={{ height: "200px" , width:"500px"}}
                   />
                 </a>
               </div>
               <div className="bloglist-content">
                 <div className="card-body">
                   <h6>
-                    <a href="#">abc1</a>
+                    <a href="#">thala</a>
                   </h6>
                   <div className="amount-details">
                     <div className="amount">

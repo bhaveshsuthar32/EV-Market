@@ -85,7 +85,7 @@ export function Home() {
                 </a>
               </div> */}
 
-              <div className="grid grid-cols-6 gap-2">
+              <div className="grid grid-cols-6 gap-1">
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                     <a href="">
                       <img
@@ -153,8 +153,6 @@ export function Home() {
                     <h4 className="text-center mt-2">abcd </h4>
                 </div>
               </div>
-
-             
             </div>
           </div>
         </section>
