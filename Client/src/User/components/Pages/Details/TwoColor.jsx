@@ -143,16 +143,25 @@ export default function TwoColor() {
             </div>
           </div>
         </div>
-        <div className="container">
-        
-          <div className="grid grid-cols-6 shadow-sm">
-            <h1>Details</h1>
-                <div className="cols-span-3">
-
-                </div>
-                <div className="cols-span-3">
-
-                </div>
+        <div className="container md:px-[120px] my-[100px]">
+          <div className="grid grid-cols-6 border-[1px] p-4">
+            <h1 className="col-span-6">Details</h1>
+            <div className="cols-span-3">
+              <ul className="px-6">
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+              </ul>
+            </div>
+            <div className="cols-span-3">
+              <ul className="px-6">
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
