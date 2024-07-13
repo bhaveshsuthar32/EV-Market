@@ -143,6 +143,18 @@ export default function TwoColor() {
             </div>
           </div>
         </div>
+        <div className="container">
+        
+          <div className="grid grid-cols-6 shadow-sm">
+            <h1>Details</h1>
+                <div className="cols-span-3">
+
+                </div>
+                <div className="cols-span-3">
+
+                </div>
+          </div>
+        </div>
       </div>
     </>
   );
