@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function ThreeColor() {
   return (
-<>
- <div className="">
+    <>
+      <div className="">
         <div className="container md:px-[120px]">
           <div className="container ">
             <h1 className="text-[30px] mb-2">OLA S1 Pro Colours</h1>
@@ -23,9 +23,30 @@ export default function ThreeColor() {
                 Image
               </Link>
             </div>
-          </div> 
+          </div>
         </div>
-</div>
-</>
-  )
+        <div className="container md:px-[120px] my-[100px]">
+          <div className="grid grid-cols-6 border-[1px] p-4">
+            <h1 className="col-span-6">Details</h1>
+            <div className="cols-span-3">
+              <ul className="px-6">
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+              </ul>
+            </div>
+            <div className="cols-span-3">
+              <ul className="px-6">
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+                <li>abc</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
