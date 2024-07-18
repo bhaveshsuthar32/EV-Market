@@ -37,12 +37,12 @@ export default function FourColor() {
               </ul>
             </div>
             <div className="cols-span-3">
-              <ul className="px-6">
+              {/* <ul className="px-6">
                 <li>abc</li>
                 <li>abc</li>
                 <li>abc</li>
                 <li>abc</li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
