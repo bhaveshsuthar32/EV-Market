@@ -135,7 +135,7 @@ export default function ThreeDetails() {
               <div className="inline-block p-2">
                 <Link to={"#"}>
                   <span className="ml-4">
-                    <Link to={"#"} className="">
+                    <Link to={"/threecolor"} className="">
                       Colors
                     </Link>
                   </span>

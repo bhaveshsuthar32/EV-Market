@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 export default function ThreeColor() {
   return (
     <>
-      <div className="">
+     <div className="">
         <div className="container md:px-[120px]">
           <div className="container ">
             <h1 className="text-[30px] mb-2">OLA S1 Pro Colours</h1>
@@ -24,6 +25,8 @@ export default function ThreeColor() {
               </Link>
             </div>
           </div>
+
+         
         </div>
         <div className="container md:px-[120px] my-[100px]">
           <div className="grid grid-cols-6 border-[1px] p-4">

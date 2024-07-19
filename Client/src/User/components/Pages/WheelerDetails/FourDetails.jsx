@@ -135,7 +135,7 @@ export default function FourDetails() {
               <div className="inline-block p-2">
                 <Link to={"#"}>
                   <span className="ml-4">
-                    <Link to={"#"} className="">
+                    <Link to={"/fourcolor"} className="">
                       Colors
                     </Link>
                   </span>
