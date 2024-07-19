@@ -146,22 +146,43 @@ export default function TwoColor() {
         <div className="container md:px-[120px] my-[100px]">
           <div className="grid grid-cols-6 border-[1px] p-4">
             <h1 className="col-span-6">Details</h1>
-            <div className="cols-span-3">
-              <ul className="px-6">
-                <li>abc</li>
-                <li>abc</li>
-                <li>abc</li>
-                <li>abc</li>
-              </ul>
-            </div>
-            <div className="cols-span-3">
-              <ul className="px-6">
-                <li>abc</li>
-                <li>abc</li>
-                <li>abc</li>
-                <li>abc</li>
-              </ul>
-            </div>
+            <div className="col-span-2 border-t-[1px]">
+                      <ul className="">
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Riding Range
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Speed                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Battery
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Motor Power
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Tyer
+                        </li>
+                      </ul>
+                    </div>
+                    <div className=" col-span-4 border-t-[1px] ">
+                      <ul>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                      </ul>
+                    </div>
           </div>
         </div>
       </div>
