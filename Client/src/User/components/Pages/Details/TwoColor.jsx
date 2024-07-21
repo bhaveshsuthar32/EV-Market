@@ -167,19 +167,19 @@ export default function TwoColor() {
                     <div className=" col-span-4 border-t-[1px] ">
                       <ul>
                         <li className="border-b-[1px] pt-3 pb-1">
-                          abc
+                          abc1
                         </li>
                         <li className="border-b-[1px] pt-3 pb-1">
-                          abc
+                          abc2
                         </li>
                         <li className="border-b-[1px] pt-3 pb-1">
-                          abc
+                          abc3
                         </li>
                         <li className="border-b-[1px] pt-3 pb-1">
-                          abc
+                          abc4
                         </li>
                         <li className="border-b-[1px] pt-3 pb-1">
-                          abc
+                          abc5
                         </li>
                       </ul>
                     </div>
