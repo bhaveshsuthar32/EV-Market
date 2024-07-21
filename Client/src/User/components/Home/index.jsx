@@ -444,7 +444,7 @@ export function Home() {
         {/* Category */}
         <Footer />
 
-        <h1 className="text-[100px]">add new section</h1>
+        <h1 className="text-[100px]">add new Feature</h1>
       </div>
     </>
   );
