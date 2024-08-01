@@ -10,7 +10,7 @@ export function Home() {
 
   return (
     <>
-      <div className="main-wrapper mt-[70px]">
+      <div className="main-wrapper mt-[50px]">
         <Navbar />
         <section className="banner-section">
           <div
@@ -21,28 +21,28 @@ export function Home() {
               <div className="carousel-item active">
                 <img
                   src={cowork01}
-                  className="d-block w-100 h-[300px] sm:h-[500px]"
+                  className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
                   src={cowork02}
-                  className="d-block w-100 h-[300px] sm:h-[500px]"
+                  className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
                   src={cowork01}
-                  className="d-block w-100 h-[300px] sm:h-[500px]"
+                  className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
                   src={cowork03}
-                  className="d-block w-100 h-[300px] sm:h-[500px]"
+                  className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
@@ -78,25 +78,80 @@ export function Home() {
         <section className="category-section">
           <div className="container">
             <div className="row px-3">
-              <div className="col-lg-2 col-md-4 col-sm-6 col-6">
-                <a href="categories.html" className="category-links shadow-sm">
+              {/* <div className="col-lg-2 col-md-4 col-sm-6 col-6">
+                <a href="categories.html" className="category-links shadow-sm text-center">
                   <img src={cowork01} alt="icons" height="80px" width="80px" />
                   <h6 className="mt-3">New EV</h6>
                 </a>
-              </div>
+              </div> */}
 
-              <div className="col-lg-2 col-md-4 col-sm-6 col-6">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img src={cowork01} alt="icons" height="80px" width="80px" />
-                  <h6 className="mt-3">New EV</h6>
-                </a>
-              </div>
-
-              <div className="col-lg-2 col-md-4 col-sm-6 col-6">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img src={cowork01} alt="icons" height="80px" width="80px" />
-                  <h6 className="mt-3">New EV</h6>
-                </a>
+              <div className="grid grid-cols-6 gap-1">
+                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
+                    <a href="">
+                      <img
+                        src={cowork01}
+                        alt="icons"
+                        height="100px"
+                        width="100px"
+                      />
+                    </a>
+                    <h4 className="text-center mt-2">abcd </h4>
+                </div>
+                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
+                    <a href="">
+                      <img
+                        src={cowork01}
+                        alt="icons"
+                        height="100px"
+                        width="100px"
+                      />
+                    </a>
+                    <h4 className="text-center mt-2">abcd </h4>
+                </div>
+                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
+                    <a href="">
+                      <img
+                        src={cowork01}
+                        alt="icons"
+                        height="100px"
+                        width="100px"
+                      />
+                    </a>
+                    <h4 className="text-center mt-2">abcd </h4>
+                </div>
+                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
+                    <a href="">
+                      <img
+                        src={cowork01}
+                        alt="icons"
+                        height="100px"
+                        width="100px"
+                      />
+                    </a>
+                    <h4 className="text-center mt-2">abcd </h4>
+                </div>
+                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
+                    <a href="">
+                      <img
+                        src={cowork01}
+                        alt="icons"
+                        height="100px"
+                        width="100px"
+                      />
+                    </a>
+                    <h4 className="text-center mt-2">abcd </h4>
+                </div>
+                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
+                    <a href="">
+                      <img
+                        src={cowork01}
+                        alt="icons"
+                        height="100px"
+                        width="100px"
+                      />
+                    </a>
+                    <h4 className="text-center mt-2">abcd </h4>
+                </div>
               </div>
             </div>
           </div>
@@ -389,7 +444,7 @@ export function Home() {
         {/* Category */}
         <Footer />
 
-        <h1 className="text-[100px]">hello world</h1>
+        {/* <h1 className="text-[100px]">add new section</h1> */}
       </div>
     </>
   );

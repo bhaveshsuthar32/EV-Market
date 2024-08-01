@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { cowork01, cowork02, cowork03 } from "@image";
-// import { Navbar } from "@components/Navbar";
-import { Footer } from "@components/Footer";
+// import { Footer } from "@components/Footer";
+import { Navbar } from "@components/Navbar";
 import { Link } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 export default function TwoDetails() {
   const [lastX, setLastX] = useState(0);
   const navRef = useRef(null);
@@ -30,7 +31,6 @@ export default function TwoDetails() {
     };
   }, [lastX]);
 
-  //   seconde vehicle details like name it
   const [showOnRoad, setShowOnRoad] = useState(false);
 
   const onRoadPrice = () => {
@@ -43,11 +43,11 @@ export default function TwoDetails() {
 
   return (
     <>
-      <div className="main-wrapper">
-        {/* <Navbar /> */}
-        <section className="pb-4 shadow-sm mt-28  bg-white">
-          <div className=" shadow-sm">
-            <div className="row px-2">
+      <div className="" style={{ backgroundColor: "#fafafa" }}>
+        <Navbar />
+        <section className=" shadow-sm mt-[85px] bg-white container">
+          <div className="border-b-[1px]">
+            <div className="row ">
               <div className="col-12 ">
                 <nav
                   ref={navRef}
@@ -69,8 +69,6 @@ export default function TwoDetails() {
                   <a className="px-3 inline-block" href="#summary">
                     SUMMARY
                   </a>
-                  {/* <a className="px-3 inline-block" href="#dealers">DEALERS</a> */}
-                  {/* <a className="px-3 inline-block" href="#reviews">REVIEWS</a> */}
                   <a className="px-3 inline-block" href="#color">
                     COLOURS
                   </a>
@@ -82,8 +80,8 @@ export default function TwoDetails() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 h-[500px] ">
-            <div className="border-[1px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2">
+            <div className="">
               <div className="card-body px-4 m-4 container">
                 <div id="carouselExample" className="carousel slide">
                   <div className="carousel-inner">
@@ -138,28 +136,27 @@ export default function TwoDetails() {
               <div className="inline-block p-2">
                 <Link to={"#"}>
                   <span className="ml-4">
-                    <Link to={"#"} className="">
-                      {/* <FontAwesomeIcon icon="fa-solid fa-palette " /> */}
+                    <Link to={"/twocolor"} className="">
                       Colors
                     </Link>
                   </span>
                   <span className="mx-4">
                     <Link to={"#"} className="">
-                      <i className="fa-regular fa-image"></i> Images
+                      Images
                     </Link>
                   </span>
                   <span className="mx-4">
                     <Link to={"#"} className="">
-                      <i className="fa-regular fa-file-video"></i> Videos
+                      Videos
                     </Link>
                   </span>
                 </Link>
               </div>
             </div>
-            <div className="border-2 border-red-600 ">
-              <div className="px-0 border-2">
-                <div className=" px-4 mx-2">
-                  <div className=" mb-2 py-1 relative">
+            <div className="sm:relative">
+              <div className="px-1 py-4">
+                <div className="px-4 mx-2">
+                  <div className="mb-2 py-1">
                     <div className="grid grid-cols-2">
                       <div className="border-[1px] p-2 px-4">
                         <strong>Vehicle Type</strong> <br />
@@ -172,9 +169,10 @@ export default function TwoDetails() {
                     </div>
                   </div>
                 </div>
+
                 {/* First div */}
                 <div
-                  className={`row ${showOnRoad ? "hidden" : "block"} px-3 mx-2`}
+                  className={`px-3 mx-2 ${showOnRoad ? "hidden" : "block"}`}
                   id="price_details"
                 >
                   <div className="col-12">
@@ -222,18 +220,16 @@ export default function TwoDetails() {
 
                 {/* Second div */}
                 <div
-                  className={` ${
-                    showOnRoad ? "block" : "hidden"
-                  } absolute w-full`}
+                  className={`absolute w-full relative ${showOnRoad ? "block" : "hidden"}`}
                   id="onRoadPriceDetails"
                 >
-                  <div className=" border-end">
+                  <div className="border-end">
                     <div className="mt-2 px-3 py-0">
-                      <div className="grid grid-rows-4">
-                        <div className="">
+                      <div className="grid grid-cols-4">
+                        <div className="col-span-3">
                           <h5>On road price</h5>
                         </div>
-                        <div className="">
+                        <div className="col-span-1">
                           <h3
                             onClick={cancelOnRoadPrice}
                             className="bg-danger rounded-1 text-white py-1 text-center text-sm border-none cursor-pointer"
@@ -243,8 +239,8 @@ export default function TwoDetails() {
                         </div>
                       </div>
 
-                      <div className="row pb-2">
-                        <div className="col-7 ">
+                      <div className="grid grid-cols-3 pb-2">
+                        <div className="col-span-2">
                           <span>Ex-price</span>
                           <br />
                           <span>RTO</span>
@@ -257,10 +253,10 @@ export default function TwoDetails() {
                           <br />
                           <span>Handling Charges</span>
                         </div>
-                        <div className="col-5">
+                        <div className="col-span-1">
                           <p>
                             <span>₹ </span>
-                            <span id="shr_value" className="bg-slate-600">
+                            <span id="shr_value" className="">
                               10
                             </span>
                             <br />
@@ -282,20 +278,22 @@ export default function TwoDetails() {
                           </p>
                         </div>
                       </div>
-                      <div className="row border-t-2 w-[550px] my-2">
-                        <div className="col-7">
+
+                      <div className="grid grid-cols-2 border-t-2 w-full my-2">
+                        <div className="col-span-1">
                           <p>Total Price</p>
                         </div>
-                        <div className="col-5">
+                        <div className="col-span-1">
                           <p>
                             <span>₹ </span>
                             <span id="total"></span>
                           </p>
                         </div>
                       </div>
-                      <div className="row my-2 mt-2" id="emi_1">
-                        <div className="col-4">
-                          <p style={{ font: "12px" }}>
+
+                      <div className="grid grid-cols-2 my-2 mt-2" id="emi_1">
+                        <div className="col-span-1">
+                          <p style={{ fontSize: "12px" }}>
                             EMI Rs. <span id="monthlyShowEMI_1"></span>/month{" "}
                             <br />
                             <span>
@@ -304,13 +302,12 @@ export default function TwoDetails() {
                                 className="text-primary"
                                 id="emiCalculator"
                               >
-                                {" "}
                                 EMI Calculator
                               </a>
                             </span>
                           </p>
                         </div>
-                        <div className="col-2">
+                        <div className="col-span-1">
                           <button className="bg-danger rounded-1 text-white py-1 px-3 text-xs border-none">
                             Get EMI Offers
                           </button>
@@ -323,9 +320,124 @@ export default function TwoDetails() {
             </div>
           </div>
         </section>
-      </div>
 
-      <Footer />
+        <section className=" py-2 mt-[12px] mb-12 container sm:p-4">
+          <div className="grid md:grid-cols-9 gap-3 ">
+            <div className="md:col-span-7 ">
+              <div className="bg-white shadow-sm">
+                <h1 className="px-10 pt-3 font-bold text-[20px]">Price</h1>
+                <div className="px-9 pt-4 pb-4">
+                  <div className="grid grid-cols-3 px-4 border-b-[1px] border-t-[1px] py-2 font-bold">
+                    <div className="">Variant</div>
+                    <div className="">Price</div>
+                    <div className="">Specifications</div>
+                  </div>
+
+                  <div className="grid grid-cols-3 px-4 border-b-[1px] py-2">
+                    <div className="">abc</div>
+                    <div className="">120000</div>
+                    <div className="">abc</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature */}
+              <div className="bg-white mt-4">
+                <h1 className="px-10 pt-3 font-bold text-[20px] ">Feature</h1>
+                <div className="shadow-sm px-4 pt-3 pb-4 ">
+                  <div className="grid grid-cols-6 py-2 container">
+                    <div className="col-span-2 border-t-[1px]">
+                      <ul className="">
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Riding Range
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Speed                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Battery
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Motor Power
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          Tyer
+                        </li>
+                      </ul>
+                    </div>
+                    <div className=" col-span-4 border-t-[1px] ">
+                      <ul>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                        <li className="border-b-[1px] pt-3 pb-1">
+                          abc
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* color  */}
+              <div className="bg-white mt-4 shadow-sm">
+                <h1 className="px-10 pt-3 font-bold text-[20px] ">Color</h1>
+                <div className=" px-4 pt-3 pb-4 ">
+                  <div className="grid grid-cols-6 py-2 container">
+                      <div className="col-span-2 border-t-[1px]">
+                        <ul className="">
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            Riding Range
+                          </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            Speed                        </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            Battery
+                          </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            Motor Power
+                          </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            Tyer
+                          </li>
+                        </ul>
+                      </div>
+                      <div className=" col-span-4 border-t-[1px] ">
+                        <ul>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            abc
+                          </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            abc
+                          </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            abc
+                          </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            abc
+                          </li>
+                          <li className="border-b-[1px] pt-3 pb-1">
+                            abc
+                          </li>
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="md:col-span-2 shadow-sm bg-white p-2">dsfsdfsd</div>
+          </div>
+        </section>
+      </div>
+      {/* <Footer /> */}
     </>
   );
 }
