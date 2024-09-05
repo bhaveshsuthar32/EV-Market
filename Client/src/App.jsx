@@ -43,6 +43,8 @@ import { TwoWheeler_Form } from "@Admin/Pages/ATwoWheeler/TwoWheeler_Form";
 import TwoColor from "@components/Pages/Details/TwoColor";
 import ThreeColor from "@components/Pages/Details/ThreeColor";
 import FourColor from "@components/Pages/Details/FourColor";
+import Sign from "@Admin/Pages/Sign/sign";
+import Login from "@Admin/Pages/Sign/login";
 
  function App() { 
   return ( 
@@ -51,6 +53,8 @@ import FourColor from "@components/Pages/Details/FourColor";
         <Routes>
           {/* Admin  */}
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/sign" element={<Sign />} />
+          <Route path="/dashboard/login" element={<Login />} />
           <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/dashboard/brand" element={<ABrand />} />
           <Route path="/dashboard/dealer" element={<ADealer />} />
@@ -65,6 +69,7 @@ import FourColor from "@components/Pages/Details/FourColor";
           <Route path="/dashboard/brand_form" element={<Brand_Form />} />
           <Route path="/dashboard/dealer_form" element={<Dealer_Form />} />
           <Route path="/dashboard/evspares_form" element={<EVSpares_Form />} />
+        
           <Route
             path="/dashboard/evstartups_form"
             element={<EVStartups_Form />}

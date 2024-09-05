@@ -10,7 +10,7 @@ const signAdmin = async (req, res) => {
         const token = jwt.sign({adminId: newUser._id},
             "aaabbb",
             {
-                expiresIn : '1h',
+                expiresIn : '5m',
             }
         )
 

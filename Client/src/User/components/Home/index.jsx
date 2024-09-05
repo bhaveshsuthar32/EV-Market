@@ -160,9 +160,9 @@ export function Home() {
         {/* E-Bike */}
         <section className="featured-section s_box section-blk py-4 section-blk blog-blk">
           <div className="container">
-            <div className="row container">
+            <div className="row ">
               <div className="col-sm-12 my-4">
-                <h4>Electric Bikes Zone</h4>
+                <h4 className="text-[26px] font-semibold mb-4">Electric Bikes Zone</h4>
                 <div className="row mb-2">
                   <div className="col-lg-12">
                     <div className="col-sm-12" data-aos="fade-up">
