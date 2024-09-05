@@ -9,6 +9,12 @@ import { BikeUsed } from "./Bike/used";
 import { Scooter } from "@Home/Scooter";
 import { ScooterUpcoming } from "@Home/Scooter/upcoming";
 import { ScooterUsed } from "@Home/Scooter/used";
+import { Bicycle } from "@Home/Bicycle";
+import { BicycleUpcoming } from "@Home/Bicycle/upcoming";
+import { BicycleUsed } from "@Home/Bicycle/used";
+import { Car } from "./Car";
+import { CarUpcoming } from "./Car/upcoming";
+import { CarUsed } from "./Car/used";
 
 
 export function Home() {
@@ -163,7 +169,7 @@ export function Home() {
         </section>
 
         {/* E-Bike */}
-        <section className="featured-section s_box section-blk py-0 section-blk blog-blk">
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
@@ -263,7 +269,7 @@ export function Home() {
 
 
         {/* E-Scooter */}
-        <section className="featured-section s_box section-blk py-0 section-blk blog-blk">
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
@@ -362,7 +368,7 @@ export function Home() {
         {/* End E-Scooter */}
 
         {/* Category */}
-        <section className="category-section co">
+        <section className="category-section my-0">
           <div className="container">
             <div className="section-heading">
               <div className="row align-items-center">
@@ -517,6 +523,208 @@ export function Home() {
             </div>
           </div>
         </section>
+
+        
+        {/* E-Bicycle */}
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
+          <div className="container">
+            <div className="row ">
+              <div className="col-sm-12 my-4">
+                <h4 className="text-[26px] font-semibold mb-4">Electric Bicycle Zone</h4>
+                <div className="row mb-2">
+                  <div className="col-lg-12">
+                    <div className="col-sm-12" data-aos="fade-up">
+                      <div className="recommended-tabs-blk">
+                        <ul className="nav gap-2 fw-bold" data-bs-tabs="tabs">
+                          <li>
+                            <a
+                              className="active rounded-3"
+                              aria-current="true"
+                              data-bs-toggle="tab"
+                              href="#e-bicycle"
+                            >
+                              Electric Bicycle
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="rounded-3"
+                              data-bs-toggle="tab"
+                              href="#e-bicycle_up"
+                            >
+                              Upcoming Electric Bicycle
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="rounded-3"
+                              data-bs-toggle="tab"
+                              href="#e-bicycle_us"
+                            >
+                              Used Electric Bicycle
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card-body tab-content">
+                  <div className="tab-pane active" id="e-bicycle">
+                    <Bicycle />
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <Link
+                        to={"/twoWheeler"}
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="tab-pane fade" id="e-bicycle_up">
+                    <div className="owl-carousel featured-slider grid-view">
+                      <BicycleUpcoming />
+                    </div>
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <a
+                        href="/User/two_data"
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </a>
+                    </div>
+                  </div>
+                  <div className="tab-pane fade" id="e-bicycle_us">
+                    <div className="owl-carousel featured-slider grid-view">
+                      <BicycleUsed />
+                    </div>
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <a
+                        href="/User/two_data"
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* End E-Bicycle */}
+
+
+        
+        {/* E-Car */}
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
+          <div className="container">
+            <div className="row ">
+              <div className="col-sm-12 my-4">
+                <h4 className="text-[26px] font-semibold mb-4">Electric Car Zone</h4>
+                <div className="row mb-2">
+                  <div className="col-lg-12">
+                    <div className="col-sm-12" data-aos="fade-up">
+                      <div className="recommended-tabs-blk">
+                        <ul className="nav gap-2 fw-bold" data-bs-tabs="tabs">
+                          <li>
+                            <a
+                              className="active rounded-3"
+                              aria-current="true"
+                              data-bs-toggle="tab"
+                              href="#e-car"
+                            >
+                              Electric Car
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="rounded-3"
+                              data-bs-toggle="tab"
+                              href="#e-car_up"
+                            >
+                              Upcoming Electric Car
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="rounded-3"
+                              data-bs-toggle="tab"
+                              href="#e-car_us"
+                            >
+                              Used Electric Car
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card-body tab-content">
+                  <div className="tab-pane active" id="e-car">
+                    <Car />
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <Link
+                        to={"/twoWheeler"}
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="tab-pane fade" id="e-car_up">
+                    <div className="owl-carousel featured-slider grid-view">
+                      <CarUpcoming />
+                    </div>
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <a
+                        href="/User/two_data"
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </a>
+                    </div>
+                  </div>
+                  <div className="tab-pane fade" id="e-car_us">
+                    <div className="owl-carousel featured-slider grid-view">
+                      <CarUsed />
+                    </div>
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <a
+                        href="/User/two_data"
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* End E-Car */}
+
 
         <br />
         <div className="btn">
