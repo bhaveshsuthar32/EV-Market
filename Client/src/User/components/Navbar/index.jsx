@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { cowork01 } from "@image";
+// import { cowork01 } from "@image";
 
 export function Navbar() {
   return (
@@ -19,7 +19,7 @@ export function Navbar() {
               </a>
               <Link to="/" className="navbar-brand logo ">
                 <img
-                  src={cowork01}
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCzX0J4Tq-8O0xTbsr9HbF_SOqv0BoArjIw&s"
                   className="img-fluid mt-[15px] ml-[32px] h-[52px]"
                   alt="Logo"
                 />
@@ -28,7 +28,8 @@ export function Navbar() {
             <div className="main-menu-wrapper">
               <div className="menu-header">
                 <Link to="/" className="menu-logo">
-                  <img src={cowork01} className="img-fluid h-[52px]" alt="Logo" />
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCzX0J4Tq-8O0xTbsr9HbF_SOqv0BoArjIw&s" 
+                  className="img-fluid h-[52px]" alt="Logo" />
                 </Link>
                 <Link id="menu_close" className="menu-close" to="#">
                   <i className="fas fa-times"></i>
