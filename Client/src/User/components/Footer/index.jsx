@@ -3,7 +3,7 @@ import React from "react";
 export function Footer() {
   return (
     <>
-      <footer className="footer">
+      <footer className="footer mt-0">
         {/* <div className="container">
           <div className="stay-tuned">
             <h3>Stay Tuned With Us</h3>
@@ -30,7 +30,7 @@ export function Footer() {
         </div> */}
 
         {/* Footer Top */}
-        <div className="footer-top aos" data-aos="fade-up">
+        <div className="footer-top aos " data-aos="fade-up">
           <div className="container">
             <div className="row">
               <div className="col-lg-3 col-md-6">
@@ -152,14 +152,14 @@ export function Footer() {
                     <div className="footer-address">
                       <img src="/assets/img/call-calling.svg" alt="Callus" />
                       <p>
-                        <span>Call Us</span> <br /> +91 &nbsp; 9586363303{" "}
+                        <span>Call Us</span> <br /> +91 &nbsp; 9998887776{" "}
                       </p>
                     </div>
                     <div className="footer-address">
                       <img src="/assets/img/sms-tracking.svg" alt="Callus" />
                       <p>
                         <span>Send Message</span> <br />{" "}
-                        electricvehiclesknowledge@gmail.com{" "}
+                        userdemo123@gmail.com{" "}
                       </p>
                     </div>
                   </div>

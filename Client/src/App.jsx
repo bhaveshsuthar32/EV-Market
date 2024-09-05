@@ -20,7 +20,11 @@ import { Home } from "@components/Home";
 import { Error404 } from "@components/Pages/404Error";
 import { Contact } from "@components/Pages/Contact";
 import { About } from "@components/Pages/About";
-import { TwoWheeler } from "@components/Pages/TwoWheeler";
+import { BikeData } from "@components/Pages/TwoWheeler/Bike";
+import { ScooterData } from "@components/Pages/TwoWheeler/Scooter";
+import { CarData } from "@components/Pages/FourWheeler/Car";
+import { BicycleData } from "@components/Pages/ThreeWheeler/Bicycle";
+
 import { FourDetails, ThreeDetails, TwoDetails } from "@Vehicle";
 import Dashboard from "./Admin/Pages/Dashboard";
 import Profile from "./Admin/Pages/Profile";
@@ -45,6 +49,7 @@ import ThreeColor from "@components/Pages/Details/ThreeColor";
 import FourColor from "@components/Pages/Details/FourColor";
 import Sign from "@Admin/Pages/Sign/sign";
 import Login from "@Admin/Pages/Sign/login";
+
 
  function App() { 
   return ( 
@@ -95,7 +100,12 @@ import Login from "@Admin/Pages/Sign/login";
           <Route path="/twodetails" element={<TwoDetails />} />
           <Route path="/threedetails" element={<ThreeDetails />} />
           <Route path="/fourdetails" element={<FourDetails />} />
-          <Route path="/twowheeler" element={<TwoWheeler />} />
+          {/* <Route path="/twowheeler" element={<TwoWheeler />} /> */}
+          <Route path="/bikeData" element={<BikeData />} />
+          <Route path="/scooterData" element={<ScooterData />} />
+          <Route path="/bicycleData" element={<BicycleData />} />
+          <Route path="/carData" element={<CarData />} />
+
           <Route path="/twocolor" element={<TwoColor />} />
           <Route path="/threecolor" element={<ThreeColor />} />
           <Route path="/fourcolor" element={<FourColor />} />

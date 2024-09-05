@@ -3,7 +3,7 @@ import React from "react";
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
 
-export function TwoWheeler() {
+export function ScooterData() {
   return (
     <>
       <div className="main-wrapper">
@@ -17,7 +17,7 @@ export function TwoWheeler() {
                 <div className=" listgrid-sidebar">
                   <div className="count-search mb-[20px] ">
                     <h4>
-                      E-Bike for Sale{" "}
+                      E-Scooter for Sale{" "}
                       <span style={{ fontSize: "14px" }}>(Showing 12)</span>
                     </h4>
                   </div>

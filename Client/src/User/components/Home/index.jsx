@@ -221,7 +221,7 @@ export function Home() {
                       data-aos="fade-up"
                     >
                       <Link
-                        to={"/twoWheeler"}
+                        to={"/bikeData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
@@ -236,12 +236,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                      <Link
+                        to={"/bikeData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="tab-pane fade" id="e-bike_us">
@@ -252,12 +252,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                      <Link
+                        to={"/bikeData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -321,7 +321,7 @@ export function Home() {
                       data-aos="fade-up"
                     >
                       <Link
-                        to={"/twoWheeler"}
+                        to={"/scooterData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
@@ -336,12 +336,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                      <Link
+                        to={"/scooterData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="tab-pane fade" id="e-scooter_us">
@@ -352,12 +352,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                       <Link
+                        to={"/scooterData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -387,8 +387,8 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div className="row small">
-              <div className="col-lg-2 col-md-3 col-sm-6">
+            <div className="grid grid-cols-6 small">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo1.png"
@@ -399,7 +399,7 @@ export function Home() {
                   <p className="mt-3">Li Battery Packs(6)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo2.png"
@@ -410,7 +410,7 @@ export function Home() {
                   <p className="mt-3">Battery Chargers(7)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo3.png"
@@ -421,7 +421,7 @@ export function Home() {
                   <p className="mt-3">Motor Controller(13)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo4.png"
@@ -432,7 +432,7 @@ export function Home() {
                   <p className="mt-3">BMS(6)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo5.png"
@@ -443,7 +443,7 @@ export function Home() {
                   <p className="mt-3">EV Conversion Kits(22)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo6.png"
@@ -454,7 +454,7 @@ export function Home() {
                   <p className="mt-3">Lithium Cells(5)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo7.png"
@@ -465,7 +465,7 @@ export function Home() {
                   <p className="mt-3">Vehicle & Accessories(16)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo8.png"
@@ -476,7 +476,7 @@ export function Home() {
                   <p className="mt-3">Connectors(1)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo9.png"
@@ -487,7 +487,7 @@ export function Home() {
                   <p className="mt-3">Mechanical Accessories(5)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo10.png"
@@ -498,7 +498,7 @@ export function Home() {
                   <p className="mt-3">Electronics Components(23)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo11.png"
@@ -509,7 +509,7 @@ export function Home() {
                   <p className="mt-3">Tools & Equipments(27)</p>
                 </a>
               </div>
-              <div className="col-lg-2 col-md-3 col-sm-6">
+              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
                 <a href="categories.html" className="category-links shadow-sm">
                   <img
                     src="/assets/img/evs_logo12.jpeg"
@@ -578,7 +578,7 @@ export function Home() {
                       data-aos="fade-up"
                     >
                       <Link
-                        to={"/twoWheeler"}
+                        to={"/bicycleData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
@@ -593,12 +593,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                      <Link
+                        to={"/bicycleData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="tab-pane fade" id="e-bicycle_us">
@@ -609,12 +609,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                       <Link
+                        to={"/bicycleData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -679,7 +679,7 @@ export function Home() {
                       data-aos="fade-up"
                     >
                       <Link
-                        to={"/twoWheeler"}
+                        to={"/carData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
@@ -694,12 +694,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                      <Link
+                        to={"/carData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <div className="tab-pane fade" id="e-car_us">
@@ -710,12 +710,12 @@ export function Home() {
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
                       data-aos="fade-up"
                     >
-                      <a
-                        href="/User/two_data"
+                      <Link
+                        to={"/carData"}
                         className="btn btn-view text-center d-flex mx-auto"
                       >
                         View All
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
