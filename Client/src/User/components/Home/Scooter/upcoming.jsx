@@ -5,7 +5,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-export function Bike() {
+export function ScooterUpcoming() {
 
   return (
       <>
@@ -56,7 +56,7 @@ export function Bike() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Mandan Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>
@@ -70,7 +70,7 @@ export function Bike() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Mandan Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>
@@ -84,7 +84,7 @@ export function Bike() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Mandan Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export function Bike() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Mandan Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>
@@ -112,7 +112,7 @@ export function Bike() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Mandan Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>

@@ -4,6 +4,11 @@ import { Footer } from "@components/Footer";
 import { Bike } from "@Home/Bike";
 import { cowork01, cowork02, cowork03 } from "@image";
 import { Link } from "react-router-dom";
+import { BikeUpcoming } from "@Home/Bike/upcoming";
+import { BikeUsed } from "./Bike/used";
+import { Scooter } from "@Home/Scooter";
+import { ScooterUpcoming } from "@Home/Scooter/upcoming";
+import { ScooterUsed } from "@Home/Scooter/used";
 
 
 export function Home() {
@@ -158,7 +163,7 @@ export function Home() {
         </section>
 
         {/* E-Bike */}
-        <section className="featured-section s_box section-blk py-4 section-blk blog-blk">
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk">
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
@@ -219,10 +224,7 @@ export function Home() {
                   </div>
                   <div className="tab-pane fade" id="e-bike_up">
                     <div className="owl-carousel featured-slider grid-view">
-                      {/* {mainBike.map((bike, index) => (
-                        <BikeCard key={index} bike={bike} />
-                      ))} */}
-                      <h6>bike1</h6>
+                      <BikeUpcoming />
                     </div>
                     <div
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
@@ -238,10 +240,7 @@ export function Home() {
                   </div>
                   <div className="tab-pane fade" id="e-bike_us">
                     <div className="owl-carousel featured-slider grid-view">
-                      {/* {mainBike.map((bike, index) => (
-                        <BikeCard key={index} bike={bike} />
-                      ))} */}
-                      <h6>Batman</h6>
+                      <BikeUsed />
                     </div>
                     <div
                       className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
@@ -261,6 +260,106 @@ export function Home() {
           </div>
         </section>
         {/* End E-Bike */}
+
+
+        {/* E-Scooter */}
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk">
+          <div className="container">
+            <div className="row ">
+              <div className="col-sm-12 my-4">
+                <h4 className="text-[26px] font-semibold mb-4">Electric Scooter Zone</h4>
+                <div className="row mb-2">
+                  <div className="col-lg-12">
+                    <div className="col-sm-12" data-aos="fade-up">
+                      <div className="recommended-tabs-blk">
+                        <ul className="nav gap-2 fw-bold" data-bs-tabs="tabs">
+                          <li>
+                            <a
+                              className="active rounded-3"
+                              aria-current="true"
+                              data-bs-toggle="tab"
+                              href="#e-scooter"
+                            >
+                              Electric Scooter
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="rounded-3"
+                              data-bs-toggle="tab"
+                              href="#e-scooter_up"
+                            >
+                              Upcoming Electric Scooter
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              className="rounded-3"
+                              data-bs-toggle="tab"
+                              href="#e-scooter_us"
+                            >
+                              Used Electric Scooter
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card-body tab-content">
+                  <div className="tab-pane active" id="e-scooter">
+                    <Scooter />
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <Link
+                        to={"/twoWheeler"}
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="tab-pane fade" id="e-scooter_up">
+                    <div className="owl-carousel featured-slider grid-view">
+                      <ScooterUpcoming />
+                    </div>
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <a
+                        href="/User/two_data"
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </a>
+                    </div>
+                  </div>
+                  <div className="tab-pane fade" id="e-scooter_us">
+                    <div className="owl-carousel featured-slider grid-view">
+                      <ScooterUsed />
+                    </div>
+                    <div
+                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
+                      data-aos="fade-up"
+                    >
+                      <a
+                        href="/User/two_data"
+                        className="btn btn-view text-center d-flex mx-auto"
+                      >
+                        View All
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* End E-Scooter */}
 
         {/* Category */}
         <section className="category-section co">
