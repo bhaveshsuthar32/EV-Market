@@ -12,7 +12,8 @@ export default defineConfig({
       "@Home": "/src/User/components/Home",
       "@Vehicle": "/src/User/components/Pages/WheelerDetails",
       "@Admin" : "/src/Admin",
-      "@Service" : "/src/service"
+      "@Service" : "/src/service",
+      'jquery': 'jquery/dist/jquery.js',
     },
   },
   plugins: [react()],
