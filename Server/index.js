@@ -18,10 +18,10 @@ app.use(cors(
 app.use(express.json());
 
 // app.use("/")
-app.get("/", (req,res) => {
-    res.send("welcome server side ev project")
+app.get("/abc", (req,res) => {
+    res.send("welcome server side ev projet")
 })
-app.use("/EV", router)
+app.use("/", router)
 
 
 app.listen(port, 'localhost' , () => {
