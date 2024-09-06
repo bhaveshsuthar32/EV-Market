@@ -10,7 +10,7 @@ mongodb();
 app.use(cors(
     {
         origin: ["https://ev-market-iota.vercel.app"],
-        methods: ["POST", "GET"],
+        
         credentials: true
     }
 ))
@@ -22,7 +22,6 @@ app.get("/abc", (req,res) => {
     res.send("welcome server side ev projet")
 })
 app.use("/", router)
-
 
 app.listen(port, 'localhost' , () => {
     console.log(`server started on http://localhost:${port}`);
