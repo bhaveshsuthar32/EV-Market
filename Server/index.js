@@ -9,9 +9,7 @@ mongodb();
 
 app.use(cors(
     {
-        origin: ["https://ev-market-iota.vercel.app"],
-        
-        credentials: true
+        origin: ["https://ev-market-iota.vercel.app"]
     }
 ))
 
