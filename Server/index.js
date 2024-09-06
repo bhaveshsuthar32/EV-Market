@@ -17,7 +17,11 @@ app.use(cors(
 
 app.use(express.json());
 
-app.use("/", router)
+// app.use("/")
+app.get("/", (req,res) => {
+    res.send("welcome server side ev project")
+})
+app.use("/EV", router)
 
 
 app.listen(port, 'localhost' , () => {
