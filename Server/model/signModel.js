@@ -5,9 +5,12 @@ const signSchema = new mongoose.Schema({
         type : String,
         required : false,
     },
-    email : {
-        type : String,
-        required : false,
+    email: {
+        type: String,
+        required: true, 
+        unique: true,
+        trim: true,
+        match: [/.+@.+\..+/, 'Please enter a valid email address'],
     },
     password : {
         type : String,
