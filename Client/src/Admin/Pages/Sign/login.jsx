@@ -20,7 +20,7 @@ const Login = () => {
           // Start the logout timer
           startLogoutTimer();
   
-          navigate("/dashboard"); // Navigate to home page on successful login
+          navigate("/dashboard"); 
         } else {
           alert(response.data.error);
         }
@@ -31,18 +31,18 @@ const Login = () => {
     };
   
     const startLogoutTimer = () => {
-      // Set a timer to log out the user after 2 minutes (120000 ms)
+    
       setTimeout(() => {
         handleLogout();
-      }, 120000); // 2 minutes
+      }, 120000); 
     };
   
     const handleLogout = () => {
-      // Clear token from local storage
+   
       localStorage.removeItem('token');
       console.log("Logged out due to token expiration.");
       // alert("You have been logged out due to inactivity.");
-      navigate('/dashboard/login'); // Navigate to login page
+      navigate('/dashboard/login'); 
     };
   
     // Optional: Check if the user is already logged in and redirect
