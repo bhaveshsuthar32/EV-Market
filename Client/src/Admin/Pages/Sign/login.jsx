@@ -1,65 +1,64 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-// import { Link, useNavigate } from 'react-router-dom';
-// import { loginData } from '@Service/api';
+import { Link, useNavigate } from 'react-router-dom';
+import { loginData } from '@Service/api';
 
 
 const Login = () => {
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    // const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
   
-    // const handleSubmit = async (e) => {
-    //   e.preventDefault();
-    //   try {
-    //     const response = await loginData({ email, password });
-    //     if (response.status === 200) {
-    //       alert("Login successful");
-    //       // Store token in local storage
-    //       localStorage.setItem('token', response.data.token);
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const response = await loginData({ email, password });
+        if (response.status === 200) {
+          alert("Login successful");
+          // Store token in local storage
+          localStorage.setItem('token', response.data.token);
           
-    //       // Start the logout timer
-    //       startLogoutTimer();
+          // Start the logout timer
+          startLogoutTimer();
   
-    //       navigate("/dashboard"); 
-    //     } else {
-    //       alert(response.data.error);
-    //     }
-    //   } catch (error) {
-    //     const errorMessage = error.response?.data?.error || "Failed to login. Please check your credentials.";
-    //     alert(errorMessage);
-    //   }
-    // };
+          navigate("/dashboard"); 
+        } else {
+          alert(response.data.error);
+        }
+      } catch (error) {
+        const errorMessage = error.response?.data?.error || "Failed to login. Please check your credentials.";
+        alert(errorMessage);
+      }
+    };
   
-    // const startLogoutTimer = () => {
+    const startLogoutTimer = () => {
     
-    //   setTimeout(() => {
-    //     handleLogout();
-    //   }, 120000); 
-    // };
+      setTimeout(() => {
+        handleLogout();
+      }, 120000); 
+    };
   
-    // const handleLogout = () => {
+    const handleLogout = () => {
    
-    //   localStorage.removeItem('token');
-    //   console.log("Logged out due to token expiration.");
-    //   // alert("You have been logged out due to inactivity.");
-    //   navigate('/dashboard/login'); 
-    // };
+      localStorage.removeItem('token');
+      console.log("Logged out due to token expiration.");
+      // alert("You have been logged out due to inactivity.");
+      navigate('/dashboard/login'); 
+    };
   
-    // // Optional: Check if the user is already logged in and redirect
-    // useEffect(() => {
-    //   const token = localStorage.getItem('token');
-    //   if (token) {
-    //     // If token exists, navigate to home page
-    //     // navigate('/dashboard');
-    //     navigate('');
-    //   }
-    // }, [navigate]);
+    // Optional: Check if the user is already logged in and redirect
+    useEffect(() => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        // If token exists, navigate to home page
+        // navigate('/dashboard');
+        navigate('');
+      }
+    }, [navigate]);
   
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <form
-                // onSubmit={handleSubmit}
+                onSubmit={handleSubmit}
                 className="bg-white p-6 rounded shadow-md w-96"
             >
                 <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
@@ -71,8 +70,8 @@ const Login = () => {
                         type="email"
                         name="email"
                         id="email"
-                        // value={email}
-                        // onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                         className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-500"
                     />
@@ -85,8 +84,8 @@ const Login = () => {
                         type="password"
                         name="password"
                         id="password"
-                        // value={password}
-                        // onChange={(e) => setPassword(e.target.value)}
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         required
                         className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-500"
                     />
