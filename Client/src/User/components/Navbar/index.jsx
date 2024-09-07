@@ -17,7 +17,7 @@ export function Navbar() {
                   <span></span>
                 </span>
               </a>
-              <Link to="/" className="navbar-brand logo ">
+              <Link to="/home" className="navbar-brand logo ">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCzX0J4Tq-8O0xTbsr9HbF_SOqv0BoArjIw&s"
                   className="img-fluid mt-[15px] ml-[32px] h-[52px]"
@@ -27,7 +27,7 @@ export function Navbar() {
             </div>
             <div className="main-menu-wrapper">
               <div className="menu-header">
-                <Link to="/" className="menu-logo">
+                <Link to="/home" className="menu-logo">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCzX0J4Tq-8O0xTbsr9HbF_SOqv0BoArjIw&s" 
                   className="img-fluid h-[52px]" alt="Logo" />
                 </Link>
@@ -77,9 +77,7 @@ export function Navbar() {
                 <li className="has-submenu">
                   <Link to="/charging-point">Charging Point</Link>
                 </li>
-                <li className="has-submenu">
-                  <Link to="/ev-spares">EV Spares</Link>
-                </li>
+               
                 <li className="has-submenu">
                   <Link to="/ev-training">EV Training</Link>
                 </li>
@@ -109,8 +107,12 @@ export function Navbar() {
                     <li>
                       <Link to="/videos">Videos</Link>
                     </li>
+                
                   </ul>
                 </li>
+                {/* <li className="has-submenu">
+                  <Link to="/">Loign</Link>
+                </li> */}
               </ul>
             </div>
           </nav>

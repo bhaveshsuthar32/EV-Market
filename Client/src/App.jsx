@@ -58,8 +58,10 @@ import Login from "@Admin/Pages/Sign/login";
         <Routes>
           {/* Admin  */}
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/dashboard/sign" element={<Sign />} />
-          <Route path="/dashboard/login" element={<Login />} />
+          {/* <Route path="/dashboard/sign" element={<Sign />} /> */}
+          {/* <Route path="/dashboard/login" element={<Login />} /> */}
+          <Route path="/sign" element={<Sign />} />
+          <Route path="/" element={<Login />} />
           <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/dashboard/brand" element={<ABrand />} />
           <Route path="/dashboard/dealer" element={<ADealer />} />
@@ -93,7 +95,8 @@ import Login from "@Admin/Pages/Sign/login";
             element={<TwoWheeler_Form />}
           />
 
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/error" element={<Error404 />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
