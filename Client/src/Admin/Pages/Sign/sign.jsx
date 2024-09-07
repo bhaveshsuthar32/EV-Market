@@ -23,7 +23,8 @@ const Sign = () => {
             const response = await signData(user);
             if (response.status === 201) {
                 alert('Sign-up successful!');
-                navigate('/dashboard/login');
+                // navigate('/dashboard/login');
+                navigate('/');
             }
         } catch (error) {
             if (error.response && error.response.status === 409) {
@@ -87,7 +88,7 @@ const Sign = () => {
                 >
                     Sign Up
                 </button>
-                <Link to={"/dashboard/login"}>
+                <Link to={"/"}>
                     <p>Login</p>
                 </Link>
             </form>

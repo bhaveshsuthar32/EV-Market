@@ -42,7 +42,8 @@ const Login = () => {
       localStorage.removeItem('token');
       console.log("Logged out due to token expiration.");
       // alert("You have been logged out due to inactivity.");
-      navigate('/dashboard/login'); 
+    //   navigate('/dashboard/login'); 
+      navigate('/'); 
     };
   
     // Optional: Check if the user is already logged in and redirect
