@@ -88,8 +88,8 @@ const Sign = () => {
                 >
                     Sign Up
                 </button>
-                <Link to={"/"}>
-                    <p>Login</p>
+                <Link to={'/'}>
+                    <p className="text-sky-800 text-center my-2">Already have an account? Login</p>
                 </Link>
             </form>
         </div>

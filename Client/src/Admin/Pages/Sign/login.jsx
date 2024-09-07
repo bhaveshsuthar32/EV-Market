@@ -9,27 +9,36 @@ const Login = () => {
     const navigate = useNavigate();
   
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      try {
-        const response = await loginData({ email, password });
-        if (response.status === 200) {
-          alert("Login successful");
-          // Store token in local storage
-          localStorage.setItem('token', response.data.token);
-          
-          // Start the logout timer
-          startLogoutTimer();
-  
-          navigate("/dashboard"); 
-        } else {
-          alert(response.data.error);
+        e.preventDefault();
+        try {
+            const response = await loginData({ email, password });
+            console.log("API Response:", response.data); 
+            if (response.status === 200) {
+                alert("Login successful");
+                // Store token in local storage
+                localStorage.setItem('token', response.data.token);
+    
+                // Start the logout timer
+                startLogoutTimer();
+    
+                // Check if the user is an admin
+                if (response.data.isAdmin === true) {
+                    console.log("Navigating to dashboard");
+                    navigate("/dashboard"); 
+                } else {
+                    console.log("Navigating to home");
+                    navigate("/home"); 
+                }
+            } else {
+                alert(response.data.error);
+            }
+        } catch (error) {
+            const errorMessage = error.response?.data?.error || "Failed to login. Please check your credentials.";
+            alert(errorMessage);
         }
-      } catch (error) {
-        const errorMessage = error.response?.data?.error || "Failed to login. Please check your credentials.";
-        alert(errorMessage);
-      }
     };
-  
+
+
     const startLogoutTimer = () => {
     
       setTimeout(() => {
@@ -41,8 +50,7 @@ const Login = () => {
    
       localStorage.removeItem('token');
       console.log("Logged out due to token expiration.");
-      // alert("You have been logged out due to inactivity.");
-    //   navigate('/dashboard/login'); 
+      
       navigate('/'); 
     };
   
@@ -97,9 +105,9 @@ const Login = () => {
                 >
                     Login
                 </button>
-                <Link to={"/sign"}>
-                    Sign-Up
-                </Link>
+                
+                   <p className='text-center mt-2 my-2'>Not Registerd? <Link to={"/sign"} className=' text-sky-800'>Create an account</Link> </p> 
+                
             </form>
         </div>
     );
