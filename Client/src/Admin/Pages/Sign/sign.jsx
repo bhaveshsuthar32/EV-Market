@@ -30,7 +30,8 @@ const Sign = () => {
             if (error.response && error.response.status === 409) {
                 setError('Email already exists. Please sign up with another email.');
             } else {
-                setError('Credential  erorr. Please try again.');
+                // setError('Credential  erorr. Please try again.');
+                setError('Email already exists. Please try again.');
             }
         }
     };

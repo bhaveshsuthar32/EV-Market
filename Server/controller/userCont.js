@@ -26,11 +26,17 @@ const signAdmin = async (req, res) => {
 
         // Send welcome email using Nodemailer
         const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: newUser.email,
-            subject: 'Welcome to EV-Market',
-            text: 'Congratulations, you have successfully signed up for the EV-Market'
-        };
+          from: process.env.EMAIL_USER,
+          to: newUser.email,
+          subject: 'Welcome to EV-Market',
+          html: `
+              <div>
+                  <h3>Welcome to EV-Market, ${newUser.username}</h3>
+                  <p>Congratulations, you have successfully signed up for EV-Market.</p>
+                  <p>At EV-Market, we believe in a sustainable future, and we are here to help you navigate the exciting world of electric vehicles.</p>
+              </div>
+          `
+      };
 
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
@@ -75,7 +81,7 @@ const loginAdmin = async (req, res) => {
   }
 };
 
-  
+
   const getAdmin = async (req, res) => {
 
     try {
