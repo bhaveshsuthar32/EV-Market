@@ -96,7 +96,7 @@ const Login = () => {
                 >
                     Login
                 </button>
-                <Link to={"/dashboard/sign"}>
+                <Link to={"/sign"}>
                     Sign-Up
                 </Link>
             </form>
