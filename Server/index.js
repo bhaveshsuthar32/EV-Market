@@ -7,13 +7,13 @@ const cors = require('cors');
 
 mongodb();
 
-// app.use(cors(
-//     {
-//         origin: ["https://ev-market-iota.vercel.app"]
-//     }
-// ))
+ app.use(cors(
+    {
+        origin: ["https://ev-market-iota.vercel.app"]
+    }
+ ))
 
-app.use(cors());
+// app.use(cors());
 
 app.use(express.json());
 
