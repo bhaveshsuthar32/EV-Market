@@ -1,8 +1,3 @@
-Backend :- Node.js, Express.js <br />
-Frontend :- React.js <br />
-Database :- Mongodb <br />
-Css :- Tailwindcss
-
 ## Tech Stack
 **Frontend:**
 - ![React.js](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
