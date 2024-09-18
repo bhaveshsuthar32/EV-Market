@@ -17,8 +17,7 @@ mongodb();
 
 app.use(express.json());
 
-// app.use("/")
-app.get("/abc", (req,res) => {
+app.get("/checkServer", (req,res) => {
     res.send("welcome server side ev projet")
 })
 app.use("/", router)
