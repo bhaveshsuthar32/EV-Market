@@ -99,70 +99,70 @@ export function Home() {
 
               <div className="grid grid-cols-6 gap-1">
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
-                    <a href="">
-                      <img
-                        src={""}
-                        alt="icons"
-                        height="100px"
-                        width="100px"
-                      />
-                    </a>
-                    <h4 className="text-center mt-2">abcd </h4>
+                  <a href="">
+                    <img
+                      src={""}
+                      alt="icons"
+                      height="100px"
+                      width="100px"
+                    />
+                  </a>
+                  <h4 className="text-center mt-2">abcd </h4>
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
-                    <a href="">
-                      <img
-                        src={""}
-                        alt="icons"
-                        height="100px"
-                        width="100px"
-                      />
-                    </a>
-                    <h4 className="text-center mt-2">abcd </h4>
+                  <a href="">
+                    <img
+                      src={""}
+                      alt="icons"
+                      height="100px"
+                      width="100px"
+                    />
+                  </a>
+                  <h4 className="text-center mt-2">abcd </h4>
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
-                    <a href="">
-                      <img
-                        src={""}
-                        alt="icons"
-                        height="100px"
-                        width="100px"
-                      />
-                    </a>
-                    <h4 className="text-center mt-2">abcd </h4>
+                  <a href="">
+                    <img
+                      src={""}
+                      alt="icons"
+                      height="100px"
+                      width="100px"
+                    />
+                  </a>
+                  <h4 className="text-center mt-2">abcd </h4>
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
-                    <a href="">
-                      <img
-                        src={""}
-                        alt="icons"
-                        height="100px"
-                        width="100px"
-                      />
-                    </a>
-                    <h4 className="text-center mt-2">abcd </h4>
+                  <a href="">
+                    <img
+                      src={""}
+                      alt="icons"
+                      height="100px"
+                      width="100px"
+                    />
+                  </a>
+                  <h4 className="text-center mt-2">abcd </h4>
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
-                    <a href="">
-                      <img
-                        src={""}
-                        alt="icons"
-                        height="100px"
-                        width="100px"
-                      />
-                    </a>
-                    <h4 className="text-center mt-2">abcd </h4>
+                  <a href="">
+                    <img
+                      src={""}
+                      alt="icons"
+                      height="100px"
+                      width="100px"
+                    />
+                  </a>
+                  <h4 className="text-center mt-2">abcd </h4>
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
-                    <a href="">
-                      <img
-                        src={""}
-                        alt="icons"
-                        height="100px"
-                        width="100px"
-                      />
-                    </a>
-                    <h4 className="text-center mt-2">abcd </h4>
+                  <a href="">
+                    <img
+                      src={""}
+                      alt="icons"
+                      height="100px"
+                      width="100px"
+                    />
+                  </a>
+                  <h4 className="text-center mt-2">abcd </h4>
                 </div>
               </div>
             </div>
@@ -217,49 +217,20 @@ export function Home() {
                 <div className="card-body tab-content">
                   <div className="tab-pane active" id="e-bike">
                     <Bike />
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/bikeData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                   <div className="tab-pane fade" id="e-bike_up">
-                    <div className="owl-carousel featured-slider grid-view">
-                      <BikeUpcoming />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/bikeData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
+                    <BikeUpcoming />
                   </div>
                   <div className="tab-pane fade" id="e-bike_us">
-                    <div className="owl-carousel featured-slider grid-view">
-                      <BikeUsed />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
+                    <BikeUsed />
+                  </div>
+                  <div className="text-center">
+                    <Link
+                      to={"/bike"}
+                      className="btn btn-view text"
                     >
-                      <Link
-                        to={"/bikeData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
+                      View All
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -317,51 +288,22 @@ export function Home() {
                 <div className="card-body tab-content">
                   <div className="tab-pane active" id="e-scooter">
                     <Scooter />
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/scooterData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                   <div className="tab-pane fade" id="e-scooter_up">
-                    <div className="owl-carousel featured-slider grid-view">
                       <ScooterUpcoming />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/scooterData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                   <div className="tab-pane fade" id="e-scooter_us">
-                    <div className="owl-carousel featured-slider grid-view">
                       <ScooterUsed />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                       <Link
-                        to={"/scooterData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                 </div>
+                <div className="text-center">
+                    <Link
+                      to={"/scooter"}
+                      className="btn btn-view text"
+                    >
+                      View All
+                    </Link>
+                  </div>
               </div>
             </div>
           </div>
@@ -525,7 +467,7 @@ export function Home() {
           </div>
         </section>
 
-        
+
         {/* E-Bicycle */}
         <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
           <div className="container">
@@ -574,51 +516,22 @@ export function Home() {
                 <div className="card-body tab-content">
                   <div className="tab-pane active" id="e-bicycle">
                     <Bicycle />
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/bicycleData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                   <div className="tab-pane fade" id="e-bicycle_up">
-                    <div className="owl-carousel featured-slider grid-view">
                       <BicycleUpcoming />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/bicycleData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                   <div className="tab-pane fade" id="e-bicycle_us">
-                    <div className="owl-carousel featured-slider grid-view">
                       <BicycleUsed />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                       <Link
-                        to={"/bicycleData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                 </div>
+                <div className="text-center">
+                    <Link
+                      to={"/bicycle"}
+                      className="btn btn-view text"
+                    >
+                      View All
+                    </Link>
+                  </div>
               </div>
             </div>
           </div>
@@ -626,7 +539,7 @@ export function Home() {
         {/* End E-Bicycle */}
 
 
-        
+
         {/* E-Car */}
         <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
           <div className="container">
@@ -675,51 +588,22 @@ export function Home() {
                 <div className="card-body tab-content">
                   <div className="tab-pane active" id="e-car">
                     <Car />
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/carData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                   <div className="tab-pane fade" id="e-car_up">
-                    <div className="owl-carousel featured-slider grid-view">
-                      <CarUpcoming />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/carData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
+                      <CarUpcoming />                   
                   </div>
                   <div className="tab-pane fade" id="e-car_us">
-                    <div className="owl-carousel featured-slider grid-view">
                       <CarUsed />
-                    </div>
-                    <div
-                      className="col-md-6 text-md-end aos aos-init aos-animate d-flex mx-auto mt-3"
-                      data-aos="fade-up"
-                    >
-                      <Link
-                        to={"/carData"}
-                        className="btn btn-view text-center d-flex mx-auto"
-                      >
-                        View All
-                      </Link>
-                    </div>
                   </div>
                 </div>
+                <div className="text-center">
+                    <Link
+                      to={"/car"}
+                      className="btn btn-view text"
+                    >
+                      View All
+                    </Link>
+                  </div>
               </div>
             </div>
           </div>
