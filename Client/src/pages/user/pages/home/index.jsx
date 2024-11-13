@@ -1,20 +1,21 @@
 import React from "react";
-import { Navbar } from "@components/Navbar";
-import { Footer } from "@components/Footer";
-import { Bike } from "@Home/Bike";
-import { cowork01, cowork02, cowork03 } from "@image";
+import { Navbar } from "../../components/Navbar";
+
+import { Footer } from "../../components/Footer";
+import { Bike } from "./bike";
+// import { "", "", "" } from "@image";
 import { Link } from "react-router-dom";
-import { BikeUpcoming } from "@Home/Bike/upcoming";
-import { BikeUsed } from "./Bike/used";
-import { Scooter } from "@Home/Scooter";
-import { ScooterUpcoming } from "@Home/Scooter/upcoming";
-import { ScooterUsed } from "@Home/Scooter/used";
-import { Bicycle } from "@Home/Bicycle";
-import { BicycleUpcoming } from "@Home/Bicycle/upcoming";
-import { BicycleUsed } from "@Home/Bicycle/used";
-import { Car } from "./Car";
-import { CarUpcoming } from "./Car/upcoming";
-import { CarUsed } from "./Car/used";
+import { BikeUpcoming } from "./bike/upcoming";
+import { BikeUsed } from "./bike/used";
+import { Scooter } from "./scooter";
+import { ScooterUpcoming } from "./scooter/upcoming";
+import { ScooterUsed } from "./scooter/used";
+import { Bicycle } from "./bicycle";
+import { BicycleUpcoming } from "./bicycle/upcoming";
+import { BicycleUsed } from "./bicycle/used";
+import { Car } from "./car";
+import { CarUpcoming } from "./car/upcoming";
+import { CarUsed } from "./car/used";
 
 
 export function Home() {
@@ -31,28 +32,28 @@ export function Home() {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
-                  src={cowork01}
+                  src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrDbEAZr_Sahbmt0K5GEycUFJWrzbz8uhQLA&s"}
                   className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src={cowork02}
+                  src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuAq1s8aZaGgkwrvW-EMx2LkUnTQHqu_JeTQ&s"}
                   className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src={cowork01}
+                  src={""}
                   className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src={cowork03}
+                  src={""}
                   className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
@@ -91,7 +92,7 @@ export function Home() {
             <div className="row px-3">
               {/* <div className="col-lg-2 col-md-4 col-sm-6 col-6">
                 <a href="categories.html" className="category-links shadow-sm text-center">
-                  <img src={cowork01} alt="icons" height="80px" width="80px" />
+                  <img src={""} alt="icons" height="80px" width="80px" />
                   <h6 className="mt-3">New EV</h6>
                 </a>
               </div> */}
@@ -100,7 +101,7 @@ export function Home() {
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                     <a href="">
                       <img
-                        src={cowork01}
+                        src={""}
                         alt="icons"
                         height="100px"
                         width="100px"
@@ -111,7 +112,7 @@ export function Home() {
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                     <a href="">
                       <img
-                        src={cowork01}
+                        src={""}
                         alt="icons"
                         height="100px"
                         width="100px"
@@ -122,7 +123,7 @@ export function Home() {
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                     <a href="">
                       <img
-                        src={cowork01}
+                        src={""}
                         alt="icons"
                         height="100px"
                         width="100px"
@@ -133,7 +134,7 @@ export function Home() {
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                     <a href="">
                       <img
-                        src={cowork01}
+                        src={""}
                         alt="icons"
                         height="100px"
                         width="100px"
@@ -144,7 +145,7 @@ export function Home() {
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                     <a href="">
                       <img
-                        src={cowork01}
+                        src={""}
                         alt="icons"
                         height="100px"
                         width="100px"
@@ -155,7 +156,7 @@ export function Home() {
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                     <a href="">
                       <img
-                        src={cowork01}
+                        src={""}
                         alt="icons"
                         height="100px"
                         width="100px"

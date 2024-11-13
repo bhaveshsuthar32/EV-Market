@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-// import { cowork01 } from "@image";
+import { Link } from 'react-router-dom'
 
 export function Navbar() {
   return (
-    <>
-      {/* <h1>navbar</h1> */}
-      <header className="header shadow-sm">
+    <div>
+            <header className="header shadow-sm">
         <div className="container">
           <nav className="navbar header-nav" style={{ width: "100%" }}>
             <div className="navbar-header">
@@ -118,7 +116,6 @@ export function Navbar() {
           </nav>
         </div>
       </header>
-    </>
-  );
+    </div>
+  )
 }
-

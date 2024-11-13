@@ -1,6 +1,7 @@
 import React from 'react'
-import Header from '@Admin/layout/Header'
-import Sidebar from '@Admin/Layouts/Sidebar'
+import Header from '../../layouts/Header'
+import Sidebar from '../../layouts/Sidebar'
+
 
 export default function brand_form() {
   return (

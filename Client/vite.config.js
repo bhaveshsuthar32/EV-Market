@@ -5,15 +5,15 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   resolve: {
     alias: {
-      "@components": "/src/User/components",
-      "@image": "/src/assets/img",
+      // "@components": "/src/User/components",
+      // "@image": "/src/assets/img",
       "@assets": "/src/assets/css",
       "@assets_js": "/src/assets/js",
-      "@Home": "/src/User/components/Home",
-      "@Vehicle": "/src/User/components/Pages/WheelerDetails",
-      "@Admin" : "/src/pages/admin",
-      "@Service" : "/src/service",
-      'jquery': 'jquery/dist/jquery.js',
+      // "@Home": "/src/User/components/Home",
+      // "@Vehicle": "/src/User/components/Pages/WheelerDetails",
+      // "@Admin" : "/src/pages/admin",
+      // "@Service" : "/src/service",
+      // 'jquery': 'jquery/dist/jquery.js',
     },
   },
   plugins: [react()],
