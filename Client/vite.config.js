@@ -11,7 +11,7 @@ export default defineConfig({
       "@assets_js": "/src/assets/js",
       "@Home": "/src/User/components/Home",
       "@Vehicle": "/src/User/components/Pages/WheelerDetails",
-      "@Admin" : "/src/Admin",
+      "@Admin" : "/src/pages/admin",
       "@Service" : "/src/service",
       'jquery': 'jquery/dist/jquery.js',
     },
