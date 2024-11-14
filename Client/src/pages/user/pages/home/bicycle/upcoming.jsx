@@ -56,7 +56,21 @@ export function BicycleUpcoming() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Schwinn Discover</h2>
+                <p className='text-[14px]  lg:text-[17px]'>70,000</p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide className=''>
+            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
+              <figure>
+                <img
+                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                  alt="Img" />
+              </figure>
+              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Schwinn Discover</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>
@@ -70,7 +84,7 @@ export function BicycleUpcoming() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Schwinn Discover</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>
@@ -84,7 +98,7 @@ export function BicycleUpcoming() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Schwinn Discover</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>
@@ -98,21 +112,7 @@ export function BicycleUpcoming() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
-                <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Dilip Suthar</h2>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Schwinn Discover</h2>
                 <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
               </div>
             </div>

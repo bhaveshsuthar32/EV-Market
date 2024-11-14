@@ -57,8 +57,8 @@ export function ScooterUsed() {
                   alt="Img" />
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Tushar Suthar</h2>
-                <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
+                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Suzuki Access</h2>
+                <p className='text-[14px]  lg:text-[17px]'>80,000</p>
               </div>
             </div>
           </SwiperSlide>
@@ -72,7 +72,7 @@ export function ScooterUsed() {
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
                 <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Tushar Suthar</h2>
-                <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
+                <p className='text-[14px]  lg:text-[17px]'>80,000</p>
               </div>
             </div>
           </SwiperSlide>
@@ -86,7 +86,7 @@ export function ScooterUsed() {
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
                 <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Tushar Suthar</h2>
-                <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
+                <p className='text-[14px]  lg:text-[17px]'>80,000</p>
               </div>
             </div>
           </SwiperSlide>
@@ -100,7 +100,7 @@ export function ScooterUsed() {
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
                 <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Tushar Suthar</h2>
-                <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
+                <p className='text-[14px]  lg:text-[17px]'>80,000</p>
               </div>
             </div>
           </SwiperSlide>
@@ -114,7 +114,7 @@ export function ScooterUsed() {
               </figure>
               <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
                 <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Tushar Suthar</h2>
-                <p className='text-[14px]  lg:text-[17px]'>Bagra</p>
+                <p className='text-[14px]  lg:text-[17px]'>80,000</p>
               </div>
             </div>
           </SwiperSlide>
