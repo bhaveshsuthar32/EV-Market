@@ -1,6 +1,6 @@
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { userRoutes } from "./routes";
+import { userRoutes, adminRouts } from "./routes";
 import { PageNotFound } from "./components";
 
 import "@assets/bootstrap-datetimepicker.min.css";
@@ -19,6 +19,7 @@ import "@assets_js/script.js";
 
 const router = createBrowserRouter([
   ...userRoutes,
+  ...adminRouts,
   { path: "*", element: <PageNotFound /> },
 ]);
 

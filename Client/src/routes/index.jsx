@@ -1,3 +1,5 @@
+
+import AdminLayout from "../pages/admin/pages";
 import { 
     AboutUs,
     BicycleData, 
@@ -54,4 +56,13 @@ const userRoutes = [
     },
 ]
 
-export {userRoutes}
+const adminRouts = [
+    {
+        path: "/admin/*",
+        element: < AdminLayout/>
+    }
+]
+
+
+
+export {userRoutes, adminRouts}

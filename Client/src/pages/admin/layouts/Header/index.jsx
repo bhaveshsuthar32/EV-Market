@@ -2,6 +2,7 @@
 export default function Header() {
   return (
     <>
+      <h1 className="text-20 text-center py-2 md:hidden">EV-Market</h1>
     <div className="px-4 sm:ml-64 border-b-[1px]">
     {/* Hide on mobile, show on medium screens and up */}
     <div className="nav justify-between items-center py-4 hidden md:flex">
