@@ -4,6 +4,8 @@ const port = 4000;
 const mongodb = require('./connection/dbcon');
 const router = require('./Router/router');
 const cors = require('cors');
+const errorHandler = require('./middleware/errorHandler');
+
 
 mongodb();
 
@@ -16,6 +18,7 @@ mongodb();
 //   app.use(cors());
 
 app.use(express.json());
+app.use(errorHandler);
 
 app.get("/checkServer", (req,res) => {
     res.send("welcome server side ev projet")

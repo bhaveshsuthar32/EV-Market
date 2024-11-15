@@ -4,13 +4,12 @@ import App from './App.jsx'
 import $ from 'jquery'
 window.jQuery = window.$ = $
 import './index.css'
-// import "owl.carousel/dist/assets/owl.carousel.css";
-// import "owl.carousel/dist/assets/owl.theme.default.css";
-// import "jquery"; // Import jQuery
-// import "owl.carousel";
+import {NextUIProvider} from '@nextui-org/react'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <NextUIProvider>
+      <App />
+    </NextUIProvider>
   </React.StrictMode>,
 )

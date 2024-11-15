@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <div className="flex-1">
         <Header />
         <Sidebar />
-        <main className="p-4 sm:ml-64">{children}</main>
+        <main className="px-4 sm:ml-64">{children}</main>
       </div>
   );
 };
