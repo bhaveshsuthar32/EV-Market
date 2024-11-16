@@ -1,8 +1,42 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { addTwoData } from '../../../../api'
 
+
+const defaultValue = {
+    type : "",
+    brand : "",
+    upcomming_and_used : "",
+    vehicle_name : "",
+    speed : "",
+    range : "",
+    motor_power : "",
+    battery : "",
+    charging_time : "",
+    battery_charger : "",
+    showroom_price : "",
+    color : "",
+  }
 export default function TwoWheelerForm() {
+  
+  const [twoData, setTwoData] = useState(defaultValue)
+  const Navigate = useNavigate();
 
+  const handleChange = async(e)=>{
+    setTwoData({ ...twoData, [e.target.name]: e.target.value})
+  }
+  const handleSubmit = async(e)=>{
+    e.preventDefault();
+    try {
+      await addTwoData(twoData);
+      // console.log(response);
+      Navigate("/admin")
+   
+    } catch (error) {
+      console.log("Error : ", error);
+    }
+
+  }
   return (
     <div>
       <div className="">
@@ -10,7 +44,7 @@ export default function TwoWheelerForm() {
           <div className="border-b-[1px]">
             <h1 className='text-[20px] font-semibold mb-2'>Add Two Wheeler Details</h1>
           </div>
-          <form >
+          <form onSubmit={handleSubmit}>
             <div className="border-b border-gray-900/10 pb-12">
               <div>
                 <h1 className='mt-4 font-semibold'>Vehicle Type/Brand -</h1>
@@ -20,6 +54,7 @@ export default function TwoWheelerForm() {
                       id="type"
                       name="type"
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                      onChange={(e)=>handleChange(e)}
                     >
                       <option disabled selected>Select Type</option>
                       <option value="E-Scooter" >E-Scooter</option>
@@ -35,6 +70,7 @@ export default function TwoWheelerForm() {
                       name="brand"
                       autoComplete=""
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                      onChange={(e)=>handleChange(e)}
                     >
                       <option disabled selected>Select Brand</option>
                       <option value="Yamaha">Yamaha</option>
@@ -48,6 +84,7 @@ export default function TwoWheelerForm() {
                       id="upcomming_and_used"
                       name="upcomming_and_used"
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                      onChange={(e)=>handleChange(e)}
                     >
                       <option disabled selected>Select Vehicle</option>
                       <option value="Upcoming" >Upcoming</option>
@@ -68,6 +105,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Vehicle Name'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -77,6 +115,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Speed'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -86,6 +125,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Range'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -95,6 +135,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Moter Power'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -104,6 +145,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Battery'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -113,6 +155,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Charging Time'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
 
@@ -123,6 +166,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Battery Charger'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
 
@@ -134,6 +178,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Showroom Price'
+                      onChange={(e)=>handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -143,6 +188,7 @@ export default function TwoWheelerForm() {
                       name="brand"
                       autoComplete=""
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                      onChange={(e)=>handleChange(e)}
                     >
                       <option disabled selected>Select Color</option>
                       <option value="Black">Black</option>

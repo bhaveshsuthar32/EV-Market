@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 //  const URL = "https://ev-market-server.vercel.app"
 const URL = "http://localhost:4000"
 
@@ -21,3 +22,10 @@ export const loginData = async (data) => {
     }
   };
 
+export const addTwoData = async (data) =>{
+  try {
+    return await axios.post(`${URL}/admin/addTwoWheeler`,data)    
+  } catch (error) {
+    console.log("Error :- ", error)
+  }
+}
