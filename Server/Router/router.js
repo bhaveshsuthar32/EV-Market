@@ -6,7 +6,7 @@ const upload = require('../middleware/upload');
 const { signAdmin, loginAdmin, getAdmin } = require('../controllers/adminController');
 const authenticateToken = require('../middleware/authMiddleware');
 const { addTwoDetails, getTwoDetails } = require('../controllers/wheelerController');
-
+const {addBrand, getBrand} = require("../controllers/otherDetailsController")
 
 router.post("/admin/sign", signAdmin)
 router.post("/admin/login", loginAdmin)
@@ -17,6 +17,10 @@ router.post("/admin/addTwoWheeler",upload.fields([
     { name: 'img3', maxCount: 1 },
   ]), addTwoDetails)
 router.get("/admin/getTwoWheeler",  getTwoDetails)
+
+router.post("/admin/addBrand", upload.single("brand_logo"), addBrand )
+router.get("/admin/getBrand", getBrand )
+
 
 // export default router ;
 module.exports = router;
