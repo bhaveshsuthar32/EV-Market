@@ -21,7 +21,7 @@ router.get("/admin/getTwoWheeler",  getTwoDetails)
 router.post("/admin/addBrand", upload.single("brand_logo"), addBrand )
 router.get("/admin/getBrand", getBrand )
 
-router.post("/admin/addStartUps", upload.single("baddStartUpsrand_logo"),  )
+router.post("/admin/addStartUps", upload.single("startup_logo"), addStartUps )
 router.get("/admin/getStartUps", getStartUps )
 
 
