@@ -12,7 +12,7 @@ const { uploadFile } = require("../utils/cloudinary");
         // }
 
         // Upload image to Cloudinary
-        // const result = await uploadFile(req.file.map);
+        // const result = await uploadFile(req.file);
         // console.log("Cloudinary Upload Result:", result); // This log is important
 
         // const [img1, img2, img3] = result;
