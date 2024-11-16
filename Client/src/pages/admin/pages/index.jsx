@@ -5,6 +5,7 @@ import Dashboard from './dashboard'
 import Dealer from './dealer'
 import Dealer_form from './dealer/dealer_form'
 import TwoWheelerForm from './two-wheeler/two_form'
+import TwoWheeler from './two-wheeler'
 
 export default function AdminLayout() {
   return (
@@ -16,6 +17,7 @@ export default function AdminLayout() {
         <Route path='/dealer' element={<Dealer/>} />
         <Route path='/dealer-form' element={<Dealer_form/>} />
         <Route path='/twoWheeler-form' element={<TwoWheelerForm/>} />
+        <Route path='/twoWheeler' element={<TwoWheeler/>} />
       </Routes>
     </div>
     </Layout>
