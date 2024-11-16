@@ -59,6 +59,7 @@ export default function TwoWheelerForm() {
       <div className="">
         <div className="mx-auto my-4 max-w-7xl px-4 py-4 sm:px-6 lg:px-8 border-[1px] rounded-lg shadow-sm sticky top-20 bg-white z-10">
           <div className="border-b-[1px]">
+            <Link to={"/admin/twoWheeler"} className='btn bg-sky-300'>twoDAta</Link>
             <h1 className='text-[20px] font-semibold mb-2'>Add Two Wheeler Details</h1>
           </div>
           <form onSubmit={handleSubmit}>
@@ -201,8 +202,8 @@ export default function TwoWheelerForm() {
                   <div className="sm:col-span-2">
 
                     <select
-                      id="brand"
-                      name="brand"
+                      id="color"
+                      name="color"
                       autoComplete=""
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                       onChange={(e) => handleChange(e)}
