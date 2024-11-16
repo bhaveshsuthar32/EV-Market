@@ -59,7 +59,6 @@ export default function TwoWheelerForm() {
       <div className="">
         <div className="mx-auto my-4 max-w-7xl px-4 py-4 sm:px-6 lg:px-8 border-[1px] rounded-lg shadow-sm sticky top-20 bg-white z-10">
           <div className="border-b-[1px]">
-            <Link to={"/admin/twoWheeler"} className='btn bg-sky-300'>twoDAta</Link>
             <h1 className='text-[20px] font-semibold mb-2'>Add Two Wheeler Details</h1>
           </div>
           <form onSubmit={handleSubmit}>
@@ -267,7 +266,7 @@ export default function TwoWheelerForm() {
                   </div>
                   <div className="mt-6 sm:ml-28 lg-ml-0 flex items-center justify-end gap-x-6">
                     <Link
-                      to="/admin/fsponser"
+                      to="/admin/twoWheeler"
                       className="text-sm font-semibold leading-6 text-gray-900"
                     >
                       Cancel

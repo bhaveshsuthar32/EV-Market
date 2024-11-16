@@ -24,11 +24,11 @@ export default function TwoWheeler() {
         <div className="mx-auto my-4 max-w-7xl px-2 py-4 sm:px-6 lg:px-8 border-[1px] rounded-lg shadow-sm bg-white">
           <div className="mt-2 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-6 ">
             <div className="sm:col-span-5 mb-5">
-              <h1 className="font-bold text-lg text-gray-600">Food Sponsors</h1>
+              <h1 className="font-bold text-lg text-gray-600">Two Wheeler Details</h1>
             </div>
             <div className="flex items-center justify-end gap-x-6">
               <Link
-                to={"/admin/fsponserform"}
+                to={"/admin/twoWheeler-form"}
                 className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 ADD
