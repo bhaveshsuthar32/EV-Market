@@ -4,34 +4,51 @@ import { addTwoData } from '../../../../api'
 
 
 const defaultValue = {
-    type : "",
-    brand : "",
-    upcomming_and_used : "",
-    vehicle_name : "",
-    speed : "",
-    range : "",
-    motor_power : "",
-    battery : "",
-    charging_time : "",
-    battery_charger : "",
-    showroom_price : "",
-    color : "",
-  }
+  type: "",
+  brand: "",
+  upcomming_and_used: "",
+  vehicle_name: "",
+  speed: "",
+  range: "",
+  motor_power: "",
+  battery: "",
+  charging_time: "",
+  battery_charger: "",
+  showroom_price: "",
+  color: "",
+  img1: null,
+  img2: null,
+  img3: null,
+}
 export default function TwoWheelerForm() {
-  
+
   const [twoData, setTwoData] = useState(defaultValue)
   const Navigate = useNavigate();
 
-  const handleChange = async(e)=>{
-    setTwoData({ ...twoData, [e.target.name]: e.target.value})
+  const handleChange = async (e) => {
+    setTwoData({ ...twoData, [e.target.name]: e.target.value })
   }
-  const handleSubmit = async(e)=>{
+
+  const handleFileChange = (e, field) => {
+    const file = e.target.files[0];
+    setTwoData((prev) => ({ ...prev, [field]: file }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await addTwoData(twoData);
-      // console.log(response);
-      Navigate("/admin")
-   
+      const formData = new FormData();
+      // Append all the fields to the FormData object
+      Object.keys(twoData).forEach(key => {
+        if (twoData[key] !== null) {
+          formData.append(key, twoData[key]);
+        }
+      });
+
+      // Submit form data to the backend API
+      await addTwoData(formData); 
+      // Redirect after submission
+      Navigate("/admin");
     } catch (error) {
       console.log("Error : ", error);
     }
@@ -54,7 +71,7 @@ export default function TwoWheelerForm() {
                       id="type"
                       name="type"
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     >
                       <option disabled selected>Select Type</option>
                       <option value="E-Scooter" >E-Scooter</option>
@@ -70,7 +87,7 @@ export default function TwoWheelerForm() {
                       name="brand"
                       autoComplete=""
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     >
                       <option disabled selected>Select Brand</option>
                       <option value="Yamaha">Yamaha</option>
@@ -84,7 +101,7 @@ export default function TwoWheelerForm() {
                       id="upcomming_and_used"
                       name="upcomming_and_used"
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     >
                       <option disabled selected>Select Vehicle</option>
                       <option value="Upcoming" >Upcoming</option>
@@ -105,7 +122,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Vehicle Name'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -115,7 +132,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Speed'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -125,7 +142,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Range'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -135,7 +152,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Moter Power'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -145,7 +162,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Battery'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -155,7 +172,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Charging Time'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
 
@@ -166,7 +183,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Battery Charger'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
 
@@ -178,7 +195,7 @@ export default function TwoWheelerForm() {
                       type="text"
                       className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       placeholder='Showroom Price'
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     />
                   </div>
                   <div className="sm:col-span-2">
@@ -188,12 +205,64 @@ export default function TwoWheelerForm() {
                       name="brand"
                       autoComplete=""
                       className="block w-full rounded-md border-[1px] py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
-                      onChange={(e)=>handleChange(e)}
+                      onChange={(e) => handleChange(e)}
                     >
                       <option disabled selected>Select Color</option>
                       <option value="Black">Black</option>
                       <option value="White">White</option>
                     </select>
+                  </div>
+
+                  <div className="sm:col-span-2">
+                    <label
+                      htmlFor="img1"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      Image 1
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="img1"
+                        name="img1"
+                        type="file"
+                        className="file-input file-input-bordered file-input-sm w-full max-w-xs"
+                        onChange={(e) => handleFileChange(e, "img1")}
+                      />
+                    </div>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label
+                      htmlFor="img2"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      image 2
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="img2"
+                        name="img2"
+                        type="file"
+                        className="file-input file-input-bordered file-input-sm w-full max-w-xs"
+                        onChange={(e) => handleFileChange(e, "img2")}
+                      />
+                    </div>
+                  </div>
+                  <div className="sm:col-span-2">
+                    <label
+                      htmlFor="img3"
+                      className="block text-sm font-medium leading-6 text-gray-900"
+                    >
+                      image 3
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        id="img3"
+                        name="img3"
+                        type="file"
+                        className="file-input file-input-bordered file-input-sm w-full max-w-xs"
+                        onChange={(e) => handleFileChange(e, "img3")}
+                      />
+                    </div>
                   </div>
                   <div className="mt-6 sm:ml-28 lg-ml-0 flex items-center justify-end gap-x-6">
                     <Link
