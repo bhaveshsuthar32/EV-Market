@@ -29,3 +29,11 @@ export const addTwoData = async (data) =>{
     console.log("Error :- ", error)
   }
 }
+
+export const getTwoData = async () =>{
+  try {
+    return await axios.get(`${URL}/admin/getTwoWheeler`)    
+  } catch (error) {
+    console.log("Error : ", error)
+  }
+}
