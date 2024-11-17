@@ -1,8 +1,6 @@
-// src/components/layout/index.jsx
 import React from "react";
 import Header from "../../pages/admin/layouts/Header";
 import Sidebar from "../../pages/admin/layouts/Sidebar";
-
 
 const Layout = ({ children }) => {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default function PageNotFound() {
   return (
     <section className="bg-[#f1f5f9] h-screen w-screen grid place-items-center overflow-hidden">
