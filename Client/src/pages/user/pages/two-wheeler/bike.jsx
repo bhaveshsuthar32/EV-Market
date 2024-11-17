@@ -131,7 +131,6 @@ export function BikeData() {
                                 <div className="blog-location-details text-dark grid grid-cols-3 text-center text-xs mt-[-20px]">
                                   <div>{bikeInfo.charging_time}</div>
                                   <div>{bikeInfo.color}</div>
-                                  {/* <div>{bikeInfo.charging_time}</div> */}
                                   <div>{bikeInfo.speed}</div>
                                 </div>
                                 <div className="amount-details">
