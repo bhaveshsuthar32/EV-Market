@@ -120,7 +120,7 @@ const navigate = useNavigate();
             </li>
             <li>
               <Link
-                to={"/dashboard/threewheeler"}
+                to={"/admin/threeWheeler"}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg 
@@ -137,7 +137,7 @@ const navigate = useNavigate();
             </li>
             <li>
               <Link
-                to={"/dashboard/fourwheeler"}
+                to={"/admin/fourWheeler"}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg 
