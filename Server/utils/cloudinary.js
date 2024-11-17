@@ -11,7 +11,7 @@ const uploadFile = async (file) => {
   try {
     return new Promise((resolve, reject) => {
       const uploadStream = cloudinary.uploader.upload_stream(
-        { resource_type: "auto" },
+        { resource_type: "auto" , folder: "evmarket"},
         (error, result) => {
           if (error) reject(error);
           else resolve(result.secure_url);
