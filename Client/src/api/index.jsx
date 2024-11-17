@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-//  const URL = "https://ev-market-server.vercel.app"
-const URL = "http://localhost:4000"
+ const URL = "https://ev-market-server.vercel.app"
+// const URL = "http://localhost:4000"
 
 export const signData = async(data)=>{
     try {
@@ -11,6 +11,7 @@ export const signData = async(data)=>{
         console.log("Error :- " , error);
     }
 }
+
 
 export const loginData = async (data) => {
     try {
