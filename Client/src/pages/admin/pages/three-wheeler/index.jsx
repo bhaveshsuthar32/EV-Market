@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function threeWheeler() {
+export default function ThreeWheeler() {
   return (
     <div>
-      
+      <h1>
+        Three Wheeler 
+      </h1>
     </div>
   )
 }
