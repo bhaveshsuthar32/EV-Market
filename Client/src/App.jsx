@@ -22,7 +22,6 @@ const router = createBrowserRouter([
   ...adminRouts,
   { path: "*", element: <PageNotFound /> },
 ]);
-
  
 function App() {
   return <RouterProvider router={router} />;
