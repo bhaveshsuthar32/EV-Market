@@ -11,6 +11,8 @@ import Brand_form from './brand/brand_form'
 import Startups_form from './ev-startups/startups_form'
 import StartUps from './ev-startups'
 import Profile from './profile'
+import ThreeWheeler from './three-wheeler'
+import FourWheeler from './four-wheeler'
 
 export default function AdminLayout() {
   return (
@@ -28,6 +30,8 @@ export default function AdminLayout() {
         <Route path='/brand-form' element={<Brand_form/>} />
         <Route path='/startUps-form' element={<Startups_form/>} />
         <Route path='/startUps' element={<StartUps/>} />
+        <Route path='/threeWheeler' element={<ThreeWheeler/>} />
+        <Route path='/fourWheeler' element={<FourWheeler/>} />
       </Routes>
     </div>
     </Layout>
