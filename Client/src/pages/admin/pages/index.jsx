@@ -10,6 +10,7 @@ import Brand from './brand'
 import Brand_form from './brand/brand_form'
 import Startups_form from './ev-startups/startups_form'
 import StartUps from './ev-startups'
+import Profile from './profile'
 
 export default function AdminLayout() {
   return (
@@ -18,6 +19,7 @@ export default function AdminLayout() {
     <div >
       <Routes>
         <Route path='/' element={<Dashboard/>} />
+        <Route path='/profile' element={<Profile/>} />
         <Route path='/dealer' element={<Dealer/>} />
         <Route path='/dealer-form' element={<Dealer_form/>} />
         <Route path='/twoWheeler-form' element={<TwoWheelerForm/>} />
