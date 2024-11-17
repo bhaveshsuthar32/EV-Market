@@ -61,10 +61,6 @@ export default function Brand() {
                       </td>
                      
                       <td className='p-1'> {brandInfo.brand_name}</td>
-                     
-
-                     
-                    
                       <td className='p-1'>
                         <tr>
                           <td>
