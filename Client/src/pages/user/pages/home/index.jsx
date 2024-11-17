@@ -35,7 +35,7 @@ export function Home() {
 
   return (
     <>
-      <div className="main-wrapper mt-2">
+      <div className="main-wrapper mt-2 ">
         <Navbar />
         <section className="banner-section">
           <div
@@ -337,15 +337,15 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-6 gap-2">
+            <div className="grid grid-cols-6 gap-4">
 
               {brand.map((brandInfo) => (
                 <div className="lg:col-span-1 sm:col-span-2 col-span-3 " key={brandInfo._id}>
-                  <a href="categories.html" className="category-links p-0 shadow-sm hover:text-white">
+                  <a href="#" className="category-links p-0 shadow-sm hover:text-white">
                     <img
                       src={brandInfo.brand_logo}
                       alt={brandInfo.brand_name}
-                      className="rou rounded-t-md"
+                      className="rounded-t-lg w-full h-[100px]"
                     />
                     <p className="h-[40px] mt-3">{brandInfo.brand_name}</p>
                   </a>
@@ -505,19 +505,19 @@ export function Home() {
         <br />
         <div className="btn">
           <Link
-            to={"/twodetails"}
+            to={"/two-details"}
             className="bg-slate-900 text-white mb-3 p-2 mx-2"
           >
             Two details
           </Link>
           <Link
-            to={"/threedetails"}
+            to={"/three-details"}
             className="bg-slate-900 text-white mb-3 p-2 mx-2"
           >
             Three details
           </Link>
           <Link
-            to={"/fourdetails"}
+            to={"/four-details"}
             className="bg-slate-900 text-white mb-3 p-2 mx-2"
           >
             Four details
