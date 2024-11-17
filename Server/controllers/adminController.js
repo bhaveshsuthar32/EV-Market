@@ -73,7 +73,7 @@ const loginAdmin = async (req, res) => {
 
       // Generate JWT token
       const accessToken = jwt.sign({ userId: user._id, username: user.username, email: user.email }, JWT_SECRET, {
-          expiresIn: "5M",
+          expiresIn: "55M",
       });
 
       const refreshToken = jwt.sign({ userId: user._id, username: user.username, email: user.email}, JWT_REFRESH_SECRET, { expiresIn: "8d"})
@@ -88,7 +88,17 @@ const loginAdmin = async (req, res) => {
   }
 };
 
+const logoutAdmin = async(req,res)=>{
+  try {
+    const userId = res.user.userId;
+    await adminSchema.findByIdAndUpdate(userId, {accessToken : null})
 
+    res.status(200).json({ message: "Logout successful, token removed." });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" }); 
+  }
+}
 
   const getAdmin = async (req, res) => {
 
@@ -110,4 +120,5 @@ const loginAdmin = async (req, res) => {
     signAdmin,
     loginAdmin,
     getAdmin,
+    logoutAdmin,
   }
