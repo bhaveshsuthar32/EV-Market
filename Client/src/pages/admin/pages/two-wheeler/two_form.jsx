@@ -48,7 +48,7 @@ export default function TwoWheelerForm() {
       // Submit form data to the backend API
       await addTwoData(formData); 
       // Redirect after submission
-      Navigate("/admin");
+      Navigate("/admin/twoWheeler");
     } catch (error) {
       console.log("Error : ", error);
     }
