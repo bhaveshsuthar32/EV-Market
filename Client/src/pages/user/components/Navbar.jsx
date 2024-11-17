@@ -15,7 +15,7 @@ export function Navbar() {
                   <span></span>
                 </span>
               </a>
-              <Link to="/home" className="navbar-brand logo ">
+              <Link to="/" className="navbar-brand logo ">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCzX0J4Tq-8O0xTbsr9HbF_SOqv0BoArjIw&s"
                   className="img-fluid mt-[15px] ml-[32px] h-[52px]"
@@ -25,7 +25,7 @@ export function Navbar() {
             </div>
             <div className="main-menu-wrapper">
               <div className="menu-header">
-                <Link to="/home" className="menu-logo">
+                <Link to="/" className="menu-logo">
                   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCzX0J4Tq-8O0xTbsr9HbF_SOqv0BoArjIw&s" 
                   className="img-fluid h-[52px]" alt="Logo" />
                 </Link>
@@ -35,10 +35,10 @@ export function Navbar() {
               </div>
               <ul className="main-nav">
                 <li className="has-submenu active">
-                  <Link to="#">
+                  <Link to="/">
                     Home <i className="fas fa-chevron-down"></i>
                   </Link>
-                  <ul className="submenu">
+                  {/* <ul className="submenu">
                     <li>
                       <Link to="/new-ev">New EV</Link>
                     </li>
@@ -51,7 +51,7 @@ export function Navbar() {
                     <li>
                       <Link to="/sell-ev">Sell EV</Link>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="has-submenu">
                   <Link to="#">
@@ -59,33 +59,35 @@ export function Navbar() {
                   </Link>
                   <ul className="submenu">
                     <li>
-                      <Link to="/retrofitter">Retrofitter</Link>
+                      <Link to="/bike">Electric Bikes Zone</Link>
                     </li>
                     <li>
-                      <Link to="/ev-mechanic">EV Mechanic</Link>
+                      <Link to="/scooter">Electric Scooter Zone</Link>
                     </li>
                     <li>
-                      <Link to="/ev-software-apps">EV Software & Apps</Link>
+                      <Link to="/bicycle">Electric Bicycle Zone</Link>
                     </li>
                     <li>
-                      <Link to="/loan-insurance">Loan & Insurance</Link>
+                      <Link to="/car">Electric Car Zone</Link>
                     </li>
                   </ul>
                 </li>
                 <li className="has-submenu">
-                  <Link to="/charging-point">Charging Point</Link>
-                </li>
-               
-                <li className="has-submenu">
-                  <Link to="/ev-training">EV Training</Link>
+                  <Link to="/ev-brand">EV Brand</Link>
                 </li>
                 <li className="has-submenu">
-                  <Link to="/ev-jobs">EV Jobs</Link>
+                  <Link to="#">EV StartUps</Link>
                 </li>
                 <li className="has-submenu">
+                  <Link to="#">Contact Us</Link>
+                </li>
+                <li className="has-submenu">
+                  <Link to="#">About Us</Link>
+                </li>
+                {/* <li className="has-submenu">
                   <Link to="/ev-startups">EV Startups</Link>
-                </li>
-                <li className="has-submenu">
+                </li> */}
+                {/* <li className="has-submenu">
                   <Link to="#">
                     News & Reviews <i className="fas fa-chevron-down"></i>
                   </Link>
@@ -107,7 +109,7 @@ export function Navbar() {
                     </li>
                 
                   </ul>
-                </li>
+                </li> */}
                 {/* <li className="has-submenu">
                   <Link to="/">Loign</Link>
                 </li> */}
