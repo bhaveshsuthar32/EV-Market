@@ -9,6 +9,7 @@ import FourDetails from "./wheeler-details/four-wheeler";
 import ThreeDetails from "./wheeler-details/three-wheeler";
 import TwoDetails from "./wheeler-details/two-wheeler";
 
+
 export {
     ThreeDetails,
     TwoDetails,
