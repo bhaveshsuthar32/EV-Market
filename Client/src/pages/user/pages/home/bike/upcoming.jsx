@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { getBikeUpcoming } from '../../../../../api';
 export function BikeUpcoming() {
+  const [bike, setBike] = useState([]);
+
+  const getBike = async () => {
+    const response = await getBikeUpcoming();
+    setBike(response.data);
+  }
+
+  useEffect(() => {
+    getBike();
+  }, [])
 
   return (
       <>
@@ -48,76 +59,22 @@ export function BikeUpcoming() {
             },
           }}
         >
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Royal Enfield Bullet</h2>
-                <p className='text-[14px]  lg:text-[17px]'>1,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
+          {bike.map((bikeInfo)=>(
+          <SwiperSlide className='' key={bikeInfo._id}>
+          <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
+                  <figure>
+                    <img src={bikeInfo.img1} alt={bikeInfo.vehicle_name} />
+                  </figure>
+                  <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
+                    <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">
+                      {bikeInfo.vehicle_name}
+                    </h2>
+                    <p className="text-[14px] lg:text-[17px] mt-2">₹  {bikeInfo.showroom_price}</p>
+                  </div>
+                </div>
+        </SwiperSlide>
 
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Royal Enfield Bullet</h2>
-                <p className='text-[14px]  lg:text-[17px]'>1,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Royal Enfield Bullet</h2>
-                <p className='text-[14px]  lg:text-[17px]'>1,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Royal Enfield Bullet</h2>
-                <p className='text-[14px]  lg:text-[17px]'>1,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Royal Enfield Bullet</h2>
-                <p className='text-[14px]  lg:text-[17px]'>1,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
+          ))}
 
 
 

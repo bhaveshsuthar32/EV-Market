@@ -54,3 +54,45 @@ export const getBrand = async()=>{
     console.log("Error : ", error)
   }
 }
+
+
+export const addStartUps = async (data) =>{
+  try {
+    return await axios.post(`${URL}/admin/addStartUps`,data);
+  } catch (error) {
+    console.log("Error : ",error);
+  }
+}
+
+
+export const getStartUps = async () =>{
+  try {
+    return await axios.get(`${URL}/admin/getStartUps`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getBikeData = async () =>{
+  try {
+    return await axios.get(`${URL}/getBikeData`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getBikeUpcoming = async () =>{
+  try {
+    return await axios.get(`${URL}/getBikeUpcoming`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getBikeUsed = async () =>{
+  try {
+    return await axios.get(`${URL}/getBikeUsed`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}

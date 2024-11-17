@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../../components/Navbar";
 
 import { Footer } from "../../components/Footer";
@@ -17,12 +17,25 @@ import { Car } from "./car";
 import { CarUpcoming } from "./car/upcoming";
 import { CarUsed } from "./car/used";
 
+import { getBrand } from "../../../../api";
+
 
 export function Home() {
 
+  const [brand, setBrand] = useState([]);
+
+  const brandData = async () => {
+    const response = await getBrand();
+    setBrand(response.data);
+  }
+
+  useEffect(() => {
+    brandData();
+  }, [])
+
   return (
     <>
-      <div className="main-wrapper mt-[50px]">
+      <div className="main-wrapper mt-2">
         <Navbar />
         <section className="banner-section">
           <div
@@ -32,32 +45,26 @@ export function Home() {
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img
-                  src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrDbEAZr_Sahbmt0K5GEycUFJWrzbz8uhQLA&s"}
+                  src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/h3jvw4otrknxuk7uumiw"}
                   className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuAq1s8aZaGgkwrvW-EMx2LkUnTQHqu_JeTQ&s"}
+                  src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/ans3etxrrexnx9x5n062"}
                   className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
               <div className="carousel-item">
                 <img
-                  src={""}
+                  src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/yezjmofajnddmbyyt9rz"}
                   className="d-block w-100 h-[270px] sm:h-[500px]"
                   alt="..."
                 />
               </div>
-              <div className="carousel-item">
-                <img
-                  src={""}
-                  className="d-block w-100 h-[270px] sm:h-[500px]"
-                  alt="..."
-                />
-              </div>
+
             </div>
             <button
               className="carousel-control-prev"
@@ -290,20 +297,20 @@ export function Home() {
                     <Scooter />
                   </div>
                   <div className="tab-pane fade" id="e-scooter_up">
-                      <ScooterUpcoming />
+                    <ScooterUpcoming />
                   </div>
                   <div className="tab-pane fade" id="e-scooter_us">
-                      <ScooterUsed />
+                    <ScooterUsed />
                   </div>
                 </div>
                 <div className="text-center">
-                    <Link
-                      to={"/scooter"}
-                      className="btn btn-view text"
-                    >
-                      View All
-                    </Link>
-                  </div>
+                  <Link
+                    to={"/scooter"}
+                    className="btn btn-view text"
+                  >
+                    View All
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -323,146 +330,30 @@ export function Home() {
                     EV{" "}
                     <span style={{ backgroundColor: "red", padding: "4px" }}>
                       {" "}
-                      Sp{" "}
+                      Br{" "}
                     </span>{" "}
-                    ares
+                    and
                   </h2>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-6 small">
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo1.png"
-                    alt="icons"
-                    height="100px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Li Battery Packs(6)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo2.png"
-                    alt="icons"
-                    height="100px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Battery Chargers(7)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo3.png"
-                    alt="icons"
-                    height="100px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Motor Controller(13)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo4.png"
-                    alt="icons"
-                    height="100px"
-                    width="80px"
-                  />
-                  <p className="mt-3">BMS(6)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo5.png"
-                    alt="icons"
-                    height="80px"
-                    width="80px"
-                  />
-                  <p className="mt-3">EV Conversion Kits(22)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo6.png"
-                    alt="icons"
-                    height="100px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Lithium Cells(5)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo7.png"
-                    alt="icons"
-                    height="80px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Vehicle & Accessories(16)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo8.png"
-                    alt="icons"
-                    height="100px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Connectors(1)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo9.png"
-                    alt="icons"
-                    height="80px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Mechanical Accessories(5)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo10.png"
-                    alt="icons"
-                    height="80px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Electronics Components(23)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo11.png"
-                    alt="icons"
-                    height="80px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Tools & Equipments(27)</p>
-                </a>
-              </div>
-              <div className="lg:col-span-1 sm:col-span-2 col-span-3">
-                <a href="categories.html" className="category-links shadow-sm">
-                  <img
-                    src="/assets/img/evs_logo12.jpeg"
-                    alt="icons"
-                    height="100px"
-                    width="80px"
-                  />
-                  <p className="mt-3">Wires & Cables(0)</p>
-                </a>
-              </div>
+            <div className="grid grid-cols-6 gap-2">
+
+              {brand.map((brandInfo) => (
+                <div className="lg:col-span-1 sm:col-span-2 col-span-3 " key={brandInfo._id}>
+                  <a href="categories.html" className="category-links p-0 shadow-sm hover:text-white">
+                    <img
+                      src={brandInfo.brand_logo}
+                      alt={brandInfo.brand_name}
+                      className="rou rounded-t-md"
+                    />
+                    <p className="h-[40px] mt-3">{brandInfo.brand_name}</p>
+                  </a>
+                </div>
+              ))}
+
+
+              
             </div>
           </div>
         </section>
@@ -518,20 +409,20 @@ export function Home() {
                     <Bicycle />
                   </div>
                   <div className="tab-pane fade" id="e-bicycle_up">
-                      <BicycleUpcoming />
+                    <BicycleUpcoming />
                   </div>
                   <div className="tab-pane fade" id="e-bicycle_us">
-                      <BicycleUsed />
+                    <BicycleUsed />
                   </div>
                 </div>
                 <div className="text-center">
-                    <Link
-                      to={"/bicycle"}
-                      className="btn btn-view text"
-                    >
-                      View All
-                    </Link>
-                  </div>
+                  <Link
+                    to={"/bicycle"}
+                    className="btn btn-view text"
+                  >
+                    View All
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -590,20 +481,20 @@ export function Home() {
                     <Car />
                   </div>
                   <div className="tab-pane fade" id="e-car_up">
-                      <CarUpcoming />                   
+                    <CarUpcoming />
                   </div>
                   <div className="tab-pane fade" id="e-car_us">
-                      <CarUsed />
+                    <CarUsed />
                   </div>
                 </div>
                 <div className="text-center">
-                    <Link
-                      to={"/car"}
-                      className="btn btn-view text"
-                    >
-                      View All
-                    </Link>
-                  </div>
+                  <Link
+                    to={"/car"}
+                    className="btn btn-view text"
+                  >
+                    View All
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
