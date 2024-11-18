@@ -31,6 +31,18 @@ const getTwoDetails = async (req,res) =>{
     }
 }
 
+const getTwoDataById = async (req, res)=>{
+    try {
+        const twoId = req.params.id
+        
+        const twoData = await twoWheeler.findById({twoId})
+        console.log(twoData);
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ error: error.message });
+    }
+}
+
 const getBikeData = async(req, res) =>{
     try {
         const bikeData = await twoWheeler.find({ type : "E-Bike"});
@@ -64,6 +76,7 @@ const getBikeUsed = async(req, res) =>{
 module.exports = {
     addTwoDetails,
     getTwoDetails,
+    getTwoDataById,
     getBikeData,
     getBikeUpcoming,
     getBikeUsed,
