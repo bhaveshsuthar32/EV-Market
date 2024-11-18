@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 import { getBikeData } from "../../../../api";
+import { Link } from "react-router-dom";
 
 export function BikeData() {
 
@@ -135,11 +136,11 @@ export function BikeData() {
                                 </div>
                                 <div className="amount-details">
                                   <div className="amount">
-                                    <a className="validrate" href="">
+                                    <Link className="validrate" to={`/two-details/${bikeInfo._id}`}>
                                       <button className="bg-success text-white text-xs p-1 rounded">
                                         View data
                                       </button>
-                                    </a>
+                                    </Link>
                                   </div>
                                   <div className="ratings mt-2">
                                     <input type="checkbox" /> Add To Compare
