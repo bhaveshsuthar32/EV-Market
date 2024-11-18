@@ -12,7 +12,6 @@ export const signData = async(data)=>{
     }
 }
 
-
 export const loginData = async (data) => {
     try {
       const response = await axios.post(`${URL}/admin/login`, data);
@@ -39,6 +38,13 @@ export const getTwoData = async () =>{
   }
 }
 
+export const getTwoDataById = async (id) =>{
+  try {
+    return await axios.get(`${URL}/admin/getTwoById/${id}`)    
+  } catch (error) {
+    console.log("Error : ", error)
+  }
+}
 
 export const addBrand = async(data) =>{
   try {
