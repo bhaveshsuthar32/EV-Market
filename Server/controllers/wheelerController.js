@@ -1,4 +1,5 @@
 const twoWheeler = require("../model/twoWheeler");
+
 const dotenv = require('dotenv');
 dotenv.config();
 const asyncHandler = require("express-async-handler");
@@ -33,15 +34,43 @@ const getTwoDetails = async (req,res) =>{
 
 const getTwoDataById = async (req, res)=>{
     try {
-        const twoId = req.params.id
-        
-        const twoData = await twoWheeler.findById({twoId})
+        const { id } = req.params;
+
+        // finding the team by ID
+        const twoData = await twoWheeler.findById(id);
         console.log(twoData);
+        res.status(200).json(twoData);
     } catch (error) {
         console.error("Error:", error);
         res.status(500).json({ error: error.message });
     }
 }
+
+
+// const getTwoDataById = async (req, res) => {
+//     try {
+//         const { id } = req.params;
+
+//         // Check if the ID is a valid ObjectId
+//         if (!mongoose.Types.ObjectId.isValid(id)) {
+//             return res.status(400).json({ error: "Invalid ID format" });
+//         }
+
+//         // Find the document by ID
+//         const twoData = await twoWheeler.findById(id);
+
+//         if (!twoData) {
+//             return res.status(404).json({ error: "Data not found" });
+//         }
+
+//         res.status(200).json(twoData);
+//     } catch (error) {
+//         console.error("Error:", error);
+//         res.status(500).json({ error: error.message });
+//     }
+// };
+
+
 
 const getBikeData = async(req, res) =>{
     try {
