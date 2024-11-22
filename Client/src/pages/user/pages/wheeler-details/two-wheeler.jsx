@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
-// import { "", "", "" } from "@image";
 // import { Footer } from "@components/Footer";
 import { Navbar } from "../../components/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { getTwoDataById } from "../../../../api";
 
 
 export default function TwoDetails() {
   const [lastX, setLastX] = useState(0);
   const navRef = useRef(null);
+  const [user, setUser] = useState([])
+  const {id} = useParams();
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -40,6 +42,22 @@ export default function TwoDetails() {
   const cancelOnRoadPrice = () => {
     setShowOnRoad(false);
   };
+
+
+  
+  const getTwoData = async(id) =>{
+    try {
+      const response = await getTwoDataById(id);
+      setUser(response.data);
+
+    } catch (error) {
+      console.log("Error : ", error)
+    }
+  }
+
+useEffect(()=>{
+  getTwoData(id)
+},[id])
 
   return (
     <>
@@ -85,27 +103,30 @@ export default function TwoDetails() {
               <div className="card-body px-4 m-4 container">
                 <div id="carouselExample" className="carousel slide">
                   <div className="carousel-inner">
-                    <div className="carousel-item active">
+                    
+                      <div className="carousel-item active">
                       <img
-                        src={""}
+                        src={user.img1}
                         className="d-block w-100 lg:h-[350px] h-[300px]"
                         alt="..."
                       />
                     </div>
                     <div className="carousel-item">
                       <img
-                        src={""}
+                        src={user.img2}
                         className="d-block w-100 h-[300px] lg:h-[350px]"
                         alt="..."
                       />
                     </div>
                     <div className="carousel-item">
                       <img
-                        src={""}
+                        src={user.img3}
                         className="d-block w-100 h-[300px] lg:h-[350px]"
                         alt="..."
                       />
                     </div>
+                    
+                    
                   </div>
                   <button
                     className="carousel-control-prev"
@@ -160,12 +181,15 @@ export default function TwoDetails() {
                     <div className="grid grid-cols-2">
                       <div className="border-[1px] p-2 px-4">
                         <strong>Vehicle Type</strong> <br />
-                        <strong>Honda</strong>
+                        <strong>{user.vehicle_name}</strong>
                       </div>
-                      <div className="border-[1px] p-2 px-4">
+                      
+                        <div className="border-[1px] p-2 px-4" key={user._id}>
                         <strong>City</strong> <br />
-                        <strong>Vadodra</strong>
+                        <strong>vadodara</strong>
                       </div>
+                      
+                      
                     </div>
                   </div>
                 </div>
@@ -178,7 +202,7 @@ export default function TwoDetails() {
                   <div className="col-12">
                     <div className="mt-2">
                       <h5>
-                        ₹ <span>120000</span>
+                        ₹ <span>{user.price || `1,20,000 ` }</span>
                         <span>
                           <a
                             href="#"
@@ -441,3 +465,5 @@ export default function TwoDetails() {
     </>
   );
 }
+
+
