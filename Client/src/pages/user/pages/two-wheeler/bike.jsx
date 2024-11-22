@@ -40,14 +40,14 @@ export function BikeData() {
                         <div className="card">
                           <div className="blog-widget">
                             <div className=" text-center p-2">
-                              <a href="">
+                              <Link to={`/two-details/${bikeInfo._id}`}>
                                 <img
                                   src={bikeInfo.img1}
                                   className="img-fluid h-[170px] object-cover transform-none hover:transform-none px-1"
                                   // style={{ height: "170px", width: "150px" }}
                                   alt={bikeInfo.vehicle_name}
                                 />
-                              </a>
+                              </Link>
                             </div>
                             <div className="bloglist-content">
                               <div className="card-body p-3">
