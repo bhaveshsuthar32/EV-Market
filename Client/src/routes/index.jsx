@@ -68,7 +68,7 @@ const userRoutes = [
         element: <BicycleData />,
     },
     {
-        path: "/two-details",
+        path: "/two-details/:id",
         element: <TwoDetails />,
     },
     {
