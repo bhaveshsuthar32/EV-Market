@@ -13,6 +13,7 @@ import StartUps from './ev-startups'
 import Profile from './profile'
 import ThreeWheeler from './three-wheeler'
 import FourWheeler from './four-wheeler'
+import { Two_view } from './two-wheeler/two_view'
 
 export default function AdminLayout() {
   return (
@@ -26,6 +27,7 @@ export default function AdminLayout() {
         <Route path='/dealer-form' element={<Dealer_form/>} />
         <Route path='/twoWheeler-form' element={<TwoWheelerForm/>} />
         <Route path='/twoWheeler' element={<TwoWheeler/>} />
+        <Route path='/twoWheeler-view/:id' element={<Two_view/>} />
         <Route path='/brand' element={<Brand/>} />
         <Route path='/brand-form' element={<Brand_form/>} />
         <Route path='/startUps-form' element={<Startups_form/>} />
