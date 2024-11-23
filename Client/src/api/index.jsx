@@ -45,6 +45,15 @@ export const getTwoDataById = async (id) =>{
     console.log("Error : ", error)
   }
 }
+ 
+export const deleteTwoWheeler = async (id) => {
+  try {
+    const response = await axios.delete(`${URL}/admin/deleteTwoWheeler/${id}`);
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
 
 export const addBrand = async(data) =>{
   try {
@@ -99,6 +108,30 @@ export const getBikeUpcoming = async () =>{
 export const getBikeUsed = async () =>{
   try {
     return await axios.get(`${URL}/getBikeUsed`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getScooterData = async () =>{
+  try {
+    return await axios.get(`${URL}/getScooterData`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getScooterUpcoming = async () =>{
+  try {
+    return await axios.get(`${URL}/getScooterUpcoming`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getScooterUsed = async () =>{
+  try {
+    return await axios.get(`${URL}/getScooterUsed`);
   } catch (error) {
     console.log("Error : ", error);
   }
