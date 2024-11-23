@@ -46,8 +46,25 @@ const getTwoDataById = async (req, res)=>{
     }
 }
 
+const deleteTwoDetails = async (req, res) => {
+    try {
+        const id = req.params.id ;
 
+        const userData = await twoWheeler.findById(id);
+        if(!userData){
+            return res.status(404).json({message : "two wheeler data not found"})
+        }
 
+        await twoWheeler.findByIdAndDelete(id);
+        res.status(200).json({message : "delete successfully "})
+    } catch (error) {
+      console.error("Error: ", error);
+      res.status(500).json({ error: error.message });
+    }
+  };
+  
+
+  // Bike :-
 
 const getBikeData = async(req, res) =>{
     try {
@@ -79,11 +96,47 @@ const getBikeUsed = async(req, res) =>{
     }
 }
 
+// Scooter :-
+
+const getScooterData = async(req, res) =>{
+    try {
+        const scooterData = await twoWheeler.find({ type : "E-Scooter"});
+        res.status(200).json(scooterData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
+const getScooterUpcoming = async(req, res) =>{
+    try {
+        const scooterData = await twoWheeler.find({ type : "E-Scooter", upcomming_and_used : "Upcoming" });
+        res.status(200).json(scooterData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
+const getScooterUsed = async(req, res) =>{
+    try {
+        const scooterData = await twoWheeler.find({ type : "E-Scooter", upcomming_and_used : "Used"});
+        res.status(200).json(scooterData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
 module.exports = {
     addTwoDetails,
     getTwoDetails,
     getTwoDataById,
+    deleteTwoDetails,
     getBikeData,
     getBikeUpcoming,
     getBikeUsed,
+    getScooterData,
+    getScooterUpcoming,
+    getScooterUsed,
 }
