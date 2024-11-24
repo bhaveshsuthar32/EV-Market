@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 
 import {
     AboutUs,
-    BicycleData,
+    RickshawData,
     BikeData,
     CarData,
     Contact,
@@ -64,8 +64,8 @@ const userRoutes = [
         element: <CarData />,
     },
     {
-        path: "/bicycle",
-        element: <BicycleData />,
+        path: "/rickshaws",
+        element: <RickshawData />,
     },
     {
         path: "/two-details/:id",
