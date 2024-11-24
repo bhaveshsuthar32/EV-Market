@@ -221,6 +221,7 @@ const getRickshawUpcoming = async(req, res) =>{
     }
 }
 
+
 const getRickshawUsed = async(req, res) =>{
     try {
         const rickshawData = await threeWheeler.find({ type : "E-Rickshaw", upcomming_and_used : "Used"});
