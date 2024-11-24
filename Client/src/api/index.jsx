@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
- const URL = "https://ev-market-server.vercel.app"
-// const URL = "http://localhost:4000"
+//  const URL = "https://ev-market-server.vercel.app"
+const URL = "http://localhost:4000"
 
 export const signData = async(data)=>{
     try {
@@ -132,6 +132,69 @@ export const getScooterUpcoming = async () =>{
 export const getScooterUsed = async () =>{
   try {
     return await axios.get(`${URL}/getScooterUsed`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+
+
+// three wheeler :-
+
+export const addThreeData = async (data) =>{
+  try {
+    return await axios.post(`${URL}/admin/addThreeWheeler`,data)    
+  } catch (error) {
+    console.log("Error :- ", error)
+  }
+}
+
+
+export const getThreeData = async () =>{
+  try {
+    return await axios.get(`${URL}/admin/getThreeWheeler`)    
+  } catch (error) {
+    console.log("Error : ", error)
+  }
+}
+
+export const getThreeDataById = async (id) =>{
+  try {
+    return await axios.get(`${URL}/admin/getThreeById/${id}`)    
+  } catch (error) {
+    console.log("Error : ", error)
+  }
+}
+  
+export const deleteThreeWheeler = async (id) => {
+  try {
+    const response = await axios.delete(`${URL}/admin/deleteThreeWheeler/${id}`);
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+
+export const getRickshawData = async () =>{
+  try {
+    return await axios.get(`${URL}/getRickshawData`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getRickshawUpcoming = async () =>{
+  try {
+    return await axios.get(`${URL}/getRickshawUpcoming`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getRickshawUsed = async () =>{
+  try {
+    return await axios.get(`${URL}/getRickshawUsed`);
   } catch (error) {
     console.log("Error : ", error);
   }
