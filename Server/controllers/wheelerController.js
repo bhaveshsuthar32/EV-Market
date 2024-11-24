@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 const asyncHandler = require("express-async-handler");
 const { uploadFile } = require("../utils/cloudinary");
+const threeWheeler = require("../model/threeWheeler");
 
     const addTwoDetails = asyncHandler(async (req, res) => {
         const { type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color} = req.body;
@@ -128,6 +129,110 @@ const getScooterUsed = async(req, res) =>{
     }
 }
 
+
+
+// three wheeler :-
+
+const addThreeData = async (req, res) => {
+    try {
+        const { type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color} = req.body;
+
+        const uploadResults = await Promise.all(
+            Object.values(req.files).flat().map((file) => uploadFile(file))
+          );
+      
+          // Destructure uploaded image URLs
+          const [img1, img2, img3] = uploadResults;
+    
+        const addThreeData = new threeWheeler({type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color, img1, img2, img3});
+    
+        const saveThreeData = await addThreeData.save();
+        res.status(201).json(saveThreeData);
+
+    } catch (error) {
+        res.status(500).json({error : error.message})
+    }
+
+}
+
+
+const getThreeData = async (req,res) =>{
+    try {
+        const threeData = await threeWheeler.find();
+        res.status(200).json(threeData);
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ error: error.message });
+    }
+}
+
+const getThreeDataById = async (req, res)=>{
+    try {
+        const { id } = req.params;
+
+        // finding the team by ID
+        const threeData = await threeWheeler.findById(id);
+        console.log(threeData);
+        res.status(200).json(threeData);
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ error: error.message });
+    }
+}
+
+
+const deleteThreeDetails = async (req, res) => {
+    try {
+        const id = req.params.id ;
+
+        const userData = await threeWheeler.findById(id);
+        if(!userData){
+            return res.status(404).json({message : "two wheeler data not found"})
+        }
+
+        await threeWheeler.findByIdAndDelete(id);
+        res.status(200).json({message : "delete successfully "})
+    } catch (error) {
+      console.error("Error: ", error);
+      res.status(500).json({ error: error.message });
+    }
+  };
+  
+
+  // Rickshaws  :-
+
+const getRickshawData = async(req, res) =>{
+    try {
+        const rickshawData = await threeWheeler.find({ type : "E-Rickshaw"});
+        res.status(200).json(rickshawData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
+const getRickshawUpcoming = async(req, res) =>{
+    try {
+        const rickshawData = await threeWheeler.find({ type : "E-Rickshaw", upcomming_and_used : "Upcoming" });
+        res.status(200).json(rickshawData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
+const getRickshawUsed = async(req, res) =>{
+    try {
+        const rickshawData = await threeWheeler.find({ type : "E-Rickshaw", upcomming_and_used : "Used"});
+        res.status(200).json(rickshawData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
+
+
 module.exports = {
     addTwoDetails,
     getTwoDetails,
@@ -139,4 +244,11 @@ module.exports = {
     getScooterData,
     getScooterUpcoming,
     getScooterUsed,
+    addThreeData,
+    getThreeData,
+    getThreeDataById,
+    deleteThreeDetails,
+    getRickshawData,
+    getRickshawUpcoming,
+    getRickshawUsed,
 }
