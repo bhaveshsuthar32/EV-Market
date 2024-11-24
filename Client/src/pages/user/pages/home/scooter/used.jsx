@@ -65,21 +65,39 @@ export function ScooterUsed() {
             },
           }}
         >
-         {scooter.map((scooterInfo)=>(
-            <SwiperSlide className='' key={scooterInfo._id}>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src={scooterInfo.img1}
-                  alt={scooterInfo.vehicle_name} />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">{scooterInfo.vehicle_name}</h2>
-                <p className='text-[14px]  lg:text-[17px]'>{scooterInfo.showroom_price}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          ))}
+        
+
+  {/* Conditional rendering: Show loading if no data */}
+  {scooter && scooter.length > 0 ? (
+    scooter.map((scooterInfo) => (
+      <SwiperSlide className="" key={scooterInfo._id}>
+        <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
+          <figure>
+            <img
+              src={scooterInfo.img1}
+              alt={scooterInfo.vehicle_name}
+            />
+          </figure>
+          <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
+            <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">
+              {scooterInfo.vehicle_name}
+            </h2>
+            <p className="text-[14px] lg:text-[17px]">
+              {scooterInfo.showroom_price}
+            </p>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))
+  ) : (
+    // Loading State
+    <div className="flex items-center justify-center h-64">
+      <p className="text-lg font-semibold">Loading...</p>
+    </div>
+  )}
+
+
+
 
 
           {/* <SwiperSlide>

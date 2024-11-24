@@ -10,9 +10,9 @@ import { BikeUsed } from "./bike/used";
 import { Scooter } from "./scooter";
 import { ScooterUpcoming } from "./scooter/upcoming";
 import { ScooterUsed } from "./scooter/used";
-import { Bicycle } from "./bicycle";
-import { BicycleUpcoming } from "./bicycle/upcoming";
-import { BicycleUsed } from "./bicycle/used";
+import { Rickshaw } from "./rickshaw";
+import { RickshawUpcoming } from "./rickshaw/upcoming";
+import { RickshawUsed } from "./rickshaw/used";
 import { Car } from "./car";
 import { CarUpcoming } from "./car/upcoming";
 import { CarUsed } from "./car/used";
@@ -364,7 +364,7 @@ export function Home() {
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
-                <h4 className="text-[26px] font-semibold mb-4">Electric Bicycle Zone</h4>
+                <h4 className="text-[26px] font-semibold mb-4">Electric Rickshaws Zone</h4>
                 <div className="row mb-2">
                   <div className="col-lg-12">
                     <div className="col-sm-12" data-aos="fade-up">
@@ -377,7 +377,7 @@ export function Home() {
                               data-bs-toggle="tab"
                               href="#e-bicycle"
                             >
-                              Electric Bicycle
+                              Electric Rickshaws
                             </a>
                           </li>
                           <li>
@@ -386,7 +386,7 @@ export function Home() {
                               data-bs-toggle="tab"
                               href="#e-bicycle_up"
                             >
-                              Upcoming Electric Bicycle
+                              Upcoming Electric Rickshaws
                             </a>
                           </li>
                           <li>
@@ -395,7 +395,7 @@ export function Home() {
                               data-bs-toggle="tab"
                               href="#e-bicycle_us"
                             >
-                              Used Electric Bicycle
+                              Used Electric Rickshaws
                             </a>
                           </li>
                         </ul>
@@ -406,13 +406,13 @@ export function Home() {
 
                 <div className="card-body tab-content">
                   <div className="tab-pane active" id="e-bicycle">
-                    <Bicycle />
+                    <Rickshaw />
                   </div>
                   <div className="tab-pane fade" id="e-bicycle_up">
-                    <BicycleUpcoming />
+                    <RickshawUpcoming />
                   </div>
                   <div className="tab-pane fade" id="e-bicycle_us">
-                    <BicycleUsed />
+                    <RickshawUsed />
                   </div>
                 </div>
                 <div className="text-center">

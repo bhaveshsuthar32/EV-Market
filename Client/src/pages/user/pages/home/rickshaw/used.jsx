@@ -1,30 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import {  getRickshawUsed } from '../../../../../api';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { getScooterData } from '../../../../../api';
-export function Scooter() {
 
-  const [scooter, setScootre] = useState([]);
+export function RickshawUsed() {
+  const [rickshaw, setRickshaw] = useState([]);
 
-  const scooterData = async()=>{
+  const rickshawData = async()=>{
     try {
-      const response = await getScooterData();
-      setScootre(response.data);
+      const response = await getRickshawUsed();
+      setRickshaw(response.data);
     } catch (error) {
       console.log('Error : ', error)
     }
   }
 
   useEffect(()=>{
-    scooterData();
+    rickshawData();
   },[])
   
   return (
-    
       <>
          <section className='lg:h-[300px] h-[250px] z-0'>
       <div className='sm:mx-16 mx-8'>
@@ -65,22 +64,37 @@ export function Scooter() {
             },
           }}
         >
-          {scooter.map((scooterInfo)=>(
-            <SwiperSlide className='' key={scooterInfo._id}>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src={scooterInfo.img1}
-                  alt={scooterInfo.vehicle_name} />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">{scooterInfo.vehicle_name}</h2>
-                <p className='text-[14px]  lg:text-[17px]'>{scooterInfo.showroom_price}</p>
-              </div>
-            </div>
-          </SwiperSlide>
-          ))}
-          
+        
+  {rickshaw && rickshaw.length > 0 ? (
+    rickshaw.map((rickshawInfo) => (
+      <SwiperSlide className="" key={rickshawInfo._id}>
+        <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
+          <figure>
+            <img
+              src={rickshawInfo.img1}
+              alt={rickshawInfo.vehicle_name}
+            />
+          </figure>
+          <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
+            <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">
+              {rickshawInfo.vehicle_name}
+            </h2>
+            <p className="text-[14px] lg:text-[17px]">
+              {rickshawInfo.showroom_price}
+            </p>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))
+  ) : (
+    // Loading State
+    <div className="flex items-center justify-center h-64">
+      <p className="text-lg font-semibold">Loading...</p>
+    </div>
+  )}
+
+
+
           {/* <SwiperSlide>
               <div className='bg-green-200 p-8 rounded-lg'>
                 <h2 className='text-2xl font-bold mb-4'>Slide-7</h2>

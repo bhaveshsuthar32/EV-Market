@@ -64,6 +64,7 @@ export function ScooterUpcoming() {
             },
           }}
         >
+          
           {scooter.map((scooterInfo)=>(
             <SwiperSlide className='' key={scooterInfo._id}>
             <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
