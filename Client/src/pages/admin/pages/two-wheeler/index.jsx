@@ -79,20 +79,20 @@ export default function TwoWheeler() {
                           </div>
                         </div>
                       </td>
-                     
+
                       <td className='p-1'> {twoDataInfo.type}</td>
                       <td className='p-1'>{twoDataInfo.vehicle_name}</td>
                       <td className='p-1'>{twoDataInfo.speed}</td>
                       <td className='p-1'>{twoDataInfo.color}</td>
                       <td className='p-1'>{twoDataInfo.brand}</td>
 
-                     
+
                       <td className='p-1'>{twoDataInfo.showroom_price}</td>
                       <td className='p-1'>
-                        <tr>
+                        <tr className=''>
                           <td>
                             <button
-                            onClick={() => handleDeleteClick(twoDataInfo._id)}
+                              onClick={() => handleDeleteClick(twoDataInfo._id)}
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -108,8 +108,28 @@ export default function TwoWheeler() {
                                 ></path>
                               </svg>
                             </button>
-                            <button className='border-2'>
-                              <Link to={`/admin/twoWheeler-view/${twoDataInfo._id}`}>view
+                            <button className=''>
+                              <Link to={`/admin/twoWheeler-view/${twoDataInfo._id}`}>
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke-width="1.5"
+                                  stroke="currentColor"
+                                  class="w-6 h-6"
+                                >
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                                  />
+                                  <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-.012.034-.023.068-.035.103-.482 1.52-1.264 2.887-2.29 4-.272.294-.555.575-.845.843C16.268 17.057 13.523 19 12 19c-4.477 0-8.268-2.943-9.542-7 .012-.034.023-.068.035-.103.482-1.52 1.264-2.887 2.29-4 .272-.294.555-.575.845-.843z"
+                                  />
+                                </svg>
+
                               </Link>
                             </button>
                             <button
