@@ -2,7 +2,7 @@ import { AboutUs } from "./about";
 import { Contact } from "./contact_us";
 import { CarData } from "./four-wheeler/car";
 import { Home } from "./home";
-import { BicycleData } from "./three-wheeler/bicycle";
+import { RickshawData } from "./three-wheeler/rickshaw";
 import { BikeData } from "./two-wheeler/bike";
 import { ScooterData } from "./two-wheeler/scooter";
 import FourDetails from "./wheeler-details/four-wheeler";
@@ -16,7 +16,7 @@ export {
     FourDetails,
     ScooterData,
     BikeData,
-    BicycleData,
+    RickshawData,
     Home,
     CarData,
     Contact,
