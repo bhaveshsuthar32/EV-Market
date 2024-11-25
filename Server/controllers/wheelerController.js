@@ -5,6 +5,8 @@ dotenv.config();
 const asyncHandler = require("express-async-handler");
 const { uploadFile } = require("../utils/cloudinary");
 const threeWheeler = require("../model/threeWheeler");
+const fourWheeler = require("../model/fourWheeler");
+
 
     const addTwoDetails = asyncHandler(async (req, res) => {
         const { type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color} = req.body;
@@ -234,6 +236,44 @@ const getRickshawUsed = async(req, res) =>{
 
 
 
+
+// Four Wheeler :-
+
+const addFourData = async (req, res) => {
+    try {
+        const { type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color} = req.body;
+
+        const uploadResults = await Promise.all(
+            Object.values(req.files).flat().map((file) => uploadFile(file))
+          );
+      
+ 
+          const [img1, img2, img3] = uploadResults;
+    
+        const addFourData = new fourWheeler({type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color, img1, img2, img3});
+    
+        const saveFourData = await addFourData.save();
+        res.status(201).json(saveFourData);
+
+    } catch (error) {
+        res.status(500).json({error : error.message})
+    }
+
+}
+
+
+const getFourData = async (req,res) =>{
+    try {
+        const FourData = await fourWheeler.find();
+        res.status(200).json(FourData);
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ error: error.message });
+    }
+}
+
+
+
 module.exports = {
     addTwoDetails,
     getTwoDetails,
@@ -252,4 +292,6 @@ module.exports = {
     getRickshawData,
     getRickshawUpcoming,
     getRickshawUsed,
+    addFourData,
+    getFourData,
 }
