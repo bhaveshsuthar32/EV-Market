@@ -11,6 +11,7 @@ const adminApi = require('../controllers/adminController');
 const authenticateToken = require('../middleware/authMiddleware');
 const twoWheeler = require('../controllers/wheelerController');
 const threeWheeler = require('../controllers/wheelerController');
+const fourWheeler = require('../controllers/wheelerController');
 const otherData = require("../controllers/otherDetailsController")
 
 router.post("/admin/sign", adminApi.signAdmin)
@@ -56,6 +57,17 @@ router.delete("/admin/deleteThreeWheeler/:id", threeWheeler.deleteThreeDetails)
 router.get("/getRickshawData", threeWheeler.getRickshawData);
 router.get("/getRickshawUpcoming", threeWheeler.getRickshawUpcoming);
 router.get("/getRickshawUsed", threeWheeler.getRickshawUsed);
+
+
+
+router.get("/admin/addFourWheeler", upload.fields([
+  { name: 'img1', maxCount: 1 },
+  { name: 'img2', maxCount: 1 },
+  { name: 'img3', maxCount: 1 },
+]), fourWheeler.addFourData);
+router.get("/admin/getFourWheeler", fourWheeler.getFourData);
+
+
 
 // export default router ;
 module.exports = router;
