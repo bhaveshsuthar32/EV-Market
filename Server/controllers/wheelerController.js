@@ -288,6 +288,24 @@ const getFourDataById = async (req, res)=>{
 }
 
 
+const deleteFourDetails = async (req, res) => {
+    try {
+        const id = req.params.id ;
+
+        const userData = await fourWheeler.findById(id);
+        if(!userData){
+            return res.status(404).json({message : "two wheeler data not found"})
+        }
+
+        await FourWheeler.findByIdAndDelete(id);
+        res.status(200).json({message : "delete successfully "})
+    } catch (error) {
+      console.error("Error: ", error);
+      res.status(500).json({ error: error.message });
+    }
+  };
+  
+
 
 module.exports = {
     addTwoDetails,
@@ -310,4 +328,5 @@ module.exports = {
     addFourData,
     getFourData,
     getFourDataById,
+    deleteFourDetails,
 }
