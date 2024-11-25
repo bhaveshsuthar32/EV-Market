@@ -66,7 +66,8 @@ router.get("/admin/addFourWheeler", upload.fields([
   { name: 'img3', maxCount: 1 },
 ]), fourWheeler.addFourData);
 router.get("/admin/getFourWheeler", fourWheeler.getFourData);
-
+router.get("/admin/getFourById/:id", fourWheeler.getFourDataById)
+router.delete("/admin/deleteFourWheeler/:id", fourWheeler.deleteFourDetails)
 
 
 // export default router ;
