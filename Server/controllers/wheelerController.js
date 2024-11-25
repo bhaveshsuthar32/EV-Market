@@ -273,6 +273,21 @@ const getFourData = async (req,res) =>{
 }
 
 
+const getFourDataById = async (req, res)=>{
+    try {
+        const { id } = req.params;
+
+        // finding the team by ID
+        const FourData = await fourWheeler.findById(id);
+        console.log(FourData);
+        res.status(200).json(FourData);
+    } catch (error) {
+        console.error("Error:", error);
+        res.status(500).json({ error: error.message });
+    }
+}
+
+
 
 module.exports = {
     addTwoDetails,
@@ -294,4 +309,5 @@ module.exports = {
     getRickshawUsed,
     addFourData,
     getFourData,
+    getFourDataById,
 }
