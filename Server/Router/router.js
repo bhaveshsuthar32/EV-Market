@@ -70,5 +70,10 @@ router.get("/admin/getFourById/:id", fourWheeler.getFourDataById)
 router.delete("/admin/deleteFourWheeler/:id", fourWheeler.deleteFourDetails)
 
 
+router.get("/getCarData", threeWheeler.getCarData);
+router.get("/getCarUpcoming", threeWheeler.getCarUpcoming);
+router.get("/getCarUsed", threeWheeler.getCarUsed);
+
+
 // export default router ;
 module.exports = router;
