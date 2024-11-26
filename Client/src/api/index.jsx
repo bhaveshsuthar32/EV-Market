@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
- const URL = "https://ev-market-server.vercel.app"
-// const URL = "http://localhost:4000"
+//  const URL = "https://ev-market-server.vercel.app"
+const URL = "http://localhost:4000"
 
 export const signData = async(data)=>{
     try {
@@ -199,3 +199,30 @@ export const getRickshawUsed = async () =>{
     console.log("Error : ", error);
   }
 }
+
+
+
+export const getCarData = async () =>{
+  try {
+    return await axios.get(`${URL}/getCarData`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getCarUpcoming = async () =>{
+  try {
+    return await axios.get(`${URL}/getCarUpcoming`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
+export const getCarUsed = async () =>{
+  try {
+    return await axios.get(`${URL}/getCarUsed`);
+  } catch (error) {
+    console.log("Error : ", error);
+  }
+}
+
