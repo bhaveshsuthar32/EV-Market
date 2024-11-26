@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-//  const URL = "https://ev-market-server.vercel.app"
-const URL = "http://localhost:4000"
+ const URL = "https://ev-market-server.vercel.app"
+// const URL = "http://localhost:4000"
 
 export const signData = async(data)=>{
     try {
@@ -227,6 +227,16 @@ export const getFourDataById = async (id) =>{
     console.log("Error : ", error)
   }
 }
+
+ 
+export const deleteFourWheeler = async (id) => {
+  try {
+    const response = await axios.delete(`${URL}/admin/deleteFourWheeler/${id}`);
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
 
 
 export const getCarData = async () =>{
