@@ -15,6 +15,7 @@ import ThreeWheeler from './three-wheeler'
 import FourWheeler from './four-wheeler'
 import { Two_view } from './two-wheeler/two_view'
 import THreeWheelerForm from './three-wheeler/three_form'
+import FourWheelerForm from './four-wheeler/four_form'
 
 export default function AdminLayout() {
   return (
@@ -36,6 +37,7 @@ export default function AdminLayout() {
         <Route path='/threeWheeler' element={<ThreeWheeler/>} />
         <Route path='/threeWheeler-form' element={<THreeWheelerForm/>} />
         <Route path='/fourWheeler' element={<FourWheeler/>} />
+        <Route path='/fourWheeler-form' element={<FourWheelerForm/>} />
       </Routes>
     </div>
     </Layout>
