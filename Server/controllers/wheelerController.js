@@ -305,6 +305,39 @@ const deleteFourDetails = async (req, res) => {
     }
   };
   
+ // Car  :-
+
+ const getCarData = async(req, res) =>{
+    try {
+        const carData = await fourWheeler.find({ type : "E-Car"});
+        res.status(200).json(carData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
+const getCarUpcoming = async(req, res) =>{
+    try {
+        const carData = await fourWheeler.find({ type : "E-Car", upcomming_and_used : "Upcoming" });
+        res.status(200).json(carData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
+
+const getCarUsed = async(req, res) =>{
+    try {
+        const carData = await fourWheeler.find({ type : "E-Car", upcomming_and_used : "Used"});
+        res.status(200).json(carData);
+    } catch (error) {
+        console.log("Error :", error);
+        res.status(500).json({error : error.message});
+    }
+}
+
 
 
 module.exports = {
@@ -329,4 +362,7 @@ module.exports = {
     getFourData,
     getFourDataById,
     deleteFourDetails,
+    getCarData,
+    getCarUpcoming,
+    getCarUsed
 }
