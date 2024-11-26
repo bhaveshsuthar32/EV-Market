@@ -60,7 +60,7 @@ router.get("/getRickshawUsed", threeWheeler.getRickshawUsed);
 
 
 
-router.get("/admin/addFourWheeler", upload.fields([
+router.post("/admin/addFourWheeler", upload.fields([
   { name: 'img1', maxCount: 1 },
   { name: 'img2', maxCount: 1 },
   { name: 'img3', maxCount: 1 },
