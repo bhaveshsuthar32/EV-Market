@@ -77,14 +77,6 @@ export function BikeUpcoming() {
           ))}
 
 
-
-
-          {/* <SwiperSlide>
-              <div className='bg-green-200 p-8 rounded-lg'>
-                <h2 className='text-2xl font-bold mb-4'>Slide-7</h2>
-                <p>Slide seven content</p>
-              </div>
-            </SwiperSlide> */}
         </Swiper>
       </div>
     </section>
