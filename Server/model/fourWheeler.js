@@ -13,7 +13,7 @@ const fourSchema = new mongoose.Schema({
         type : String,
         required : false,
     },
-    name : {
+    vehicle_name : {
         type : String,
         required : false,
     },
