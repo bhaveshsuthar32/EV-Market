@@ -68,14 +68,15 @@ export function RickshawUpcoming() {
   {rickshaw && rickshaw.length > 0 ? (
     rickshaw.map((rickshawInfo) => (
       <SwiperSlide className="" key={rickshawInfo._id}>
-        <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
+        <div className="card card-compact bg-base-100 lg:w-[290px] md:w-[260px] w-[230px] p-0 shadow-md rounded-lg">
           <figure>
             <img
               src={rickshawInfo.img1}
               alt={rickshawInfo.vehicle_name}
+              className='lg:h-[180px] h-[130px] lg:w-full w-full border-b-[1px]'
             />
           </figure>
-          <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[90px] my-0 border-t-[1px]">
+          <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[80px] my-0">
             <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">
               {rickshawInfo.vehicle_name}
             </h2>
