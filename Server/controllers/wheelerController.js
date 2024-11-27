@@ -319,7 +319,7 @@ const deleteFourDetails = async (req, res) => {
 
 const getCarUpcoming = async(req, res) =>{
     try {
-        const carData = await fourWheeler.find({ type : "E-Car", upcomming_and_used : "Upcoming" });
+        const carData = await fourWheeler.find({ type : "E-Car", type : "SUV", upcomming_and_used : "Upcoming" });
         res.status(200).json(carData);
     } catch (error) {
         console.log("Error :", error);
@@ -330,7 +330,7 @@ const getCarUpcoming = async(req, res) =>{
 
 const getCarUsed = async(req, res) =>{
     try {
-        const carData = await fourWheeler.find({ type : "E-Car", upcomming_and_used : "Used"});
+        const carData = await fourWheeler.find({ type : "E-Car", type : "SUV", upcomming_and_used : "Used"});
         res.status(200).json(carData);
     } catch (error) {
         console.log("Error :", error);
