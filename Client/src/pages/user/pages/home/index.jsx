@@ -108,68 +108,68 @@ export function Home() {
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={""}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/fstgtnbefsgzkso0ukqp"}
                       alt="icons"
                       height="100px"
                       width="100px"
                     />
                   </a>
-                  <h4 className="text-center mt-2">abcd </h4>
+                  {/* <h4 className="text-center mt-2">abcd </h4> */}
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={""}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/isaazfhewvhlz9urq1z3"}
                       alt="icons"
                       height="100px"
                       width="100px"
                     />
                   </a>
-                  <h4 className="text-center mt-2">abcd </h4>
+                  {/* <h4 className="text-center mt-2">abcd </h4> */}
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={""}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/rd48arnc6s4lreqozdye"}
                       alt="icons"
                       height="100px"
                       width="100px"
                     />
                   </a>
-                  <h4 className="text-center mt-2">abcd </h4>
+                  {/* <h4 className="text-center mt-2">abcd </h4> */}
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={""}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/xxf9kfcz7rlb8ngbentz"}
                       alt="icons"
                       height="100px"
                       width="100px"
                     />
                   </a>
-                  <h4 className="text-center mt-2">abcd </h4>
+                  {/* <h4 className="text-center mt-2">abcd </h4> */}
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={""}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/xzo90czu0nyzpy5p1a8u"}
                       alt="icons"
                       height="100px"
                       width="100px"
                     />
                   </a>
-                  <h4 className="text-center mt-2">abcd </h4>
+                  {/* <h4 className="text-center mt-2">abcd </h4> */}
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={""}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/nnkhwrnkvpviuooxzj3v"}
                       alt="icons"
                       height="100px"
                       width="100px"
                     />
                   </a>
-                  <h4 className="text-center mt-2">abcd </h4>
+                  {/* <h4 className="text-center mt-2">abcd </h4> */}
                 </div>
               </div>
             </div>
@@ -189,7 +189,7 @@ export function Home() {
                         <ul className="nav gap-2 fw-bold" data-bs-tabs="tabs">
                           <li>
                             <a
-                              className="active rounded-3"
+                              className="active rounded-2 px-3 lg:py-2 py-1"
                               aria-current="true"
                               data-bs-toggle="tab"
                               href="#e-bike"
@@ -199,20 +199,20 @@ export function Home() {
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1"
                               data-bs-toggle="tab"
                               href="#e-bike_up"
                             >
-                              Upcoming Electric Bike
+                              Upcoming E-Bike
                             </a>
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1"
                               data-bs-toggle="tab"
                               href="#e-bike_us"
                             >
-                              Used Electric Bike
+                              Used E-Bike
                             </a>
                           </li>
                         </ul>
@@ -260,30 +260,30 @@ export function Home() {
                         <ul className="nav gap-2 fw-bold" data-bs-tabs="tabs">
                           <li>
                             <a
-                              className="active rounded-3"
+                              className="active rounded-2 px-3 lg:py-2 py-1"
                               aria-current="true"
                               data-bs-toggle="tab"
                               href="#e-scooter"
                             >
-                              Electric Scooter
+                              E-Scooter
                             </a>
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1"
                               data-bs-toggle="tab"
                               href="#e-scooter_up"
                             >
-                              Upcoming Electric Scooter
+                              Upcoming E-Scooter
                             </a>
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1"
                               data-bs-toggle="tab"
                               href="#e-scooter_us"
                             >
-                              Used Electric Scooter
+                              Used E-Scooter
                             </a>
                           </li>
                         </ul>
@@ -337,29 +337,29 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-6 gap-4">
+            <div className="grid grid-cols-6 gap-4 px-3">
 
               {brand.map((brandInfo) => (
-                <div className="lg:col-span-1 sm:col-span-2 col-span-3 " key={brandInfo._id}>
-                  <a href="#" className="category-links p-0 shadow-sm hover:text-white">
+                <div className="lg:col-span-1 md:col-span-2 col-span-3 gap-3 border-[1px] rounded-md shadow-sm" key={brandInfo._id}>
+                  <Link to="#" className="">
                     <img
                       src={brandInfo.brand_logo}
                       alt={brandInfo.brand_name}
-                      className="rounded-t-lg w-full h-[100px]"
+                      className="rounded-t-md w-full md:h-[120px] h-[100px] border-b-[1px]"
                     />
-                    <p className="h-[40px] mt-3">{brandInfo.brand_name}</p>
-                  </a>
+                  </Link>
+                  <p className="h-[36px] mt-2 text-center hover:cursor-pointer font-semibold font-serif">{brandInfo.brand_name}</p>
                 </div>
               ))}
 
 
-              
+
             </div>
           </div>
         </section>
 
 
-        {/* E-Bicycle */}
+        {/* E-Rickshaws */}
         <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
           <div className="container">
             <div className="row ">
@@ -368,34 +368,36 @@ export function Home() {
                 <div className="row mb-2">
                   <div className="col-lg-12">
                     <div className="col-sm-12" data-aos="fade-up">
-                      <div className="recommended-tabs-blk">
+                      <div className="recommended-tabs-blk ">
                         <ul className="nav gap-2 fw-bold" data-bs-tabs="tabs">
                           <li>
                             <a
-                              className="active rounded-3"
+                              className="active rounded-2 px-3 lg:py-2 py-1"
                               aria-current="true"
                               data-bs-toggle="tab"
                               href="#e-bicycle"
                             >
-                              Electric Rickshaws
+
+                              E-Rickshaws
+
                             </a>
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1 "
                               data-bs-toggle="tab"
                               href="#e-bicycle_up"
                             >
-                              Upcoming Electric Rickshaws
+                              Upcoming E-Rickshaws
                             </a>
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1 "
                               data-bs-toggle="tab"
                               href="#e-bicycle_us"
                             >
-                              Used Electric Rickshaws
+                              Used E- Rickshaws
                             </a>
                           </li>
                         </ul>
@@ -444,7 +446,7 @@ export function Home() {
                         <ul className="nav gap-2 fw-bold" data-bs-tabs="tabs">
                           <li>
                             <a
-                              className="active rounded-3"
+                              className="active rounded-2 px-3 lg:py-2 py-1"
                               aria-current="true"
                               data-bs-toggle="tab"
                               href="#e-car"
@@ -454,20 +456,20 @@ export function Home() {
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1"
                               data-bs-toggle="tab"
                               href="#e-car_up"
                             >
-                              Upcoming Electric Car
+                              Upcoming E-Car
                             </a>
                           </li>
                           <li>
                             <a
-                              className="rounded-3"
+                              className="rounded-2 px-3 lg:py-2 py-1"
                               data-bs-toggle="tab"
                               href="#e-car_us"
                             >
-                              Used Electric Car
+                              Used E-Car
                             </a>
                           </li>
                         </ul>
@@ -487,7 +489,7 @@ export function Home() {
                     <CarUsed />
                   </div>
                 </div>
-                <div className="text-center">
+                <div className="text-center mb-8">
                   <Link
                     to={"/car"}
                     className="btn btn-view text"
@@ -501,6 +503,28 @@ export function Home() {
         </section>
         {/* End E-Car */}
 
+{/* why electric vehicle */}
+
+        <section className="border-2">
+          <div className="grid grid-cols-2 mt-[50px]">
+              <div className="col-span-1 border-2 h-[400px] px-[70px] py-[30px]">
+                <h1 className="text-[36px] font-semibold mb-[18px]">Why Electric <br />Vehicle ?</h1>
+                <p className="text-[14px] mb-1"><span className="font-semibold">Eco-Friendly :</span>  Zero emissions for a cleaner, greener planet.</p>
+                <p className="text-[14px]"><span className="font-semibold">Future-Ready :</span>  Advanced performance with cutting-edge technology.</p>
+                <Link>
+                  <button className="py-2 px-4 border-[2px] rounded-3 bg-primary-500 text-white mt-3">Get Started</button>
+                </Link>
+              </div>
+              <div className="col-span-1 border-2 h-[400px] grid grid-cols-2 gap-4 px-2">
+                <div className="border-2">
+                  
+                </div>
+                <div className="border-2"></div>
+                <div className="border-2"></div>
+                <div className="border-2"></div>
+              </div>
+          </div>
+        </section>
 
         <br />
         <div className="btn">
