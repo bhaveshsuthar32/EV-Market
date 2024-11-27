@@ -18,7 +18,7 @@ export function Navbar() {
               <Link to="/" className="navbar-brand logo ">
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjCzX0J4Tq-8O0xTbsr9HbF_SOqv0BoArjIw&s"
-                  className="img-fluid mt-[15px] ml-[32px] h-[52px]"
+                  className="img-fluid mt-[15px] md:ml-[32px] md:h-[52px] h-[40px] ml-[45px]"
                   alt="Logo"
                 />
               </Link>
