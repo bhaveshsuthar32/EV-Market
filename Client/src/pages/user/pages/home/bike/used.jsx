@@ -63,11 +63,11 @@ export function BikeUsed() {
           >
             {bike.map((bikeInfo) => (
               <SwiperSlide className='' key={bikeInfo._id}>
-                <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
+                <div className="card card-compact bg-base-100 lg:w-[290px] md:w-[260px] w-[230px] p-0 shadow-md rounded-lg">
                   <figure>
-                    <img src={bikeInfo.img1} alt={bikeInfo.vehicle_name} />
+                    <img src={bikeInfo.img1} alt={bikeInfo.vehicle_name}  className='lg:h-[180px] h-[130px] lg:w-full w-full border-b-[1px]' />
                   </figure>
-                  <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
+                  <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[80px] my-0">
                     <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">
                       {bikeInfo.vehicle_name}
                     </h2>
