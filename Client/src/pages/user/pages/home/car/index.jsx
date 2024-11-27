@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import { getCarData } from '../../../../../api';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 export function Car() {
+
+  const [car, setCar] = useState([]);
+
+  const carData = async () => {
+    try {
+      const response = await getCarData();
+      setCar(response.data);
+    } catch (error) {
+      console.log('Error : ', error)
+    }
+  }
+
+  useEffect(() => {
+    carData();
+  }, [])
+
 
   return (
       <>
@@ -48,78 +65,32 @@ export function Car() {
             },
           }}
         >
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Honda Civic</h2>
-                <p className='text-[14px]  lg:text-[17px]'>7,40,000</p>
+         
+         {car && car.length > 0 ? (
+              car.map((carInfo) => (
+                <SwiperSlide className='' key={carInfo._id}>
+                <div className="card card-compact bg-base-100 lg:w-[290px] md:w-[260px] w-[230px] p-0 shadow-md rounded-lg">
+                  <figure>
+                    <img src={carInfo.img1} 
+                      alt={carInfo.vehicle_name}
+                       className='lg:h-[180px] h-[130px] lg:w-full w-full border-b-[1px]'
+                    />
+                  </figure>
+                  <div className="p-2 md:p-6 leading-4 h-[70px] lg:h-[80px] my-0">
+                    <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">
+                      {carInfo.vehicle_name}
+                    </h2>
+                    <p className="text-[14px] lg:text-[17px] mt-2">₹ {carInfo.showroom_price}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              ))
+            ) : (
+              // Loading State
+              <div className="flex items-center justify-center h-64">
+                <p className="text-lg font-semibold">Loading...</p>
               </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Honda Civic</h2>
-                <p className='text-[14px]  lg:text-[17px]'>7,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Honda Civic</h2>
-                <p className='text-[14px]  lg:text-[17px]'>7,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Honda Civic</h2>
-                <p className='text-[14px]  lg:text-[17px]'>7,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className=''>
-            <div className="card card-compact bg-base-100 lg:w-[300px] w-60 p-0 shadow-md rounded-lg">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Img" />
-              </figure>
-              <div className="p-2  md:p-6 leading-4 h-[70px] lg:h-[90px] my-0">
-                <h2 className="lg:card-title font-semibold text-[14px] lg:text-[18px] mt-0">Honda Civic</h2>
-                <p className='text-[14px]  lg:text-[17px]'>7,40,000</p>
-              </div>
-            </div>
-          </SwiperSlide>
-
-
-
+            )}
 
 
           {/* <SwiperSlide>
