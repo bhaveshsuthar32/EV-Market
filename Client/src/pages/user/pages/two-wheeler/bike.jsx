@@ -29,9 +29,9 @@ export function BikeData() {
               <div className="col-lg-12">
                 <div className=" listgrid-sidebar">
                   <div className="count-search mb-[20px] ">
-                    <h4>
+                    <h4 className="text-[20px] font-semibold">
                       E-Bike for Sale
-                      <span style={{ fontSize: "14px" }}> (Showing {bike.length})</span>
+                      <span className="text-[16px]"> (Showing {bike.length})</span>
                     </h4>
                   </div>
                   <div className="grid-view listgrid-sidebar row">
@@ -62,7 +62,7 @@ export function BikeData() {
                                     <p>₹ {bikeInfo.showroom_price}</p>
                                   </div>
                                 </div>
-                                <div className="blog-location-details mt-1 grid grid-cols-3 text-center text-xs text-black mt-[-20px]">
+                                <div className="blog-location-details mt-1 grid grid-cols-3 text-center text-xs text-black ">
                                   <div>
                                     <img
                                       src="/assets_1/My_img/logo-1.png"
