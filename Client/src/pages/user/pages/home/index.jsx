@@ -248,7 +248,7 @@ export function Home() {
 
 
         {/* E-Scooter */}
-        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0 mt-2">
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
@@ -419,7 +419,7 @@ export function Home() {
                 </div>
                 <div className="text-center">
                   <Link
-                    to={"/bicycle"}
+                    to={"/rickshaws"}
                     className="btn btn-view text"
                   >
                     View All
@@ -434,7 +434,7 @@ export function Home() {
 
 
         {/* E-Car */}
-        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0">
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk mt-2">
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
@@ -572,32 +572,9 @@ export function Home() {
         </section>
         {/* End : why electric vehicle */}
 
-        <br />
-        <div className="btn">
-          <Link
-            to={"/two-details"}
-            className="bg-slate-900 text-white mb-3 p-2 mx-2"
-          >
-            Two details
-          </Link>
-          <Link
-            to={"/three-details"}
-            className="bg-slate-900 text-white mb-3 p-2 mx-2"
-          >
-            Three details
-          </Link>
-          <Link
-            to={"/four-details"}
-            className="bg-slate-900 text-white mb-3 p-2 mx-2"
-          >
-            Four details
-          </Link>
-        </div>
 
-        {/* Category */}
+        {/* Footer */}
         <Footer />
-
-        {/* <h1 className="text-[100px]">add new section</h1> */}
       </div>
     </>
   );
