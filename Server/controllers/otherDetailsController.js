@@ -40,6 +40,24 @@ const getBrand = async(req,res)=>{
     }
 }
 
+const deleteBrand = async (req, res) => {
+    try {
+        const id = req.params.id ;
+
+        const userData = await Brand.findById(id);
+        if(!userData){
+            return res.status(404).json({message : "Brand data not found"})
+        }
+
+        await Brand.findByIdAndDelete(id);
+        res.status(200).json({message : "delete successfully "})
+    } catch (error) {
+      console.error("Error: ", error);
+      res.status(500).json({ error: error.message });
+    }
+};
+
+
 const addStartUps = async(req,res)=>{
     const {startup_name} = req.body
     try {
@@ -77,9 +95,29 @@ const getStartUps = async(req,res)=>{
     }
 }
 
+const deleteStartUps = async (req, res) => {
+    try {
+        const id = req.params.id ;
+
+        const userData = await StartUps.findById(id);
+        if(!userData){
+            return res.status(404).json({message : "StartUps data not found"})
+        }
+
+        await StartUps.findByIdAndDelete(id);
+        res.status(200).json({message : "delete successfully "})
+    } catch (error) {
+      console.error("Error: ", error);
+      res.status(500).json({ error: error.message });
+    }
+};
+
+
 module.exports = {
     addBrand,
     getBrand,
+    deleteBrand,
     addStartUps,
     getStartUps,
+    deleteStartUps,
 }
