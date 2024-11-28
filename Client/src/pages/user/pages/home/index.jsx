@@ -181,7 +181,7 @@ export function Home() {
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
-                <h4 className="text-[26px] font-semibold mb-4">Electric Bikes Zone</h4>
+                <h4 className="text-[22px] md:text-[26px] font-semibold mb-4">Electric Bikes Zone</h4>
                 <div className="row mb-2">
                   <div className="col-lg-12">
                     <div className="col-sm-12" data-aos="fade-up">
@@ -252,7 +252,7 @@ export function Home() {
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
-                <h4 className="text-[26px] font-semibold mb-4">Electric Scooter Zone</h4>
+                <h4 className="text-[22px] md:text-[26px] font-semibold mb-4">Electric Scooter Zone</h4>
                 <div className="row mb-2">
                   <div className="col-lg-12">
                     <div className="col-sm-12" data-aos="fade-up">
@@ -364,7 +364,7 @@ export function Home() {
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
-                <h4 className="text-[26px] font-semibold mb-4">Electric Rickshaws Zone</h4>
+                <h4 className="text-[22px] md:text-[26px] font-semibold mb-4">Electric Rickshaws Zone</h4>
                 <div className="row mb-2">
                   <div className="col-lg-12">
                     <div className="col-sm-12" data-aos="fade-up">
@@ -429,7 +429,7 @@ export function Home() {
             </div>
           </div>
         </section>
-        {/* End E-Bicycle */}
+        {/* End E-Rickshaws */}
 
 
 
@@ -438,7 +438,7 @@ export function Home() {
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
-                <h4 className="text-[26px] font-semibold mb-4">Electric Car Zone</h4>
+                <h4 className="text-[22px] md:text-[26px] font-semibold mb-4">Electric Car Zone</h4>
                 <div className="row mb-2">
                   <div className="col-lg-12">
                     <div className="col-sm-12" data-aos="fade-up">
@@ -503,28 +503,74 @@ export function Home() {
         </section>
         {/* End E-Car */}
 
-{/* why electric vehicle */}
-
-        <section className="border-2">
+        {/* why electric vehicle */}
+        <section className=" mb-4">
           <div className="grid grid-cols-2 mt-[50px]">
-              <div className="col-span-1 border-2 h-[400px] px-[70px] py-[30px]">
-                <h1 className="text-[36px] font-semibold mb-[18px]">Why Electric <br />Vehicle ?</h1>
-                <p className="text-[14px] mb-1"><span className="font-semibold">Eco-Friendly :</span>  Zero emissions for a cleaner, greener planet.</p>
-                <p className="text-[14px]"><span className="font-semibold">Future-Ready :</span>  Advanced performance with cutting-edge technology.</p>
-                <Link>
-                  <button className="py-2 px-4 border-[2px] rounded-3 bg-primary-500 text-white mt-3">Get Started</button>
-                </Link>
-              </div>
-              <div className="col-span-1 border-2 h-[400px] grid grid-cols-2 gap-4 px-2">
-                <div className="border-2">
-                  
+            <div className="md:col-span-1 col-span-2 h-full  px-[30px] md:px-[70px] py-[20px] md:py-[30px]">
+              <h1 className="text-[24px] md:text-[36px] font-semibold mb-[18px]">Why Electric <br />Vehicle ?</h1>
+              <p className="text-[14px] mb-1"><span className="font-semibold">Eco-Friendly :</span>  Zero emissions for a cleaner, greener planet.</p>
+              <p className="text-[14px]"><span className="font-semibold">Future-Ready :</span>  Advanced performance with cutting-edge technology.</p>
+              <Link>
+                <button className="py-2 px-4 border-[2px] rounded-3 bg-primary-500 text-white mt-3">Get Started</button>
+              </Link>
+            </div>
+            <div className="md:col-span-1 col-span-2 h-full grid grid-cols-2 py-6 gap-y-6 gap-x-4 px-4">
+              <div className="px-2 bg-base-100">
+                <div className="py-2 md:h-[80px] h-[70px] mb-2 overflow-hidden">
+                  <img
+                    src="https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732625986/evmarket/xxf9kfcz7rlb8ngbentz.png"
+                    alt=""
+                    className="w-30 h-full bg-cover"
+                  />
                 </div>
-                <div className="border-2"></div>
-                <div className="border-2"></div>
-                <div className="border-2"></div>
+                <h1 className="text-[14px] md:text-[20px] font-semibold mb-1 md:mb-2">Special Financing Offer</h1>
+                <p className="text-[12px] leading-4 md:leading-5 md:text-[14px] font-sans">Drive into the future with easy EMIs and low-interest rates on electric vehicles. Your dream EV is now within reach!</p>
+
               </div>
+
+              <div className="px-2 bg-base-100">
+                <div className="py-2 md:h-[80px] h-[70px] mb-2 overflow-hidden">
+                  <img
+                    src="https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732769090/c_logo14_px1ni7.png"
+                    alt=""
+                    className="w-30 h-full bg-cover"
+                  />
+                </div>
+                <h1 className="text-[14px] md:text-[20px] font-semibold mb-1 md:mb-2">Trusted Dealership</h1>
+                <p className="text-[12px] leading-4 md:leading-5 md:text-[14px] font-sans">Your go-to destination for reliable electric vehicles. Enjoy great deals, trusted quality, and outstanding customer service!</p>
+
+              </div>
+
+              <div className="px-2 bg-base-100">
+                <div className="py-2 md:h-[80px] h-[70px] mb-2 overflow-hidden">
+                  <img
+                    src="https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732429046/evmarket/u73a0waogn8jmx1exrft.png"
+                    alt=""
+                    className="w-30 h-full bg-cover"
+                  />
+                </div>
+                <h1 className="text-[14px] md:text-[20px] font-semibold mb-1 md:mb-2">Expert Service</h1>
+                <p className="text-[12px] leading-4 md:leading-5 md:text-[14px] font-sans">Premium service for your electric vehicle-trusted expertise, ensuring peak performance and reliability every time!</p>
+
+              </div>
+
+              <div className="px-2 bg-base-100">
+                <div className="py-2 md:h-[80px] h-[70px] mb-2 overflow-hidden">
+                  <img
+                    src="https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732769812/evs_logo4_md0e1k.png"
+                    alt=""
+                    className="w-30 h-full bg-cover"
+                  />
+                </div>
+                <h1 className="text-[14px] md:text-[20px] font-semibold mb-1 md:mb-2">Battery Power</h1>
+                <p className="text-[12px] leading-4 md:leading-5 md:text-[14px] font-sans">Power your drive with cutting-edge battery technology and take advantage of easy EMIs and low-interest rates on electric vehicles!</p>
+
+              </div>
+
+            </div>
           </div>
         </section>
+        {/* End : why electric vehicle */}
 
         <br />
         <div className="btn">
