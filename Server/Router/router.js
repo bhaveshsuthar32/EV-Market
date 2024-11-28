@@ -30,9 +30,11 @@ router.delete("/admin/deleteTwoWheeler/:id", twoWheeler.deleteTwoDetails)
 
 router.post("/admin/addBrand", upload.single("brand_logo"), otherData.addBrand )
 router.get("/admin/getBrand", otherData.getBrand )
+router.delete("/admin/deleteBrand/:id", otherData.deleteBrand)
 
 router.post("/admin/addStartUps", upload.single("startup_logo"), otherData.addStartUps )
 router.get("/admin/getStartUps", otherData.getStartUps )
+router.delete("/admin/deleteStartUps/:id", otherData.deleteStartUps)
 
 router.get("/getBikeData", twoWheeler.getBikeData);
 router.get("/getBikeUpcoming", twoWheeler.getBikeUpcoming);
