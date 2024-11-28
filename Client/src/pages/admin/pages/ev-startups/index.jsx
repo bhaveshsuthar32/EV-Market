@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getStartUps } from '../../../../api';
+import { deleteStartUps, getStartUps } from '../../../../api';
 
 
 export default function StartUps() {
@@ -11,6 +11,20 @@ export default function StartUps() {
     const response = await getStartUps();
     setStartUps(response.data);
   }
+
+    
+  const handleDeleteClick = async (id) => {
+    if (window.confirm("Are you sure you want to delete this StartUps?")) {
+      try {
+        await deleteStartUps(id);
+        // Update state after deletion
+        getStartUpsData();
+      } catch (error) {
+        console.error("Error deleting data:", error);
+      }
+    }
+  };
+
 
   useEffect(()=>{
     getStartUpsData();
@@ -70,7 +84,7 @@ export default function StartUps() {
                         <tr>
                           <td>
                             <button
-                            // onClick={() => handleDeleteClick(startUpsInfo._id)}
+                            onClick={() => handleDeleteClick(startUpsInfo._id)}
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
