@@ -72,11 +72,11 @@ const userRoutes = [
         element: <TwoDetails />,
     },
     {
-        path: "/three-details",
+        path: "/three-details/:id",
         element: <ThreeDetails />,
     },
     {
-        path: "/four-details",
+        path: "/four-details/:id",
         element: <FourDetails />,
     },
 ]
