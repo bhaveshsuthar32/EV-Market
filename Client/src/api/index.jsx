@@ -263,3 +263,23 @@ export const getCarUsed = async () =>{
   }
 }
 
+
+export const deleteBrand = async (id) => {
+  try {
+    const response = await axios.delete(`${URL}/admin/deleteBrand/${id}`);
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
+
+export const deleteStartUps = async (id) => {
+  try {
+    const response = await axios.delete(`${URL}/admin/deleteStartUps/${id}`);
+    console.log(response.data);
+  } catch (error) {
+    console.error('Error:', error);
+  }
+};
+
