@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getBrand } from '../../../../api';
+import { deleteBrand, getBrand } from '../../../../api';
 
 
 export default function Brand() {
@@ -11,6 +11,20 @@ export default function Brand() {
     const response = await getBrand();
     setBrand(response.data);
   }
+
+  
+  const handleDeleteClick = async (id) => {
+    if (window.confirm("Are you sure you want to delete this Brand?")) {
+      try {
+        await deleteBrand(id);
+        // Update state after deletion
+        getBrandData();
+      } catch (error) {
+        console.error("Error deleting data:", error);
+      }
+    }
+  };
+
 
   useEffect(()=>{
     getBrandData();
@@ -65,7 +79,7 @@ export default function Brand() {
                         <tr>
                           <td>
                             <button
-                            // onClick={() => handleDeleteClick(brandInfo._id)}
+                            onClick={() => handleDeleteClick(brandInfo._id)}
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
