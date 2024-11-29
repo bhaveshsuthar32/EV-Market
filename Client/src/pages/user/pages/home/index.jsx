@@ -35,7 +35,7 @@ export function Home() {
 
   return (
     <>
-      <div className="main-wrapper mt-2 ">
+      <div className="main-wrapper">
         <Navbar />
         <section className="banner-section">
           <div
@@ -97,80 +97,73 @@ export function Home() {
         <section className="category-section">
           <div className="container">
             <div className="row px-3">
-              {/* <div className="col-lg-2 col-md-4 col-sm-6 col-6">
-                <a href="categories.html" className="category-links shadow-sm text-center">
-                  <img src={""} alt="icons" height="80px" width="80px" />
-                  <h6 className="mt-3">New EV</h6>
-                </a>
-              </div> */}
 
               <div className="grid grid-cols-6 gap-1">
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/fstgtnbefsgzkso0ukqp"}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732627135/evmarket/isaazfhewvhlz9urq1z3.png"}
                       alt="icons"
-                      height="100px"
-                      width="100px"
+                      className=" h-[85px] w-[100px]"
                     />
                   </a>
-                  {/* <h4 className="text-center mt-2">abcd </h4> */}
+                  <h4 className="text-center mt-3 mb-2 text-[14px] font-semibold">New EV </h4>
                 </div>
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/isaazfhewvhlz9urq1z3"}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732627634/evmarket/ivbcghmgt9objk5qxu4n.png"}
                       alt="icons"
-                      height="100px"
-                      width="100px"
+                      className=" h-[85px] w-[100px]"
                     />
                   </a>
-                  {/* <h4 className="text-center mt-2">abcd </h4> */}
+                  <h4 className="text-center mt-3 mb-2 text-[14px] font-semibold">Used EV </h4>
                 </div>
+
+                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
+                  <a href="">
+                    <img
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732437742/evmarket/aevzhwixn5pl9h4xvzvc.png"}
+                      alt="icons"
+                      className=" h-[85px] w-[100px]"
+                    />
+                  </a>
+                  <h4 className="text-center mt-3 mb-2 text-[14px] font-semibold">EV Service </h4>
+                </div>
+
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
                       src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/rd48arnc6s4lreqozdye"}
                       alt="icons"
-                      height="100px"
-                      width="100px"
+                      className=" h-[85px] w-[100px]"
                     />
                   </a>
-                  {/* <h4 className="text-center mt-2">abcd </h4> */}
+                  <h4 className="text-center mt-3 mb-2 text-[14px] font-semibold">Charging Point </h4>
                 </div>
+
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/xxf9kfcz7rlb8ngbentz"}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732863305/c_logo16_j5yevh.png"}
                       alt="icons"
-                      height="100px"
-                      width="100px"
+                      className=" h-[85px] w-[100px]"
                     />
                   </a>
-                  {/* <h4 className="text-center mt-2">abcd </h4> */}
+                  <h4 className="text-center mt-3 mb-2 text-[14px] font-semibold">Dealers </h4>
                 </div>
+
                 <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
                   <a href="">
                     <img
-                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/xzo90czu0nyzpy5p1a8u"}
+                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/v1732627634/evmarket/glwenl0eywpiifvjcd3s.png"}
                       alt="icons"
-                      height="100px"
-                      width="100px"
+                      className=" h-[85px] w-[100px]"
                     />
                   </a>
-                  {/* <h4 className="text-center mt-2">abcd </h4> */}
+                  <h4 className="text-center mt-3 mb-2 text-[14px] font-semibold">Sell EV </h4>
                 </div>
-                <div className="md:col-span-1 col-span-2 shadow-sm mx-auto md:px-8 px-3 md:py-2 py-1 rounded-[8px] mb-2">
-                  <a href="">
-                    <img
-                      src={"https://res.cloudinary.com/dsp9kw0cm/image/upload/f_auto,q_auto/v1/evmarket/nnkhwrnkvpviuooxzj3v"}
-                      alt="icons"
-                      height="100px"
-                      width="100px"
-                    />
-                  </a>
-                  {/* <h4 className="text-center mt-2">abcd </h4> */}
-                </div>
+
               </div>
             </div>
           </div>
@@ -248,7 +241,7 @@ export function Home() {
 
 
         {/* E-Scooter */}
-        <section className="featured-section s_box section-blk py-0 section-blk blog-blk my-0 mt-2">
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk mt-[90px]">
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
@@ -317,8 +310,8 @@ export function Home() {
         </section>
         {/* End E-Scooter */}
 
-        {/* Category */}
-        <section className="category-section my-0">
+        {/* Brand */}
+        <section className="category-section mt-[-80px]">
           <div className="container">
             <div className="section-heading">
               <div className="row align-items-center">
@@ -337,18 +330,18 @@ export function Home() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-6 gap-4 px-3">
+            <div className="grid grid-cols-6 gap-8 px-12">
 
               {brand.map((brandInfo) => (
-                <div className="lg:col-span-1 md:col-span-2 col-span-3 gap-3 border-[1px] rounded-md shadow-sm" key={brandInfo._id}>
+                <div className="lg:col-span-1 md:col-span-2 col-span-3 gap-3" key={brandInfo._id}>
                   <Link to="#" className="">
                     <img
                       src={brandInfo.brand_logo}
                       alt={brandInfo.brand_name}
-                      className="rounded-t-md w-full md:h-[120px] h-[100px] border-b-[1px]"
+                      className="md:w-[120px] w-[100px] md:h-[70px] h-[55px] mx-auto"
                     />
                   </Link>
-                  <p className="h-[36px] mt-2 text-center hover:cursor-pointer font-semibold font-serif">{brandInfo.brand_name}</p>
+                  <p className="h-[36px] text-[15px]  mt-2 text-center hover:cursor-pointer font-semibold ">{brandInfo.brand_name}</p>
                 </div>
               ))}
 
@@ -431,10 +424,48 @@ export function Home() {
         </section>
         {/* End E-Rickshaws */}
 
+        {/* Brand */}
+        <section className="category-section ">
+          <div className="container">
+            <div className="section-heading">
+              <div className="row align-items-center">
+                <div
+                  className="col-md-6 aos aos-init aos-animate"
+                  data-aos="fade-up"
+                >
+                  <h2>
+                    EV{" "}
+                    <span style={{ backgroundColor: "red", padding: "4px" }}>
+                      {" "}
+                      Sta{" "}
+                    </span>{" "}
+                    rtups
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-6 gap-8 px-12">
+
+              {brand.map((brandInfo) => (
+                <div className="lg:col-span-1 md:col-span-2 col-span-3 gap-3" key={brandInfo._id}>
+                  <Link to="#" className="">
+                    <img
+                      src={brandInfo.brand_logo}
+                      alt={brandInfo.brand_name}
+                      className="md:w-[120px] w-[100px] md:h-[70px] h-[55px] mx-auto"
+                    />
+                  </Link>
+                  <p className="h-[36px] text-[15px] mt-2 text-center hover:cursor-pointer font-semibold ">{brandInfo.brand_name}</p>
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
 
 
         {/* E-Car */}
-        <section className="featured-section s_box section-blk py-0 section-blk blog-blk mt-2">
+        <section className="featured-section s_box section-blk py-0 section-blk blog-blk mt-0">
           <div className="container">
             <div className="row ">
               <div className="col-sm-12 my-4">
