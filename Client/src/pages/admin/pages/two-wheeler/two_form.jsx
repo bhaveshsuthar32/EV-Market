@@ -19,7 +19,14 @@ const defaultValue = {
   img1: null,
   img2: null,
   img3: null,
+  variant_1: "",
+  variant1_price: "",
+  variant1_specification: "",
+  variant_2: "",
+  variant2_price: "",
+  variant2_specification: "",
 }
+
 export default function TwoWheelerForm() {
 
   const [twoData, setTwoData] = useState(defaultValue)
@@ -264,6 +271,74 @@ export default function TwoWheelerForm() {
                       />
                     </div>
                   </div>
+                </div>
+              </div>
+              <div className='mt-2'>
+                <h1 className='mt-4 font-semibold'>Variants Details -</h1>
+                <div className="mt-4 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-6">
+                  <div className="sm:col-span-2">
+                    <input
+                      id="variant_1"
+                      name="variant_1"
+                      type="text"
+                      className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder='Variant-1 Name'
+                      onChange={(e) => handleChange(e)}
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <input
+                      id="variant1_price"
+                      name="variant1_price"
+                      type="text"
+                      className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder='variant1_price'
+                      onChange={(e) => handleChange(e)}
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <input
+                      id="variant1_specification"
+                      name="variant1_specification"
+                      type="text"
+                      className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder='variant1_specification'
+                      onChange={(e) => handleChange(e)}
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <input
+                      id="variant_2"
+                      name="variant_2"
+                      type="text"
+                      className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder='variant_2 '
+                      onChange={(e) => handleChange(e)}
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <input
+                      id="variant2_price"
+                      name="variant2_price"
+                      type="text"
+                      className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder='variant2_price'
+                      onChange={(e) => handleChange(e)}
+                    />
+                  </div>
+                  <div className="sm:col-span-2">
+                    <input
+                      id="variant2_specification"
+                      name="variant2_specification"
+                      type="text"
+                      className="block w-full rounded-md border-[1px] px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      placeholder='variant2_specification '
+                      onChange={(e) => handleChange(e)}
+                    />
+                  </div>
+                
+                </div>
+              </div>
                   <div className="mt-6 sm:ml-28 lg-ml-0 flex items-center justify-end gap-x-6">
                     <Link
                       to="/admin/twoWheeler"
@@ -278,8 +353,6 @@ export default function TwoWheelerForm() {
                       Save
                     </button>
                   </div>
-                </div>
-              </div>
             </div>
           </form>
         </div>

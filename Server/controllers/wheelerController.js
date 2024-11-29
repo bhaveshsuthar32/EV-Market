@@ -9,7 +9,7 @@ const fourWheeler = require("../model/fourWheeler");
 
 
     const addTwoDetails = asyncHandler(async (req, res) => {
-        const { type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color} = req.body;
+        const { type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color,  variant_1, variant1_price, variant1_specification, variant_2, variant2_price, variant2_specification} = req.body;
 
         const uploadResults = await Promise.all(
             Object.values(req.files).flat().map((file) => uploadFile(file))
@@ -18,7 +18,7 @@ const fourWheeler = require("../model/fourWheeler");
           // Destructure uploaded image URLs
           const [img1, img2, img3] = uploadResults;
 
-        const addTwoData = new twoWheeler({type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color, img1, img2, img3});
+        const addTwoData = new twoWheeler({type, brand, upcomming_and_used, vehicle_name, speed, range, motor_power, battery, charging_time, battery_charger, showroom_price, color, img1, img2, img3, variant_1, variant1_price, variant1_specification, variant_2, variant2_price, variant2_specification});
 
         const saveTwoData = await addTwoData.save();
         res.status(201).json(saveTwoData);

@@ -61,6 +61,31 @@ const twoSchema = new mongoose.Schema({
         type : String,
         required : false,
     },
+    variant_1 : {
+        type : String,
+        required : false,
+    },
+    variant1_price : {
+        type : String,
+        required : false,
+    },
+    variant1_specification : {
+        type : String,
+        required : false,
+    },
+    variant_2 : {
+        type : String,
+        required : false,
+    },
+    variant2_price : {
+        type : String,
+        required : false,
+    },
+    variant2_specification : {
+        type : String,
+        required : false,
+    },
+    
 },{ timestamps: true });
 
 const twoWheeler = mongoose.model("twoWheeler", twoSchema);

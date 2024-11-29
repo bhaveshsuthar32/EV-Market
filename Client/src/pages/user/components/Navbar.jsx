@@ -73,7 +73,7 @@ export function Navbar() {
                   </ul>
                 </li>
                 <li className="has-submenu">
-                  <Link to="/ev-brand">EV Brand</Link>
+                  <Link to="#ev-brand">EV Brand</Link>
                 </li>
                 <li className="has-submenu">
                   <Link to="#">EV StartUps</Link>
