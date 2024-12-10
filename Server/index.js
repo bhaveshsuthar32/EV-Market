@@ -6,7 +6,6 @@ const router = require('./Router/router');
 const cors = require('cors');
 const errorHandler = require('./middleware/errorHandler');
 
-
 mongodb();
 
 app.use(cors(
