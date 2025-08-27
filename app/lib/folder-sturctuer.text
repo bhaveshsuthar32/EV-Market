@@ -1,0 +1,59 @@
+lib/
+│
+├── main.dart
+├── services/                   # API calls, local storage, common services
+│   ├── api_service.dart
+│   ├── auth_service.dart
+│   └── storage_service.dart
+│
+├── models/                      # Data models (Vehicle, User, etc.)
+│   ├── vehicle_model.dart
+│   └── user_model.dart
+│
+├── shared/                      # Common widgets for both User & Admin
+│   ├── widgets/
+│   │   ├── custom_button.dart
+│   │   ├── custom_text_field.dart
+│   │   └── vehicle_card.dart
+│   ├── constants/
+│   │   ├── colors.dart
+│   │   └── strings.dart
+│   └── utils/
+│       ├── validators.dart
+│       └── formatters.dart
+│
+├── user/
+│   ├── home/
+│   │   ├── home_page.dart
+│   │   └── components/
+│   ├── contact/
+│   │   └── contact_page.dart
+│   ├── about/
+│   │   └── about_page.dart
+│   ├── pages/
+│   │   ├── two_wheeler/
+│   │   │   ├── bike_page.dart
+│   │   │   └── bicycle_page.dart
+│   │   ├── three_wheeler/
+│   │   │   └── e_rickshaw_page.dart
+│   │   └── four_wheeler/
+│   │       └── car_page.dart
+│   └── components/
+│       └── navbar.dart
+│
+└── admin/
+    ├── dashboard/
+    │   └── dashboard_page.dart
+    ├── components/
+    │   └── admin_navbar.dart
+    ├── pages/
+    │   ├── wheeler_form/
+    │   │   ├── two_wheeler_form.dart
+    │   │   ├── three_wheeler_form.dart
+    │   │   ├── four_wheeler_form.dart
+    │   │   └── brand_form.dart
+    │   └── wheeler_data/
+    │       ├── two_wheeler_data.dart
+    │       ├── three_wheeler_data.dart
+    │       ├── four_wheeler_data.dart
+    │       └── brand_data.dart
