@@ -1,4 +1,5 @@
-import 'package:ev_market/user/home/home.dart';
+// import 'package:ev_market/user/home/home.dart';
+import 'package:ev_market/user/root_page/root_page.dart';
 // import 'package:ev_market/view/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Poppins'),
-      home: Home(),
+      home: RootPage(),
     );
   }
 }
