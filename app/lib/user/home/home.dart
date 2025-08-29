@@ -1,12 +1,12 @@
 import 'package:ev_market/services/api_service.dart';
-import 'package:ev_market/user/about/about.dart';
+// import 'package:ev_market/user/about/about.dart';
 import 'package:ev_market/user/components/bottom_nav.dart';
-import 'package:ev_market/user/contact/contact_page.dart';
-import 'package:ev_market/admin/dashboard/admin_page.dart';
-import 'package:ev_market/admin/components/login/login.dart';
+// import 'package:ev_market/user/contact/contact_page.dart';
+// import 'package:ev_market/admin/dashboard/admin_page.dart';
+// import 'package:ev_market/admin/components/login/login.dart';
 import 'package:ev_market/user/pages/four-wheeler/ev_car.dart';
 import 'package:ev_market/user/pages/two-wheeler/bike.dart';
-import 'package:ev_market/user/pages/two-wheeler/bike_details.dart';
+// import 'package:ev_market/user/pages/two-wheeler/bike_details.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/rendering.dart';
 
@@ -37,59 +37,36 @@ class _HomeState extends State<Home> {
     allCarData = ApiService.fetchCarData();
   }
 
-  int _selectedIndex = 0;
-    final List<Widget> _pages = [
-    const Center(child: Text("Home Page")),
-    const Center(child: Text("Search Page")),
-    const Center(child: Text("EV Service Page")),
-    const Center(child: Text("Notifications")),
-    const Center(child: Text("Profile")),
-  ];
-
-  // int _selectedIndex = 0;
-  //  final List<Widget> _pages = const [
-  //   // Home(),       // 🔹 Your custom home
-  //   BikeDetails(),
-  //   Bike(),           // 🔹 Bike Page
-  //   EvCar(),          // 🔹 Car Page (EV Service)
-  //   ContactPage(),    // 🔹 Notifications ki jagah Contact
-  //   AdminPage(),    // 🔹 Profile Page
-  // ];
-
-  
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 249, 249, 249),
-      appBar: AppBar(
-        leading: Builder(
-          builder: (context) {
-            return IconButton(
-              onPressed: () {
-                Scaffold.of(context).openDrawer();
-              },
-              icon: Icon(Icons.menu),
-              color: Colors.white,
-            );
-          },
-        ),
-        actionsPadding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      // appBar: AppBar(
+      //   leading: Builder(
+      //     builder: (context) {
+      //       return IconButton(
+      //         onPressed: () {
+      //           Scaffold.of(context).openDrawer();
+      //         },
+      //         icon: Icon(Icons.menu),
+      //         color: Colors.white,
+      //       );
+      //     },
+      //   ),
+      //   actionsPadding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+      //   backgroundColor: const Color.fromARGB(255, 0, 0, 0),
 
-        title: const Text("EV-Market", style: TextStyle(color: Colors.white)),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.settings, color: Colors.white),
-          ),
-        ],
-      ),
+      //   title: const Text("EV-Market", style: TextStyle(color: Colors.white)),
+      //   actions: [
+      //     IconButton(
+      //       onPressed: () {},
+      //       icon: Icon(Icons.settings, color: Colors.white),
+      //     ),
+      //   ],
+      // ),
+
+
+
 
       // drawer: Drawer(
       //   child: ListView(
@@ -152,94 +129,101 @@ class _HomeState extends State<Home> {
       //     ],
       //   ),
       // ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            // 🔹 Profile Header
-            UserAccountsDrawerHeader(
-              decoration: const BoxDecoration(
-                color: Color(0xFF1976D2), // Blue background
-              ),
-              accountName: const Text(
-                "James Martin",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              accountEmail: const Text("james012@gmail.com"),
-              currentAccountPicture: const CircleAvatar(
-                backgroundImage: NetworkImage(
-                  "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", // profile image
-                ),
-              ),
-            ),
 
-            // 🔹 Menu Items
-            ListTile(
-              leading: const Icon(Icons.info_outline),
-              title: const Text("About Us"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const About()),
-                );
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.contact_page_outlined),
-              title: const Text("Contact Us"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ContactPage()),
-                );
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.login),
-              title: const Text("Login"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const Login()),
-                );
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.admin_panel_settings),
-              title: const Text("Admin"),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AdminPage()),
-                );
-              },
-            ),
 
-            const Spacer(),
 
-            // 🔹 Logout / Settings Bottom Button
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(double.infinity, 50),
-                  backgroundColor: Colors.blue[700],
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(Icons.logout, color: Colors.white),
-                label: const Text(
-                  "Logout",
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+
+
+
+      // ---------------- New drawer --------
+      // drawer: Drawer(
+      //   child: Column(
+      //     children: [
+      //       // 🔹 Profile Header
+      //       UserAccountsDrawerHeader(
+      //         decoration: const BoxDecoration(
+      //           color: Color(0xFF1976D2), // Blue background
+      //         ),
+      //         accountName: const Text(
+      //           "James Martin",
+      //           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      //         ),
+      //         accountEmail: const Text("james012@gmail.com"),
+      //         currentAccountPicture: const CircleAvatar(
+      //           backgroundImage: NetworkImage(
+      //             "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", // profile image
+      //           ),
+      //         ),
+      //       ),
+
+      //       // 🔹 Menu Items
+      //       ListTile(
+      //         leading: const Icon(Icons.info_outline),
+      //         title: const Text("About Us"),
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => const About()),
+      //           );
+      //         },
+      //       ),
+      //       ListTile(
+      //         leading: const Icon(Icons.contact_page_outlined),
+      //         title: const Text("Contact Us"),
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => const ContactPage()),
+      //           );
+      //         },
+      //       ),
+      //       ListTile(
+      //         leading: const Icon(Icons.login),
+      //         title: const Text("Login"),
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => const Login()),
+      //           );
+      //         },
+      //       ),
+      //       ListTile(
+      //         leading: const Icon(Icons.admin_panel_settings),
+      //         title: const Text("Admin"),
+      //         onTap: () {
+      //           Navigator.push(
+      //             context,
+      //             MaterialPageRoute(builder: (context) => const AdminPage()),
+      //           );
+      //         },
+      //       ),
+
+      //       const Spacer(),
+
+      //       // 🔹 Logout / Settings Bottom Button
+      //       Padding(
+      //         padding: const EdgeInsets.all(12.0),
+      //         child: ElevatedButton.icon(
+      //           style: ElevatedButton.styleFrom(
+      //             minimumSize: const Size(double.infinity, 50),
+      //             backgroundColor: Colors.blue[700],
+      //             shape: RoundedRectangleBorder(
+      //               borderRadius: BorderRadius.circular(12),
+      //             ),
+      //           ),
+      //           onPressed: () {
+      //             Navigator.pop(context);
+      //           },
+      //           icon: const Icon(Icons.logout, color: Colors.white),
+      //           label: const Text(
+      //             "Logout",
+      //             style: TextStyle(color: Colors.white),
+      //           ),
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
 
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(0),
@@ -253,19 +237,14 @@ class _HomeState extends State<Home> {
             _section_second(),
             const SizedBox(height: 10),
             _section_third(),
-            const SizedBox(height: 20), 
-
-            _pages[_selectedIndex],
+            const SizedBox(height: 20),
+      
               ],
           
         ),
         
       ),
 
-      bottomNavigationBar: BottomNav(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      ),
     );
   }
 
