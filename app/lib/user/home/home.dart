@@ -348,7 +348,7 @@ class _HomeState extends State<Home> {
         crossAxisAlignment: CrossAxisAlignment.start, 
         children: [
           Text(
-            "EV-Bikes",
+            "EV Brand",
             textAlign: TextAlign.left,
             style: TextStyle(
               color: const Color.fromARGB(255, 0, 0, 0),
