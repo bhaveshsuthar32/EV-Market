@@ -3,6 +3,7 @@ import 'package:ev_market/user/pages/four-wheeler/ev_car.dart';
 import 'package:ev_market/user/pages/two-wheeler/bike.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:animate_do/animate_do.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -42,6 +43,13 @@ class _HomeState extends State<Home> {
     carUsedData = ApiService.fetchCarUsedData();
   }
 
+  int _currentImageIndex = 0; // Add this in your State class
+  final List<String> imageUrls = [
+    'https://cbvalueaddrealty.in/wp-content/uploads/2022/07/electric-vehicle.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpPLBtDpqfYo0GCD72-yzaMLi0VLDfZQ2-4w&s',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6E3GlGVH0CDpOXewpHnlK_0KAhPF0lwf245k1Y6B4wJhrnhOXQwb7Uv88zIZQbJ1_Qw8&usqp=CAU',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,276 +76,77 @@ class _HomeState extends State<Home> {
   }
 
   Widget _top_screen_image() {
-    final List<String> imageUrls = [
-      'https://cbvalueaddrealty.in/wp-content/uploads/2022/07/electric-vehicle.jpg',
-      'https://static.toiimg.com/thumb/msid-88551970,width-1280,height-720,resizemode-4/.jpg',
-      'https://cbvalueaddrealty.in/wp-content/uploads/2022/07/electric-vehicle.jpg',
-    ];
-
-    return SizedBox(
-      height: 220,
-      child: PageView.builder(
-        itemCount: imageUrls.length,
-        itemBuilder: (context, index) {
-          return Stack(
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.network(
-                  imageUrls[index],
-                  fit: BoxFit.cover,
-                  width: double.infinity,
-                ),
+    return FadeInUp(
+      duration: const Duration(milliseconds: 800),
+      child: SizedBox(
+        height: 300,
+        width: double.infinity,
+        child: Stack(
+          children: [
+            CarouselSlider(
+              options: CarouselOptions(
+                height: 300,
+                viewportFraction: 1.0, // 👈 Full width for each image
+                enlargeCenterPage: false, // 👈 No zoom effect
+                enableInfiniteScroll: true,
+                autoPlay: true,
+                autoPlayInterval: const Duration(seconds: 4),
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _currentImageIndex = index;
+                  });
+                },
               ),
-            ],
-          );
-        },
+              items: imageUrls.map((imageUrl) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: Image.network(
+                        imageUrl,
+                        fit: BoxFit.cover,
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) return child;
+                          return Container(
+                            color: Colors.grey[300],
+                            child: const Center(
+                              child: CircularProgressIndicator(),
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
+            Positioned(
+              bottom: 16,
+              left: 0,
+              right: 0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: imageUrls.asMap().entries.map((entry) {
+                  return AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    width: _currentImageIndex == entry.key ? 24 : 8,
+                    height: 8,
+                    margin: const EdgeInsets.symmetric(horizontal: 4),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: _currentImageIndex == entry.key
+                          ? Colors.white
+                          : Colors.white.withOpacity(0.5),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
-
-  // Widget _section_first() {
-  //   return Container(
-  //     padding: const EdgeInsets.all(6), // outer padding kam
-  //     margin: const EdgeInsets.fromLTRB(15, 8, 15, 8),
-  //     width: double.infinity,
-  //     child: FutureBuilder<List<dynamic>>(
-  //       future: brandData,
-  //       builder: (context, snapshot) {
-  //         if (snapshot.connectionState == ConnectionState.waiting) {
-  //           return const Center(child: CircularProgressIndicator());
-  //         }
-
-  //         if (snapshot.hasError) {
-  //           return Center(child: Text("Error: ${snapshot.error}"));
-  //         }
-
-  //         if (!snapshot.hasData || snapshot.data!.isEmpty) {
-  //           return const Center(child: Text("No data found"));
-  //         }
-
-  //         final data = snapshot.data!;
-
-  //         return GridView.builder(
-  //           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-  //             crossAxisCount: 4,
-  //             mainAxisSpacing: 8,
-  //             crossAxisSpacing: 8,
-  //           ),
-  //           shrinkWrap: true,
-  //           physics: const NeverScrollableScrollPhysics(),
-  //           itemCount: data.length,
-  //           itemBuilder: (context, index) {
-  //             final item = data[index];
-
-  //             return Container(
-  //               padding: const EdgeInsets.all(8),
-  //               height: 200,
-  //               width: 150,
-  //               decoration: BoxDecoration(
-  //                 color: Colors.white,
-  //                 borderRadius: BorderRadius.circular(10),
-  //                 boxShadow: [
-  //                   BoxShadow(
-  //                     color: Colors.black.withOpacity(0.08),
-  //                     blurRadius: 6,
-  //                     offset: const Offset(2, 4),
-  //                   ),
-  //                 ],
-  //               ),
-  //               child: Column(
-  //                 mainAxisAlignment: MainAxisAlignment.center,
-  //                 children: [
-  //                   Expanded(
-  //                     child: Image.network(
-  //                       item['brand_logo'] ?? '',
-  //                       height: 70,
-  //                       width: 70,
-  //                       fit: BoxFit.cover,
-  //                     ),
-  //                   ),
-  //                   const SizedBox(height: 4),
-  //                   Text(
-  //                     item['brand_name'] ?? '',
-  //                     textAlign: TextAlign.center, // text center
-  //                     style: const TextStyle(
-  //                       fontSize: 10.5, // chota font
-  //                       fontWeight: FontWeight.bold,
-  //                     ),
-  //                   ),
-  //                 ],
-  //               ),
-  //             );
-  //           },
-  //         );
-  //       },
-  //     ),
-  //   );
-  // }
-
-  //   Widget _section_first() {
-  //   return Container(
-  //     padding: const EdgeInsets.all(6), // outer padding kam
-  //     margin: const EdgeInsets.fromLTRB(15, 8, 15, 8),
-  //     width: double.infinity,
-  //     child: FutureBuilder<List<dynamic>>(
-  //       future: brandData,
-  //       builder: (context, snapshot) {
-  //         if (snapshot.connectionState == ConnectionState.waiting) {
-  //           return const Center(child: CircularProgressIndicator());
-  //         }
-
-  //         if (snapshot.hasError) {
-  //           return Center(child: Text("Error: ${snapshot.error}"));
-  //         }
-
-  //         if (!snapshot.hasData || snapshot.data!.isEmpty) {
-  //           return const Center(child: Text("No data found"));
-  //         }
-
-  //         final data = snapshot.data!;
-
-  //         return GridView.builder(
-  //           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-  //             crossAxisCount: 4,
-  //             mainAxisSpacing: 8,
-  //             crossAxisSpacing: 8,
-  //           ),
-  //           shrinkWrap: true,
-  //           physics: const NeverScrollableScrollPhysics(),
-  //           itemCount: data.length,
-  //           itemBuilder: (context, index) {
-  //             final item = data[index];
-
-  //             return Container(
-  //               padding: const EdgeInsets.all(8),
-  //               height: 200,
-  //               width: 150,
-  //               decoration: BoxDecoration(
-  //                 color: Colors.white,
-  //                 borderRadius: BorderRadius.circular(10),
-  //                 boxShadow: [
-  //                   BoxShadow(
-  //                     color: Colors.black.withOpacity(0.08),
-  //                     blurRadius: 6,
-  //                     offset: const Offset(2, 4),
-  //                   ),
-  //                 ],
-  //               ),
-  //               child: Column(
-  //                 mainAxisAlignment: MainAxisAlignment.center,
-  //                 children: [
-  //                   Expanded(
-  //                     child: Image.network(
-  //                       item['brand_logo'] ?? '',
-  //                       height: 70,
-  //                       width: 70,
-  //                       fit: BoxFit.cover,
-  //                     ),
-  //                   ),
-  //                   const SizedBox(height: 4),
-  //                   Text(
-  //                     item['brand_name'] ?? '',
-  //                     textAlign: TextAlign.center, // text center
-  //                     style: const TextStyle(
-  //                       fontSize: 10.5, // chota font
-  //                       fontWeight: FontWeight.bold,
-  //                     ),
-  //                   ),
-  //                 ],
-  //               ),
-  //             );
-  //           },
-  //         );
-  //       },
-  //     ),
-  //   );
-  // }
-
-  /// ---- try somthing [ // expriment ]
-
-  // Widget _section_first() {
-  //   return Container(
-  //     padding: const EdgeInsets.all(6),
-  //     margin: const EdgeInsets.fromLTRB(15, 8, 15, 8),
-  //     width: double.infinity,
-  //     child: FutureBuilder<List<dynamic>>(
-  //       future: brandData,
-  //       builder: (context, snapshot) {
-  //         if (snapshot.connectionState == ConnectionState.waiting) {
-  //           return const Center(child: CircularProgressIndicator());
-  //         }
-
-  //         if (snapshot.hasError) {
-  //           return Center(child: Text("Error: ${snapshot.error}"));
-  //         }
-
-  //         if (!snapshot.hasData || snapshot.data!.isEmpty) {
-  //           return const Center(child: Text("No data found"));
-  //         }
-
-  //         final data = snapshot.data!;
-
-  //         return CarouselSlider.builder(
-  //           itemCount: data.length,
-  //           options: CarouselOptions(
-  //             height: 120,
-  //             autoPlay: true,
-  //             autoPlayInterval: const Duration(seconds: 3),
-  //             autoPlayAnimationDuration: const Duration(milliseconds: 800),
-  //             viewportFraction: 0.3, // ek row me kitne dikhne chahiye
-  //             enlargeCenterPage: true,
-  //             enableInfiniteScroll: true,
-  //             scrollDirection: Axis.horizontal,
-  //           ),
-  //           itemBuilder: (context, index, realIndex) {
-  //             final item = data[index];
-  //             return AnimatedContainer(
-  //               duration: const Duration(milliseconds: 500),
-  //               margin: const EdgeInsets.symmetric(horizontal: 6, vertical: 10),
-  //               decoration: BoxDecoration(
-  //                 color: Colors.white,
-  //                 borderRadius: BorderRadius.circular(12),
-  //                 boxShadow: [
-  //                   BoxShadow(
-  //                     color: Colors.black.withOpacity(0.1),
-  //                     blurRadius: 6,
-  //                     offset: const Offset(2, 4),
-  //                   ),
-  //                 ],
-  //               ),
-  //               child: Column(
-  //                 mainAxisAlignment: MainAxisAlignment.center,
-  //                 children: [
-  //                   Expanded(
-  //                     child: ClipRRect(
-  //                       borderRadius: BorderRadius.circular(8),
-  //                       child: Image.network(
-  //                         item['brand_logo'] ?? '',
-  //                         fit: BoxFit.cover, // pura cover karega
-  //                         width: double.infinity,
-  //                         height: double.infinity,
-  //                       ),
-  //                     ),
-  //                   ),
-  //                   const SizedBox(height: 6),
-  //                   Text(
-  //                     item['brand_name'] ?? '',
-  //                     textAlign: TextAlign.center,
-  //                     style: const TextStyle(
-  //                       fontSize: 11,
-  //                       fontWeight: FontWeight.bold,
-  //                     ),
-  //                   ),
-  //                 ],
-  //               ),
-  //             );
-  //           },
-  //         );
-  //       },
-  //     ),
-  //   );
-  // }
 
   Widget _section_first() {
     return Container(
@@ -345,7 +154,7 @@ class _HomeState extends State<Home> {
       margin: const EdgeInsets.fromLTRB(15, 8, 15, 8),
       width: double.infinity,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start, 
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "EV Brand",
@@ -357,7 +166,7 @@ class _HomeState extends State<Home> {
             ),
             textDirection: TextDirection.ltr,
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: 20),
           FutureBuilder<List<dynamic>>(
             future: brandData,
             builder: (context, snapshot) {
